@@ -6,10 +6,10 @@ topnav_dropdowns:
       folderitems:
         - title: Models and Axioms of Probability
           url: /probability_intro.html
-        - title: Conditioning and Independence
-          url: /statistics_intro.html
-        - title: Machine Learning
-          url: /machinelearning_intro.html
+        - title: Conditional Probability
+          url: /conditional.html
+        - title: Counting
+          url: /counting.html
     - title: Statistics and Data Analysis
       folderitems:
         - title: Introduction
