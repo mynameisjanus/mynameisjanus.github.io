@@ -14,6 +14,12 @@ topnav_dropdowns:
       folderitems:
         - title: Introduction
           url: /statistics_intro.html
+        - title: Inferential Statistics
+        - title: Estimation
+        - title: Hypothesis Testing
+        - title: Bayesian Statistics
+        - title: Linear Regression
+        - title: Generalized Linear Model
     - title: Machine Learning with Python
       folderitems:
         - title: Introduction
