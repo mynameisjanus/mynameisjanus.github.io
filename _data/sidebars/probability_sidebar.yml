@@ -1,0 +1,74 @@
+# This is your sidebar TOC. The sidebar code loops through sections here and provides the appropriate formatting.
+
+entries:
+- title: sidebar
+  product: Probability
+  folders:
+
+  - title:
+    output: pdf
+    type: frontmatter
+    folderitems:
+    - title:
+      url: /titlepage.html
+      output: pdf
+      type: frontmatter
+    - title:
+      url: /tocpage.html
+      output: pdf
+      type: frontmatter
+
+  - title: Models and Axioms
+    output: web, pdf
+    folderitems:
+
+    - title: Sample Space
+      url: /probability_intro.html
+      output: web, pdf
+      type: homepage
+
+    - title: Mathematical Background
+      url: /math_background.html
+      output: web, pdf
+
+    - title: Probability Axioms
+      url: /axioms.html
+      output: web, pdf
+
+  - title: Conditional Probability
+    output: web, pdf
+    folderitems:
+
+    - title: Definition
+      url: /conditional.html
+      output: web, pdf
+
+    - title: 5.0 Release notes
+      url: /mydoc_release_notes_50.html
+      output: web, pdf
+
+  - title: Counting
+    output: web, pdf
+    folderitems:
+
+    - title: Basic Counting Principles
+      url: /basiccounting.html
+      output: web, pdf
+
+    - title: Binomial Probabilities
+      url: /mydoc_install_jekyll_on_mac.html
+      output: web, pdf
+
+    - title: Hypergeometric Probabilities
+      url: /mydoc_install_jekyll_on_windows.html
+      output: web, pdf
+
+  - title: Discrete Random Variables
+    output: web, pdf
+    folderitems:
+
+    - title: Random Variables
+      url: randomv.html
+      output: web, pdf
+
+# Copyright 2021 Google LLC
