@@ -10,6 +10,13 @@ topnav_dropdowns:
           url: /conditional.html
         - title: Counting
           url: /counting.html
+        - title: Discrete Random Variables
+        - title: Continuous Random Variables
+        - title: More Random Variables
+        - title: Bayesian Inference
+        - title: Limit Theorems and Classical Statistics
+        - title: Bernoulli and Poisson Processes
+        - title: Markov Chains
     - title: Statistics and Data Analysis
       folderitems:
         - title: Introduction
@@ -24,6 +31,13 @@ topnav_dropdowns:
       folderitems:
         - title: Introduction
           url: /machinelearning_intro.html
+        - title: Linear Classifiers
+        - title: Nonlinear Classification
+        - title: Linear Regression
+        - title: Collaborative Filtering
+        - title: Neural Networks
+        - title: Unsupervised Learning
+        - title: Reinforcement Learning
 
 ## Topnav single links
 ## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.

@@ -7,4 +7,6 @@ permalink: statistics_intro.html
 folder: statistics
 ---
 
-# COMING SOON!
+##
+
+## Statistics versus Probability
