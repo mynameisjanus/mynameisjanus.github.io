@@ -8,3 +8,6 @@ toc: false
 ---
 
 ## COMING SOON!
+
+
+$$\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n}{m}}$$

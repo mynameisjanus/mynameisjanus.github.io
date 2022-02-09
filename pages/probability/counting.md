@@ -42,3 +42,7 @@ Suppose now that, instead of using all the items in $$A$$, we have to select $$r
   $$n\cdot(n-1)\cdot(n-2)\cdots(n-r+1)=\dfrac{n!}{(n-r)!}.$$
 
 ### Combination
+
+Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done?
+
+$$\binom{n}{k}=\dfrac{n!}{k!(n-k)!}$$
