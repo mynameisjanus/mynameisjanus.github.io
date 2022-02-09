@@ -22,7 +22,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Sample Space
+    - title: Sample Spaces
       url: /probability_intro.html
       output: web, pdf
       type: homepage
@@ -35,6 +35,34 @@ entries:
       url: /axioms.html
       output: web, pdf
 
+  - title: Counting
+    output: web, pdf
+    folderitems:
+
+    - title: Basic Principles
+      url: /basiccounting.html
+      output: web, pdf
+
+    - title: Permutations
+      url: /permutations.html
+      output: web, pdf
+
+    - title: Combinations
+      url: /combinations.html
+      output: web, pdf
+
+    - title: Binomial Probability
+      url: /binomial.html
+      output: web, pdf
+
+    - title: Multinomial Probability
+      url: /multinomial.html
+      output: web, pdf
+
+    - title: Hypergeometric Probability
+      url: /hypergeometric.html
+      output: web, pdf
+
   - title: Conditional Probability
     output: web, pdf
     folderitems:
@@ -43,24 +71,8 @@ entries:
       url: /conditional.html
       output: web, pdf
 
-    - title: 5.0 Release notes
-      url: /mydoc_release_notes_50.html
-      output: web, pdf
-
-  - title: Counting
-    output: web, pdf
-    folderitems:
-
-    - title: Basic Counting Principles
-      url: /basiccounting.html
-      output: web, pdf
-
-    - title: Binomial Probabilities
-      url: /mydoc_install_jekyll_on_mac.html
-      output: web, pdf
-
-    - title: Hypergeometric Probabilities
-      url: /mydoc_install_jekyll_on_windows.html
+    - title: Independence
+      url: /independence.html
       output: web, pdf
 
   - title: Discrete Random Variables

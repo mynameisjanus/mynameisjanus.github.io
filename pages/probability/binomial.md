@@ -1,10 +1,10 @@
 ---
-title: Basic Counting Principles
+title: Binomial Probability
 sidebar: probability_sidebar
-permalink: basiccounting.html
+permalink: binomial.html
 folder: probability
-toc: false
 usemathjax: true
+toc: false
 ---
 
 ## COMING SOON!

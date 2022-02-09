@@ -4,12 +4,12 @@ topnav_dropdowns:
   folders:
     - title: Probability
       folderitems:
-        - title: Models and Axioms of Probability
+        - title: Models and Axioms
           url: /probability_intro.html
-        - title: Conditional Probability
-          url: /conditional.html
         - title: Counting
           url: /counting.html
+        - title: Conditional Probability
+          url: /conditional.html
         - title: Discrete Random Variables
         - title: Continuous Random Variables
         - title: More Random Variables

@@ -1,7 +1,7 @@
 ---
-title: Basic Counting Principles
+title: Combinations
 sidebar: probability_sidebar
-permalink: basiccounting.html
+permalink: combinations.html
 folder: probability
 toc: false
 usemathjax: true

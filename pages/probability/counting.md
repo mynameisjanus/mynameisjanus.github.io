@@ -1,5 +1,5 @@
 ---
-title: Principles of Counting
+title: Basic Principles
 sidebar: probability_sidebar
 permalink: counting.html
 folder: probability

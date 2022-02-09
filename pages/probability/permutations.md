@@ -1,10 +1,11 @@
 ---
-title: Basic Counting Principles
+title: Permutations
+permalink: permutations.html
 sidebar: probability_sidebar
-permalink: basiccounting.html
 folder: probability
 toc: false
 usemathjax: true
 ---
+
 
 ## COMING SOON!
