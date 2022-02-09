@@ -40,15 +40,7 @@ entries:
     folderitems:
 
     - title: Basic Principles
-      url: /basiccounting.html
-      output: web, pdf
-
-    - title: Permutations
-      url: /permutations.html
-      output: web, pdf
-
-    - title: Combinations
-      url: /combinations.html
+      url: /counting.html
       output: web, pdf
 
     - title: Binomial Probability
