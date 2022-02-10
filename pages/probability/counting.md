@@ -19,7 +19,13 @@ If an experiment has $$r$$ stages and there are $$n_i$$ possibilities for each s
 
 ### Permutation
 
-Consider a set $$A$$ with $$n$$ elements, $$A=\{a_1,\ldots,a_n\}.$$ A **permutation** of $$A$$ is an *ordered* arrangement of its elements. How many possible arrangements are there? Since there are $$n$$ items, we can put all of them in $$n$$ boxes. For the first box, we have $$n$$ choices. For the second box, we are left with $$n-1$$ choices. For the third box, there are $$n-2$$. We proceed this way until we've put the last item in a box. Using the multiplication principle, we have
+Consider a set $$A$$ with $$n$$ elements, $$A=\{a_1,\ldots,a_n\}.$$ A **permutation** of $$A$$ is an *ordered* arrangement of its elements. How many possible arrangements are there? Since there are $$n$$ items, we can put all of them in $$n$$ boxes. For the first box, we have $$n$$ choices. For the second box, we are left with $$n-1$$ choices. For the third box, there are $$n-2$$. We proceed this way until we've put the last item in a box.
+
+<p align="center">
+  <img src="images/prob/perm.png" style="width:500px;height:auto;"/>
+</p>
+
+Using the multiplication principle, we have
 
 $$n\cdot(n-1)\cdot(n-2)\cdots 2\cdot 1=n!$$
 
