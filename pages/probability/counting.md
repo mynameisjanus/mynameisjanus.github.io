@@ -33,6 +33,12 @@ arrangements. The symbol $$!$$ is called a **factorial** and $$n!$$ is read as "
 
 $$5!=5\cdot4\cdot3\cdot2\cdot1=120.$$
 
+{{site.data.alerts.note}}
+<p>
+$$0!=1!=1$$
+</p>
+{{site.data.alerts.end}}
+
 Suppose now that, instead of using all the items in $$A$$, we have to select $$r$$ items. In how many ways can we do this? It depends on whether we can duplicate the items or not. If we can duplicate the items, then we are sampling **with replacement**. Otherwise, we are sampling **without replacement**.
 
 * **Sampling With Replacement**
@@ -49,6 +55,30 @@ Suppose now that, instead of using all the items in $$A$$, we have to select $$r
 
 ### Combination
 
-Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done?
+Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done? We can do this in two steps. First, we pick $$r$$ items from $$A$$ and we know there are
 
-$$\binom{n}{k}=\dfrac{n!}{k!(n-k)!}$$
+$$\dfrac{n!}{(n-r)!}$$
+
+ways to do this. Next, we know there are $$r!$$ ways to order the items. Therefore, if we disregard their order, there are
+
+$$\dfrac{n!}{r!(n-r)!}=\binom{n}{r}$$
+
+possible **combinations** where $$\binom{n}{r}$$ is called the **binomial coefficient**. We interpret the binomial coefficient as the number of $$r$$-element subsets of a set with $$n$$ elements.
+
+{{site.data.alerts.note}}
+<p>
+$$\binom{n}{0}=1\qquad\text{and}\qquad\binom{n}{n}=1$$
+</p>
+{{site.data.alerts.end}}
+
+#### Number of Subsets
+
+If a set $$A$$ has $$n$$ elements, how many possible subsets are there? First, the empty set is a subset of $$A$$ and we denote this by $$\binom{n}{0}$$. If we consider subsets with a single element, then there are $$\binom{n}{1}=n$$ subsets. Continuing this process, the number of subsets is
+
+$$\sum_{k}^{n}\binom{n}{k}=\binom{n}{0}+\binom{n}{1}+\cdots+\binom{n}{n}=2^n.$$
+
+{{site.data.alerts.note}}
+<p>
+$$(1+x)^n=\binom{n}{0}+\binom{n}{1}x+\binom{n}{2}x^2+\cdots+\binom{n}{n}x^n$$
+</p>
+{{site.data.alerts.end}}
