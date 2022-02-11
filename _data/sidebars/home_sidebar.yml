@@ -26,3 +26,6 @@ entries:
     - title: Contact
       url:
       output: web
+    - title: Support this Website
+      url: /support.html
+      output: web
