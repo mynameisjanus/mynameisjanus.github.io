@@ -23,8 +23,6 @@ entries:
     - title: CV
       url: /cv.html
       output: web
-    - title: My Github Page
-      external_url: https://github.com/mynameisjanus
     - title: Contact
       url:
       output: web

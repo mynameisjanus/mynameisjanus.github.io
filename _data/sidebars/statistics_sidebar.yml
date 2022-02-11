@@ -19,6 +19,14 @@ entries:
       output: pdf
       type: frontmatter
 
+  - title: Homepage
+    output: web, pdf
+    folderitems:
+
+    - title: Data Science Homepage
+      url: /index.html
+      output: web, pdf
+
   - title: Introduction
     output: web, pdf
     folderitems:

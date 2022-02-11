@@ -11,7 +11,7 @@ usemathjax: true
   <img src="images/prob/bowl.png" style="width:150px;height:auto;"/>
 </p>
 
-Suppose we have to choose 10 items from a bowl that contains 1000 items. In how many ways can we do this? If the bowl contains 300 red and 700 blue items, what is the probability that we will get 10 blue items? In many models, calculating probabilities reduces to counting the number of elements of a given set.
+Suppose we have to choose 10 items from a bowl that contains 1000 items. In how many ways can we do this? That is, how many possible outcomes are there? If the bowl contains 300 red and 700 blue items, what is the probability that we will get 10 blue items? In many models, calculating probabilities reduces to counting the number of elements of a given set.
 
 ### Multiplication Principle
 
@@ -55,15 +55,15 @@ Suppose now that, instead of using all the items in $$A$$, we have to select $$r
 
 ### Combination
 
-Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done? We can do this in two steps. First, we pick $$r$$ items from $$A$$ and we know there are
+Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done? We can do this in two steps. First, we pick $$r$$ items from $$A$$ and the number of ways to do this is
 
-$$\dfrac{n!}{(n-r)!}$$
+$$\dfrac{n!}{(n-r)!}.$$
 
-ways to do this. Next, we know there are $$r!$$ ways to order the items. Therefore, if we disregard their order, there are
+Next, we know there are $$r!$$ ways to order the items. Therefore, if we disregard their order, there are
 
 $$\dfrac{n!}{r!(n-r)!}=\binom{n}{r}$$
 
-possible **combinations** where $$\binom{n}{r}$$ is called the **binomial coefficient**. We interpret the binomial coefficient as the number of $$r$$-element subsets of a set with $$n$$ elements.
+possible **combinations** where $$\binom{n}{r}$$ is called the **binomial coefficient**. We can interpret the binomial coefficient as the number of $$r$$-element subsets of a set with $$n$$ elements.
 
 {{site.data.alerts.note}}
 <p>

@@ -9,21 +9,26 @@ usemathjax: true
 
 
 ## Basic Set Theory
-A **set** is defined as a collection of ***distinct*** elements. A set that has *no elements* is called an **empty set** and is denoted by $$\varnothing$$. Moreover, a set that contains *everything* is called **universal set** and is denoted by $$\Omega$$.
 
-The **complement** of a set $$A$$, denoted by $$A^\mathsf{C}$$, is the set of elements *not belonging to* $$A$$ but are in the universal set. Mathematically,
+A **set** is simply a collection of ***distinct*** elements. We usually denote a set by parentheses, $$\{\cdots\}$$. It can have a ***finite*** number of elements or it can be ***infinite***. It can also be ***countable*** or ***uncountable***.
+
+### Empty and Universal Sets
+A set that has *no elements* is called an **empty set** and we will denote it by $$\varnothing$$. On the other hand, a set that contains *everything* is called **universal set** which we will denote by $$\Omega$$.
+
+### Complement Set
+The **complement** of a set $$A$$, denoted by $$A^\mathsf{C}$$, is the set of elements *not belonging to* $$A$$ but are *in the universal set*. Mathematically,
 
 $$A^\mathsf{C}=\{a\in\Omega: a\notin A\}.$$
 
-The complement of the universal set $$\Omega$$ is the empty set $$\varnothing$$, i.e., $$\Omega^\mathsf{C}=\varnothing$$. Moreover, the complement of the complement of a set $$A$$ is the set itself, i.e., $$(A^\mathsf{C})^\mathsf{C}=A$$. We can visualize the complement of a set in the following figure:
+The complement of the universal set $$\Omega$$ is the empty set $$\varnothing$$, i.e., $$\Omega^\mathsf{C}=\varnothing$$. Moreover, the complement of the complement of a set $$A$$ is the set itself, i.e., $$(A^\mathsf{C})^\mathsf{C}=A$$. The figure below shows the complement of $$A$$ as the shaded region.
 
 <p align="center">
   <img src="images/prob/set1.png" style="width:250px;height:auto;"/>
 </p>
 
-### Unions and Intersections
+### Union
 
-The **union** of two sets, $$A$$ and $$B$$, is the set of elements that are in $$A$$ **or** $$B$$. We denote this with $$\cup$$, i.e.,
+The **union** of two sets, $$A$$ and $$B$$, is the set of elements that are in $$A$$ **or** $$B$$. We denote this by $$\cup$$, i.e.,
 
 $$A\cup B=\{c\in\Omega:c\in A\;\text{or}\;c\in B\}.$$
 
@@ -32,6 +37,8 @@ The shaded region in the figure below shows the union of $$A$$ and $$B$$. Note t
 <p align="center">
   <img src="images/prob/union.png" style="width:250px;height:auto;"/>
 </p>
+
+### Intersection
 
 The **intersection** of $$A$$ and $$B$$ is the set of elements that are in $$A$$ **and** $$B$$. We denote this with $$\cap$$, i.e.,
 

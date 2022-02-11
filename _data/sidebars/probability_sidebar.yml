@@ -18,17 +18,24 @@ entries:
       output: pdf
       type: frontmatter
 
+  - title: Homepage
+    output: web, pdf
+    folderitems:
+
+    - title: Data Science Homepage
+      url: /index.html
+      output: web, pdf
+
   - title: Models and Axioms
     output: web, pdf
     folderitems:
 
-    - title: Sample Spaces
-      url: /probability_intro.html
-      output: web, pdf
-      type: homepage
-
     - title: Mathematical Background
       url: /math_background.html
+      output: web, pdf
+
+    - title: Sample Spaces
+      url: /probability_intro.html
       output: web, pdf
 
     - title: Probability Axioms
@@ -65,6 +72,10 @@ entries:
 
     - title: Independence
       url: /independence.html
+      output: web, pdf
+
+    - title: Bayes' Theorem
+      url: /bayes.html
       output: web, pdf
 
   - title: Discrete Random Variables
