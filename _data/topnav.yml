@@ -5,7 +5,7 @@ topnav_dropdowns:
     - title: Probability
       folderitems:
         - title: Models and Axioms
-          url: /probability_intro.html
+          url: /math_background.html
         - title: Counting
           url: /counting.html
         - title: Conditional Probability
