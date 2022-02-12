@@ -6,20 +6,18 @@ toc: false
 sidebar: home_sidebar
 permalink: index.html
 ---
+<br>
 
-<h3 align="center">
-<i>The pursuit of truth and beauty is a sphere of activity in which we are permitted to remain children all our lives.</i>
-</h3>
+<p align="center">
+  <img src="images/quote.png" style="width:500px;height:auto;"/>
+</p>
 
 ## What is data science?
 
-
-Define data science.
+The goal of data science is to extract knowledge and derive meaningful insights from mostly noisy data, structured or unstructured. Techniques from statistics and computer science are used to
 
 <p align="center">
   <img src="images/prob/cycle.png" style="width:300px;height:auto;"/>
 </p>
 
-## Why study data science?
-
-## What
+## What is this website for?

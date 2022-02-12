@@ -53,6 +53,8 @@ Suppose now that, instead of using all the items in $$A$$, we have to select $$r
 
   $$n\cdot(n-1)\cdot(n-2)\cdots(n-r+1)=\dfrac{n!}{(n-r)!}.$$
 
+  We also denote this by $${}_nP_r$$.
+
 ### Combination
 
 Suppose we now pick $$r$$ items from $$A$$, disregarding their order. In how many ways can this be done? We can do this in two steps. First, we pick $$r$$ items from $$A$$ and the number of ways to do this is
@@ -63,7 +65,7 @@ Next, we know there are $$r!$$ ways to order the items. Therefore, if we disrega
 
 $$\dfrac{n!}{r!(n-r)!}=\binom{n}{r}$$
 
-possible **combinations** where $$\binom{n}{r}$$ is called the **binomial coefficient**. We can interpret the binomial coefficient as the number of $$r$$-element subsets of a set with $$n$$ elements.
+possible **combinations** where $$\binom{n}{r}$$ is called the **binomial coefficient**. This is also denoted by $${}_nC_r$$. We can interpret the binomial coefficient as the number of $$r$$-element subsets of a set with $$n$$ elements.
 
 {{site.data.alerts.note}}
 <p>

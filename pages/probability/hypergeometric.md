@@ -7,6 +7,12 @@ usemathjax: true
 toc: false
 ---
 
+<p align="center">
+  <img src="images/prob/hypergeom.png" style="width:100px;height:auto;"/>
+</p>
+
+<br>
+
 Consider a bowl with $$n$$ items of which $$m$$ are *red*. We randomly pick $$r$$ items from this bowl **without replacement**, i.e., we don't return to the bowl the items that we've picked. What is the probability that $$k$$ of the items we picked are red?
 
 {% include warning.html content="This might seem to be exactly like the multinomial probability but it is not. In this problem, we are only interested in having $$k$$ red items out of the $$r$$ items that we've picked. Moreover, we are sampling without replacement. In the multinomial case, we can either sample with replacement or think of the bowl as having an infinite number of items so that, if we pick an item, the probability of getting the next item with the same color is unchanged." %}
