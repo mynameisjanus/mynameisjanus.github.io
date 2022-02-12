@@ -27,9 +27,21 @@ entries:
       url: /index.html
       output: web, pdf
 
-  - title: Introduction
+  - title: Overview
     output: web, pdf
     folderitems:
-    - title: Intro
+    - title: Introduction
       url: /statistics_intro.html
+      output: web
+  - title: Foundation of Inference
+    output: web, pdf
+    folderitems:
+    - title: Parametric Models
+      url:
+      output: web
+    - title: Parametric Estimation
+      url:
+      output: web
+    - title: Confidence Intervals
+      url:
       output: web
