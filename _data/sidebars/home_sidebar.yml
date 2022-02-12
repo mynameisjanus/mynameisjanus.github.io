@@ -5,7 +5,7 @@ entries:
   levels: one
   folders:
 
-  - title: Data Science
+  - title: Contents
     output: web
     folderitems:
     - title: Probability
