@@ -15,11 +15,51 @@ toc: false
 
 Suppose we want to know the probability of getting a prime number if we pick from 1 to 100. Since there are 25 prime numbers from 1 to 100, then this probability is $$\frac{25}{100}$$ or $$\frac{1}{4}$$. Now, suppose we are given the information that the number we pick will always be odd. Because there are 24 odd prime numbers and 50 odd numbers, then the probability of picking a prime number, given that it is odd, is $$\frac{24}{50}$$ or $$\frac{12}{25}$$. The probability changed because of the new information! This is called **conditioning**.
 
-We denote the **conditional probability** of $$A$$, given that $$B$$ occurred with $$\mathbf{P}(B)>0$$, by $$\mathbf{P}(A\vert B)$$ and it is defined as
+We denote the **conditional probability** of $$A$$, given that $$B$$ occurred, by $$\mathbf{P}(A\vert B)$$ and it is defined as
 
-$$\mathbf{P}(A|B)=\dfrac{\mathbf{P}(A\cap B)}{\mathbf{P}(B)}.$$
+$$\mathbf{P}(A|B)=\dfrac{\mathbf{P}(A\cap B)}{\mathbf{P}(B)},\qquad\mathbf{P}(B)>0.$$
+
+### Example
+
+We roll a 4-sided die twice. Let $$X$$ be the outcome of the first roll and $$Y$$ the outcome of the second roll. Moreover, let $$B$$ be the event that the minimum of $$X$$ and $$Y$$ is 2, i.e., $$\min(X,Y)=2$$. The event $$B$$ is the shaded region in the figure below.
+
+<p align="center">
+  <img src="images/prob/conexample.png" style="width:150px;height:auto;"/>
+</p>
+
+What is the probability that $$Y=1$$ given that $$B$$ occurred? Since $$\{Y=1\}\cap B=\varnothing$$, then
+
+$$\mathbf{P}(\{Y=1\}\,\lvert\,B)=\dfrac{\mathbf{P}(\{Y=1\}\cap B)}{\mathbf{P}(B)}=0.$$
+
+What is the probability that $$Y$$ is even given that $$B$$ occurred? We have
+
+$$\mathbf{P}(\{Y=\text{even}\}\,\lvert\,B)=\dfrac{\mathbf{P}(\{Y=\text{even}\}\cap B)}{\mathbf{P}(B)}=\dfrac{\frac{4}{16}}{\frac{5}{16}}=\dfrac{4}{5}.$$
+
+### Properties
+
+Conditional probabilities share the properties of ordinary probabilities:
+
+1. **non-negativity**: $$\mathbf{P}(A\lvert B)\geq0,$$ assuming $$\mathbf{P}(B)>0$$
+
+2. **normalization**: $$\mathbf{P}(\Omega\lvert B)=1$$
+
+3. **countable additivity**: If $$A\cap C=\varnothing$$, then $$\mathbf{P}(A\cup C\,\lvert\,B)=\mathbf{P}(A\lvert B)+\mathbf{P}(C\lvert B).$$
+
+    <p align="center">
+      <img src="images/prob/conadd.png" style="width:250px;height:auto;"/>
+    </p>
+
+    Using the figure above, we have
+
+    $$\begin{align}
+    \mathbf{P}(A\cup C\lvert B)&=\dfrac{\mathbf{P}\left((A\cup C)\cap B\right)}{\mathbf{P}(B)}\\
+    &=\dfrac{\mathbf{P}\left((A\cap B)\cup(C\cap B)\right)}{\mathbf{P}(B)}\\
+    &=\dfrac{\mathbf{P}\left(A\cap B\right)+\mathbf{P}\left(C\cap B\right)}{\mathbf{P}(B)}\\
+    &=\mathbf{P}(A|B)+\mathbf{P}(C|B)
+    \end{align}.$$
 
 ## The Multiplication Rule
+
 
 
 ## Total Probability Theorem
