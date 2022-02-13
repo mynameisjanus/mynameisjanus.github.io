@@ -43,6 +43,12 @@ Conditional probabilities share the properties of ordinary probabilities:
 
 2. **normalization**: $$\mathbf{P}(\Omega\lvert B)=1$$
 
+    Proof: $$\mathbf{P}(\Omega\lvert B)=\dfrac{\mathbf{P}(\Omega\cap B)}{\mathbf{P}(B)}=\dfrac{\mathbf{P}(B)}{\mathbf{P}(B)}=1$$
+
+    We also have
+
+    $$\mathbf{P}(\Omega\lvert B)=\dfrac{\mathbf{P}(B\cap B)}{\mathbf{P}(B)}=\dfrac{\mathbf{P}(B)}{\mathbf{P}(B)}=1.$$
+
 3. **countable additivity**: If $$A\cap C=\varnothing$$, then $$\mathbf{P}(A\cup C\,\lvert\,B)=\mathbf{P}(A\lvert B)+\mathbf{P}(C\lvert B).$$
 
     <p align="center">
@@ -55,12 +61,14 @@ Conditional probabilities share the properties of ordinary probabilities:
     \mathbf{P}(A\cup C\lvert B)&=\dfrac{\mathbf{P}\left((A\cup C)\cap B\right)}{\mathbf{P}(B)}\\
     &=\dfrac{\mathbf{P}\left((A\cap B)\cup(C\cap B)\right)}{\mathbf{P}(B)}\\
     &=\dfrac{\mathbf{P}\left(A\cap B\right)+\mathbf{P}\left(C\cap B\right)}{\mathbf{P}(B)}\\
-    &=\mathbf{P}(A|B)+\mathbf{P}(C|B)
-    \end{align}.$$
+    &=\mathbf{P}(A|B)+\mathbf{P}(C|B).
+    \end{align}$$
+
+{% include note.html content="In general, $$\mathbf{P}(A|B)\neq\mathbf{P}(B|A).$$" %}
 
 ## The Multiplication Rule
 
-
+From the definition of conditional probability, we have $$\mathbf{P}(A\cap B)=\mathbf{P}(A|B)\mathbf{P}(B).$$ Moreover,
 
 ## Total Probability Theorem
 

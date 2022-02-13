@@ -9,7 +9,7 @@ entries:
     output: web
     folderitems:
     - title: Probability
-      url: /probability_intro.html
+      url: /math_background.html
       output: web
     - title: Statistics and Data Analysis
       url: /statistics_intro.html
