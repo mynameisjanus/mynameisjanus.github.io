@@ -17,14 +17,14 @@ entries:
     - title: Machine Learning
       url: /machinelearning_intro.html
       output: web
-  - title: About Me
+  - title: About
     output: web
     folderitems:
-    - title: CV
+    - title: About Me
       url: /cv.html
       output: web
-    - title: Contact
-      url:
+    - title: Feedback
+      url: /contact.html
       output: web
     - title: Support this Website
       url: /support.html
