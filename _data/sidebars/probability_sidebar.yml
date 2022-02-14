@@ -70,12 +70,12 @@ entries:
       url: /conditional.html
       output: web, pdf
 
-    - title: Independence
-      url: /independence.html
-      output: web, pdf
-
     - title: Bayes' Theorem
       url: /bayes.html
+      output: web, pdf
+
+    - title: Independence
+      url: /independence.html
       output: web, pdf
 
   - title: Discrete Random Variables

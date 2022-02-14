@@ -68,9 +68,36 @@ Conditional probabilities share the properties of ordinary probabilities:
 
 ## The Multiplication Rule
 
-From the definition of conditional probability, we have $$\mathbf{P}(A\cap B)=\mathbf{P}(A|B)\mathbf{P}(B).$$ Moreover,
+From the definition of conditional probability, we have $$\mathbf{P}(A\cap B)=\mathbf{P}(A\lvert B)\,\mathbf{P}(B).$$ Moreover, since $$\mathbf{P}(A\cap B)=\mathbf{P}(B\cap A)=\mathbf{P}(B\lvert A)\,\mathbf{P}(A)$$, then
+
+$$\mathbf{P}(A\cap B)=\mathbf{P}(A\lvert B)\,\mathbf{P}(B)=\mathbf{P}(B\lvert A)\,\mathbf{P}(A).$$
+
+Extending this to 3 sets, we have
+
+$$\begin{align}
+\mathbf{P}(A\cap B\cap C)&=\mathbf{P}(A\cap B)\,\mathbf{P}(C\lvert A\cap B)\\
+&=\mathbf{P}(A)\,\mathbf{P}(B\lvert A)\,\mathbf{P}(C\lvert A\cap B).
+\end{align}$$
+
+In general, for sets $$A_1,A_2,\ldots,A_n$$,
+
+$$\mathbf{P}(A_1\cap\ldots\cap A_n)=\mathbf{P}(A_1)\prod_{i=2}^{n}\mathbf{P}(A_i\lvert A_1\cap\ldots\cap A_{i-1}).$$
 
 ## Total Probability Theorem
 
+Let's partition our sample space $$\Omega$$ into $$A_1, A2$$ and $$A_3$$, as shown in the figure below.
 
-## Bayes' Rule
+<p align="center">
+  <img src="images/prob/total.png" style="width:250px;height:auto;"/>
+</p>
+
+Then, for any set $$B$$, we have
+
+$$\begin{align}
+\mathbf{P}(B)&=\mathbf{P}(A_1\cap B)+\mathbf{P}(A_2\cap B)+\mathbf{P}(A_3\cap B)\\
+&=\mathbf{P}(A_1)\,\mathbf{P}(B\lvert A_1)+\mathbf{P}(A_2)\,\mathbf{P}(B\lvert A_2)+\mathbf{P}(A_3)\,\mathbf{P}(B\lvert A_3).
+\end{align}$$
+
+In general,
+
+$$\mathbf{P}(B)=\sum_{i}\mathbf{P}(A_i)\,\mathbf{P}(B\lvert A_i).$$
