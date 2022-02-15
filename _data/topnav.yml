@@ -10,8 +10,8 @@ topnav_dropdowns:
           url: /counting.html
         - title: Conditional Probability
           url: /conditional.html
-        - title: Discrete Random Variables
-        - title: Continuous Random Variables
+        - title: Random Variables
+        - title: Joint Random Variables
         - title: More Random Variables
         - title: Bayesian Inference
         - title: Limit Theorems and Classical Statistics

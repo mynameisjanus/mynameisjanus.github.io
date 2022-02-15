@@ -31,7 +31,20 @@ $$A$$ and $$B$$ are **not independent**.
 
 If $$A$$ and $$B$$ are independent, then $$A$$ and $$B^\mathsf{C}$$ are independent.
 
+### Conditional Independence
+
+Two events, $$A$$ and $$B$$, are **conditionally independent** if, given that event $$C$$ occurred,
+
+$$\mathbf{P}(A\cap B\lvert C)=\mathbf{P}(A\lvert C)\,\mathbf{P}(B\lvert C).$$
+
+Now, assume that $$A$$ and $$B$$ are independent. Are they conditionally independent if $$C$$ occurred? No.
+
+{% include note.html content="Independence does not imply conditional independence." %}
+
 ## Mutual Independence
 
+We now generalize the idea of independence to a collection of events. We say that events $$A_1, A_2,\ldots,A_n$$ are **mutually independent** if
 
-## Pairwise Independence
+$$\mathbf{P}(A_i\cap A_j\cap\cdots\cap A_m)=\mathbf{P}(A_i)\,\mathbf{P}(A_j)\ldots\mathbf{P}(A_m)$$
+
+for any distinct indices $$i,j,\ldots,m$$.

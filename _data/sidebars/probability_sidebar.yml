@@ -82,8 +82,18 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Random Variables
+    - title: Introduction to Random Variables
       url: randomv.html
       output: web, pdf
 
-# Copyright 2021 Google LLC
+    - title: Discrete
+      url:
+      output:
+
+  - title: Continuous Random Variables
+    output: web, pdf
+    folderitems:
+
+    - title:
+      url:
+      output: web, pdf
