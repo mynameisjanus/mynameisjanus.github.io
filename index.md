@@ -31,3 +31,5 @@ The aim of this website is to connect the theoretical and the practical aspects 
 ### Prerequisites
 
 Although we will try to build ideas from the ground up, some of the topics will require basic knowledge of **calculus** and **linear algebra**. For data analysis, we will be using **R**, although they can be performed using SPSS, SAS, Python or any other programming languages. For machine learning, we will be using **Python** but R, C++, Matlab or other programming languages will work as well.
+
+{% include note.html content="This website is a work in progress. Most of the contents are still in their draft form." %}

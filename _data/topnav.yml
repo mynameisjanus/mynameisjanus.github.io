@@ -10,7 +10,8 @@ topnav_dropdowns:
           url: /counting.html
         - title: Conditional Probability
           url: /conditional.html
-        - title: Random Variables
+        - title: Discrete Random Variables
+          url: /randomv.html
         - title: Joint Random Variables
         - title: More Random Variables
         - title: Bayesian Inference
