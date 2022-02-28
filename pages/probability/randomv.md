@@ -72,6 +72,33 @@ $$\sigma_X=\sqrt{\mathrm{var}(X)}.$$
 
 ### Properties of the Variance
 
-* $$\mathrm{var}(aX+b)=a^2\mathrm{var}(X)$$
+* The variance of a linear function of $$X$$ is
 
-* $$\mathrm{var}(X)=\mathbb{E}[X^2]-\left(\mathbb{E}[X]\right)^2$$
+  $$\mathrm{var}(aX+b)=a^2\mathrm{var}(X).$$
+
+  {{site.data.alerts.proof}}
+  <p> $$\begin{align}
+  \mathrm{var}(aX+b)&=\mathbb{E}\!\left[\left(aX+b-\mathbb{E}[aX+b]\right)^2\right]\\
+  &=\mathbb{E}\!\left[(aX+b-a\,\mathbb{E}[X]-b)^2\right]\\
+  &=\mathbb{E}\!\left[a^2(X-\mathbb{E}[X])^2\right]\\
+  &=a^2\,\mathbb{E}[(X-\mathbb{E}[X])^2]\\
+  &=a^2\mathrm{var}(X)
+  \end{align}$$
+  </p>
+  {{site.data.alerts.end}}
+
+* A useful formula for variance is
+
+  $$\mathrm{var}(X)=\mathbb{E}[X^2]-\left(\mathbb{E}[X]\right)^2.$$
+
+  {{site.data.alerts.proof}}
+  <p>
+  $$\begin{align}
+  \mathrm{var}(X)&=\mathbb{E}[(X-\mu)^2]\\
+  &=\mathbb{E}[X^2-2\mu X+\mu^2]\\
+  &=\mathbb{E}[X^2]-2\mu\,\mathbb{E}[X]+\mu^2\\
+  &=\mathbb{E}[X^2]-2(\mathbb{E}[X])^2+(\mathbb{E}[X])^2\\
+  &=\mathbb{E}[X^2]-(\mathbb{E}[X])^2
+  \end{align}$$
+  </p>
+  {{site.data.alerts.end}}
