@@ -12,7 +12,7 @@ topnav_dropdowns:
           url: /conditional.html
         - title: Discrete Random Variables
           url: /randomv.html
-        - title: Joint Random Variables
+        - title: Continuous Random Variables
         - title: More Random Variables
         - title: Bayesian Inference
         - title: Limit Theorems and Classical Statistics
@@ -32,10 +32,8 @@ topnav_dropdowns:
       folderitems:
         - title: Introduction
           url: /machinelearning_intro.html
-        - title: Linear Classifiers
-        - title: Nonlinear Classification
-        - title: Linear Regression
-        - title: Collaborative Filtering
+        - title: Linear Classification
+          url:
         - title: Neural Networks
         - title: Unsupervised Learning
         - title: Reinforcement Learning

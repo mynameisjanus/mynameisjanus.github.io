@@ -21,7 +21,7 @@ $$X:\Omega\rightarrow\mathbb{R}.$$
 
 We denote a random variable by a capital letter, e.g., $$X$$, and its numerical values by a small letter, e.g., $$x$$. A function of one or several random variables is also a random variable. For example, $$X+Y$$ is a random variable whose value is $$x+y$$ when $$X=x$$ and $$Y=y$$. There can be several random variables defined on a single sample space.
 
-A random variable can be discrete or continuous. Consider tossing a coin 5 times. We can define a random variable as the number of heads that comes up. In this case, we have a discrete random variable. We might also consider the height of students in a university, in which case we have a continuous random variable. In this section, we will be dealing with discrete random variables.
+A random variable can be discrete or continuous. Consider tossing a coin 5 times. We can define a random variable as the number of heads that come up. In this case, we have a discrete random variable. We might also consider the height of students in a university, in which case we have a continuous random variable. In this section, we will be dealing with discrete random variables.
 
 ## Discrete Random Variables
 
@@ -35,24 +35,43 @@ $$p_X(x)=\mathbf{P}(X=x)=\mathbf{P}(\{\omega\in\Omega:X(\omega)=x\}).$$
 
 #### Example
 
-Consider tossing a fair coin 3 times and define the random variable $$X$$ as the number of heads. We summarize all the possible outcomes of the experiment below.
+Consider tossing a fair coin 3 times and define the random variable $$X$$ as the number of heads. We summarize all the possible outcomes of the experiment on the left table below. To extract the PMF, we add the probabilities of outcomes with the same number of heads. These are summarized on the right table.
 
-| $$\omega$$       | $$\mathbf{P}(\{\omega\})$$ | $$X(\omega)$$    |
-| :--------------: |     :--------------:       | :--------------: |
-| $$HHH$$ | $$\frac{1}{8}$$ | $$3$$ |
-| $$HHT$$ | $$\frac{1}{8}$$ | $$2$$ |
-| $$HTH$$ | $$\frac{1}{8}$$ | $$2$$ |
-| $$THH$$ | $$\frac{1}{8}$$ | $$2$$ |
-| $$HTT$$ | $$\frac{1}{8}$$ | $$1$$ |
-| $$THT$$ | $$\frac{1}{8}$$ | $$1$$ |
-| $$TTH$$ | $$\frac{1}{8}$$ | $$1$$ |
-| $$TTT$$ | $$\frac{1}{8}$$ | $$0$$ |
+<p align="center">
+  <img src="images/prob/pmf1.png" style="width:400px;height:auto;"/>
+</p>
 
-The PMF of the random variable $$X$$ follows from the table above.
+### Expectation
 
-| $$x$$ | $$\mathbf{P}(X=x)$$ |
-|:-----:|:-------------------:|
-| $$0$$ |   $$\frac{1}{8}$$   |
-| $$1$$ |   $$\frac{3}{8}$$   |
-| $$2$$ |   $$\frac{3}{8}$$   |
-| $$3$$ |   $$\frac{1}{8}$$   |
+The **expectation** or **mean** of a discrete random variable is defined as
+
+$$\mathbb{E}[X]=\sum_{x}xp_X(x).$$
+
+### Properties of Expectations
+
+* If $$X\geq0$$, then $$\mathbb{E}[X]\geq0$$.
+* If $$a\leq X\leq b$$, then $$a\leq\mathbb{E}[X]\leq b$$.
+* If $$c$$ is a constant, then $$\mathbb{E}[c]=c$$.
+* Expectation of $$g(X)$$
+
+  $$\mathbb{E}[g(X)]=\sum_{x}g(x)p_X(x)$$
+
+  {% include warning.html content="In general, $$\mathbb{E}\!\left[g(X)\right]\neq g\left(\mathbb{E}[X]\right)$$." %}
+
+### Variance
+
+The **variance** is a measure of the spread of a probability mass function. If $$X$$ is a random variable with expectation $$\mathbb{E}[X]=\mu$$, then its variance is defined by
+
+$$\mathrm{var}(X)=\mathbb{E}\!\left[\left(X-\mu\right)^2\right].$$
+
+The variance is always positive or zero, i.e., $$\mathrm{var}(X)\geq0$$. A random variable whose
+
+From the variance, we can calculate the **standard deviation** $$\sigma_X$$ of a random variable:
+
+$$\sigma_X=\sqrt{\mathrm{var}(X)}.$$
+
+### Properties of the Variance
+
+* $$\mathrm{var}(aX+b)=a^2\mathrm{var}(X)$$
+
+* $$\mathrm{var}(X)=\mathbb{E}[X^2]-\left(\mathbb{E}[X]\right)^2$$

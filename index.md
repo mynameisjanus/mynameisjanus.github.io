@@ -6,7 +6,9 @@ toc: false
 sidebar: home_sidebar
 permalink: index.html
 ---
-<br>
+<p align="center">
+  <img src="images/banner.jpeg"/>
+</p>
 
 <p align="center">
   <img src="images/quote.png" style="width:500px;height:auto;"/>

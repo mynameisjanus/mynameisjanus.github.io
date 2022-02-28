@@ -21,7 +21,6 @@ entries:
   - title: Homepage
     output: web, pdf
     folderitems:
-
     - title: Data Science Homepage
       url: /index.html
       output: web, pdf
@@ -29,7 +28,62 @@ entries:
   - title: Introduction
     output: web, pdf
     folderitems:
-
     - title: Overview
       url: /machinelearning_intro.html
-      output: web
+      output: web, pdf
+
+  - title: Linear Classification
+    output: web, pdf
+    folderitems:
+    - title: Perceptron
+      url:
+      output: web, pdf
+    - title: Hinge Loss and Margin Boundaries
+      url:
+      output: web, pdf
+    - title: Regularization
+      url:
+      output: web, pdf
+    - title: Generalization
+      url:
+      output: web, pdf
+
+  - title: Nonlinear Classication
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web, pdf
+
+  - title: Neural Networks
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url:
+      output: web, pdf
+    - title: Recurrent Neural Networks
+      url:
+      output: web, pdf
+    - title: Convolutional Neural Networks
+      url:
+      output: web, pdf
+
+  - title: Unsupervised Learning
+    output: web, pdf
+    folderitems:
+    - title: Clustering
+      url:
+      output: web, pdf
+    - title: Generative Model
+      url:
+      output: web, pdf
+    - title: Mixture Models and the EM Algorithm
+      url:
+      output: web, pdf
+
+  - title: Reinforcement Learning
+    output: web, pdf
+    folderitems:
+    - title: Introduction
+      url:
+      output: web, pdf

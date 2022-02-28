@@ -32,16 +32,66 @@ entries:
     folderitems:
     - title: Introduction
       url: /statistics_intro.html
-      output: web
+      output: web, pdf
+
   - title: Foundation of Inference
     output: web, pdf
     folderitems:
     - title: Parametric Models
       url:
-      output: web
+      output: web, pdf
     - title: Parametric Estimation
       url:
-      output: web
+      output: web, pdf
     - title: Confidence Intervals
       url:
-      output: web
+      output: web, pdf
+
+  - title: Methods of Estimation
+    output: web, pdf
+    folderitems:
+    - title:
+
+  - title: Hypothesis Testing
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web, pdf
+
+  - title: Bayesian Statistics
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web, pdf
+
+  - title: Linear Regression
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web, pdf
+
+  - title: Causality
+    output: web, pdf
+    folderitems:
+    - title: Definition
+      url:
+      output: web, pdf
+    - title: Randomized Controlled Trials
+      url:
+      output: web, pdf
+    - title: Omitted Variable Bias
+      url:
+      output: web, pdf
+    - title: Endogeneity and Instrumental Variables
+      url:
+      output: web, pdf
+
+  - title: Generalized Linear Model
+    output: web, pdf
+    folderitems:
+    - title:
+      url:
+      output: web, pdf

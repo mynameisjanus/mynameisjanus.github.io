@@ -83,12 +83,24 @@ entries:
     folderitems:
 
     - title: Introduction to Random Variables
-      url: randomv.html
+      url: /randomv.html
       output: web, pdf
 
-    - title: Discrete
+    - title: Bernoulli Random Variables
+      url: /bernoulli.html
+      output: web, pdf
+
+    - title: Binomial Distribution
       url:
-      output:
+      output: web, pdf
+
+    - title: Geometric Distribution
+      url:
+      output: web, pdf
+
+    - title: Hypergeometric Distribution
+      url:
+      output: web, pdf
 
   - title: Continuous Random Variables
     output: web, pdf
