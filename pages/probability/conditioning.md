@@ -38,7 +38,7 @@ If $$X$$ and $$Y$$ are independent, then
 
 $$\mathbb{E}[XY]=\mathbb{E}[X]\,\mathbb{E}[Y]$$
 
-$$g(X)$$ and $$h(Y)$$ are also independent, Random
+If $$X$$ and $$Y$$ are independent, then $$g(X)$$ and $$h(Y)$$ are also independent.
 
 $$\mathbb{E}[g(X)h(Y)]=\mathbb{E}[g(x)]\,\mathbb{E}[h(Y)].$$
 

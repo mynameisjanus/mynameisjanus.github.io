@@ -4,7 +4,7 @@ topnav_dropdowns:
   folders:
     - title: Probability
       folderitems:
-        - title: Models and Axioms
+        - title: Introduction
           url: /math_background.html
         - title: Counting
           url: /basic_principles_of_counting.html
