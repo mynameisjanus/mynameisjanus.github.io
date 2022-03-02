@@ -71,7 +71,7 @@ entries:
       output: web, pdf
 
     - title: Bayes' Theorem
-      url: /bayes.html
+      url: /bayes_theorem.html
       output: web, pdf
 
     - title: Independence
@@ -86,24 +86,28 @@ entries:
       url: /random_variables.html
       output: web, pdf
 
+    - title: Multiple Random Variables
+      url: /multiple_random_variables.html
+      output: web, pdf
+
     - title: Conditioning
       url: /conditioning.html
       output: web, pdf
 
     - title: Bernoulli Random Variables
-      url: /bernoulli.html
+      url: /bernoulli_random_variables.html
       output: web, pdf
 
     - title: Binomial Distribution
-      url:
+      url: /binomial_distribution.html
       output: web, pdf
 
     - title: Geometric Distribution
-      url:
+      url: /geometric_distribution.html
       output: web, pdf
 
     - title: Hypergeometric Distribution
-      url:
+      url: /hypergeometric_distribution.html
       output: web, pdf
 
   - title: Continuous Random Variables

@@ -1,12 +1,12 @@
 ---
-title: Geomtric Distribution
+title: Geometric Distribution
 sidebar: probability_sidebar
 permalink: geometric_distribution.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 13
+weight: 16
 ---
 
 

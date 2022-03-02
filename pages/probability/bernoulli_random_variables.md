@@ -1,12 +1,12 @@
 ---
 title: Bernoulli Random Variables
 sidebar: probability_sidebar
-permalink: bernoulli.html
+permalink: bernoulli_random_variables.html
 folder: probability
 usemathjax: true
 toc: false
 series: "Probability series"
-weight: 12
+weight: 14
 ---
 
 Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable.

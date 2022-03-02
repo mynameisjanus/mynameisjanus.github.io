@@ -1,7 +1,7 @@
 ---
 title: Bayes' Theorem
 sidebar: probability_sidebar
-permalink: bayes.html
+permalink: bayes_theorem.html
 folder: probability
 toc: false
 usemathjax: true

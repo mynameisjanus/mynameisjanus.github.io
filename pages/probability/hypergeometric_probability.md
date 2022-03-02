@@ -1,7 +1,7 @@
 ---
 title: Hypergeometric Probability
 sidebar: probability_sidebar
-permalink: hypergeometric.html
+permalink: hypergeometric_probability.html
 folder: probability
 usemathjax: true
 toc: false

@@ -7,11 +7,11 @@ topnav_dropdowns:
         - title: Models and Axioms
           url: /math_background.html
         - title: Counting
-          url: /counting.html
+          url: /basic_principles_of_counting.html
         - title: Conditional Probability
-          url: /conditional.html
+          url: /definition_conditional.html
         - title: Discrete Random Variables
-          url: /randomv.html
+          url: /random_variables.html
         - title: Continuous Random Variables
         - title: More Random Variables
         - title: Bayesian Inference

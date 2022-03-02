@@ -109,6 +109,6 @@ $$\sigma_X=\sqrt{\mathrm{var}(X)}.$$
   </p>
   {{site.data.alerts.end}}
 
-  <br>
+<br>
 
-  {% include custom/series_prob_next.html %}
+{% include custom/series_prob_next.html %}
