@@ -1,10 +1,12 @@
 ---
 title: Multinomial Probability
 sidebar: probability_sidebar
-permalink: multinomial.html
+permalink: multinomial_probability.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 6
 ---
 <br>
 
@@ -47,3 +49,7 @@ This is the **multinomial coefficient**.
 Finally, the probability of picking $$n$$ items with $$n_i$$ items of color $$i$$ ($$i=1,\ldots,r$$) is
 
 $$\dfrac{n!}{n_1!\cdots n_r!}\,p_1^{n_1}\cdots p_r^{n_r}.$$
+
+<br>
+
+{% include custom/series_prob_next.html %}

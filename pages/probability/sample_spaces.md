@@ -1,10 +1,12 @@
 ---
-title: Introduction
+title: Sample Spaces
 sidebar: probability_sidebar
-permalink: probability_intro.html
+permalink: sample_spaces.html
 folder: probability
 toc: false
 usemathjax: true
+series: "Probability series"
+weight: 2
 ---
 
 <p align="center">
@@ -30,3 +32,7 @@ We now consider rolling a die twice. We can list all the possible outcomes of th
 ## Event
 
 An **event** is simply a *subset* of the sample space. In the example of rolling a die, *getting an even number* is an event. We denote an event by a capital letter, say $$A$$, and we will often speak of the ***probability of an event*** $$A$$.
+
+<br>
+
+{% include custom/series_prob_next.html %}

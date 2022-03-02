@@ -1,10 +1,12 @@
 ---
 title: Discrete Random Variables
 sidebar: probability_sidebar
-permalink: randomv.html
+permalink: random_variables.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 11
 ---
 
 ## Introduction to Random Variables
@@ -58,6 +60,10 @@ $$\mathbb{E}[X]=\sum_{x}xp_X(x).$$
 
   {% include warning.html content="In general, $$\mathbb{E}\!\left[g(X)\right]\neq g\left(\mathbb{E}[X]\right)$$." %}
 
+* Linearity
+
+  $$\mathbb{E}[aX+b]=a\,\mathbb{E}[X]+b$$
+
 ### Variance
 
 The **variance** is a measure of the spread of a probability mass function. If $$X$$ is a random variable with expectation $$\mathbb{E}[X]=\mu$$, then its variance is defined by
@@ -102,3 +108,7 @@ $$\sigma_X=\sqrt{\mathrm{var}(X)}.$$
   \end{align}$$
   </p>
   {{site.data.alerts.end}}
+
+  <br>
+
+  {% include custom/series_prob_next.html %}

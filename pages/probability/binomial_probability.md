@@ -1,10 +1,12 @@
 ---
 title: Binomial Probability
 sidebar: probability_sidebar
-permalink: binomial.html
+permalink: binomial_probability.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 5
 ---
 
 <br>
@@ -28,3 +30,7 @@ $$\mathbf{P}(4\;\text{heads})=\binom{6}{4}p^4(1-p)^{6-4}.$$
 Generalizing this result, the probability of getting $$k$$ heads in $$n$$ coin tosses is
 
 $$\mathbf{P}(k\;\text{heads})=\binom{n}{k}p^k(1-p)^{n-k}.$$
+
+<br>
+
+{% include custom/series_prob_next.html %}

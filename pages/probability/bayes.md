@@ -5,6 +5,8 @@ permalink: bayes.html
 folder: probability
 toc: false
 usemathjax: true
+series: "Probability series"
+weight: 9
 ---
 
 <p align="center">
@@ -32,3 +34,7 @@ $$\begin{align}
 \end{align}$$
 
 There is a 33.27% chance that Bob has covid given that the test was positive.
+
+<br>
+
+{% include custom/series_prob_next.html %}

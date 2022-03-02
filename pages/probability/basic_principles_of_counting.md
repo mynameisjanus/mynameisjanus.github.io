@@ -1,10 +1,12 @@
 ---
-title: Basic Principles
+title: Basic Principles of Counting
 sidebar: probability_sidebar
-permalink: counting.html
+permalink: basic_principles_of_counting.html
 folder: probability
 toc: false
 usemathjax: true
+series: "Probability series"
+weight: 4
 ---
 
 <p align="center">
@@ -84,3 +86,7 @@ $$\sum_{k}^{n}\binom{n}{k}=\binom{n}{0}+\binom{n}{1}+\cdots+\binom{n}{n}=2^n.$$
 $$(1+x)^n=\binom{n}{0}+\binom{n}{1}x+\binom{n}{2}x^2+\cdots+\binom{n}{n}x^n$$
 </p>
 {{site.data.alerts.end}}
+
+<br>
+
+{% include custom/series_prob_next.html %}

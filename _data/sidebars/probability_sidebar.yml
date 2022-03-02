@@ -35,31 +35,31 @@ entries:
       output: web, pdf
 
     - title: Sample Spaces
-      url: /probability_intro.html
+      url: /sample_spaces.html
       output: web, pdf
 
     - title: Probability Axioms
-      url: /axioms.html
+      url: /probability_axioms.html
       output: web, pdf
 
   - title: Counting
     output: web, pdf
     folderitems:
 
-    - title: Basic Principles
-      url: /counting.html
+    - title: Basic Principles of Counting
+      url: /basic_principles_of_counting.html
       output: web, pdf
 
     - title: Binomial Probability
-      url: /binomial.html
+      url: /binomial_probability.html
       output: web, pdf
 
     - title: Multinomial Probability
-      url: /multinomial.html
+      url: /multinomial_probability.html
       output: web, pdf
 
     - title: Hypergeometric Probability
-      url: /hypergeometric.html
+      url: /hypergeometric_probability.html
       output: web, pdf
 
   - title: Conditional Probability
@@ -67,7 +67,7 @@ entries:
     folderitems:
 
     - title: Definition
-      url: /conditional.html
+      url: /definition_conditional.html
       output: web, pdf
 
     - title: Bayes' Theorem
@@ -83,7 +83,11 @@ entries:
     folderitems:
 
     - title: Introduction to Random Variables
-      url: /randomv.html
+      url: /random_variables.html
+      output: web, pdf
+
+    - title: Conditioning
+      url: /conditioning.html
       output: web, pdf
 
     - title: Bernoulli Random Variables

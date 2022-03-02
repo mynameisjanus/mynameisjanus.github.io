@@ -5,6 +5,8 @@ permalink: independence.html
 folder: probability
 toc: false
 usemathjax: true
+series: "Probability series"
+weight: 10
 ---
 
 ## Definition
@@ -48,3 +50,7 @@ We now generalize the idea of independence to a collection of events. We say tha
 $$\mathbf{P}(A_i\cap A_j\cap\cdots\cap A_m)=\mathbf{P}(A_i)\,\mathbf{P}(A_j)\ldots\mathbf{P}(A_m)$$
 
 for any distinct indices $$i,j,\ldots,m$$.
+
+<br>
+
+{% include custom/series_prob_next.html %}

@@ -1,10 +1,12 @@
 ---
 title:  Conditional Probability
 sidebar: probability_sidebar
-permalink: conditional.html
+permalink: definition_conditional.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 8
 ---
 
 <p align="center">
@@ -47,7 +49,9 @@ Conditional probabilities share the properties of ordinary probabilities:
 
     We also have
 
-    $$\mathbf{P}(\Omega\lvert B)=\dfrac{\mathbf{P}(B\cap B)}{\mathbf{P}(B)}=\dfrac{\mathbf{P}(B)}{\mathbf{P}(B)}=1.$$
+    $$\mathbf{P}(\Omega\lvert B)=\dfrac{\ma<br>
+
+{% include custom/series_prob_next.html %}thbf{P}(B\cap B)}{\mathbf{P}(B)}=\dfrac{\mathbf{P}(B)}{\mathbf{P}(B)}=1.$$
 
 3. **countable additivity**: If $$A\cap C=\varnothing$$, then $$\mathbf{P}(A\cup C\,\lvert\,B)=\mathbf{P}(A\lvert B)+\mathbf{P}(C\lvert B).$$
 
@@ -101,3 +105,7 @@ $$\begin{align}
 In general,
 
 $$\mathbf{P}(B)=\sum_{i}\mathbf{P}(A_i)\,\mathbf{P}(B\lvert A_i).$$
+
+<br>
+
+{% include custom/series_prob_next.html %}

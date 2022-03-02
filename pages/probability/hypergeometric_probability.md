@@ -5,6 +5,8 @@ permalink: hypergeometric.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 7
 ---
 
 <p align="center">
@@ -24,3 +26,7 @@ $$\text{size}(\Omega)=\lvert\Omega\rvert=\binom{n}{r}.$$
 Next, we pick $$k$$ items from the $$m$$ red ones. The number of ways to do this is $$\binom{m}{k}$$. Once we have the red items, we pick the remaining $$(r-k)$$ items from the $$(n-m)$$ non-red items. There are $$\binom{n-m}{r-k}$$ ways to do this. We multiply these two to get the number of ways to get $$k$$ red items out of the $$r$$ items we picked. Therefore, the probability of getting $$k$$ red items, if we picked $$r$$ items, is
 
 $$\dfrac{\displaystyle\binom{m}{k}\binom{n-m}{r-k}}{\displaystyle\binom{n}{r}}.$$
+
+<br>
+
+{% include custom/series_prob_next.html %}

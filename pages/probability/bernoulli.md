@@ -5,6 +5,8 @@ permalink: bernoulli.html
 folder: probability
 usemathjax: true
 toc: false
+series: "Probability series"
+weight: 12
 ---
 
 Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable.
@@ -16,3 +18,8 @@ Consider a trial where there are only two possible outcomes: *success/failure*, 
 </p>
 
 The **indicator random variable** takes on the value of $$1$$ if and only if the event $$A$$ occurs. Otherwise, it's $$0$$.
+
+
+<br>
+
+{% include custom/series_prob_next.html %}

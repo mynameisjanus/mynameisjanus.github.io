@@ -5,8 +5,9 @@ permalink: math_background.html
 toc: false
 folder: probability
 usemathjax: true
+series: "Probability series"
+weight: 1
 ---
-
 
 ## Basic Set Theory
 
@@ -68,7 +69,8 @@ The first of de Morgan's laws states that the complement of the union of sets is
 $$\left(\bigcup_{n}S_n\right)^{\!\mathsf{C}}=\bigcap_{n}\left(S_n\right)^{\mathsf{C}}.$$
 
 The symbol $$\bigcup$$ means we have to take the union of all the sets $$S_n$$ while $$\bigcap$$ means we have to take the intersection of all the sets.
-
+series: "ACME series"
+weight: 1.0
 The second law states that the complement of the intersection of sets is equal to the union of their complements:
 
 $$\left(\bigcap_{n}S_n\right)^{\!\mathsf{C}}=\bigcup_{n}\,(S_n)^\mathsf{C}.$$
@@ -124,3 +126,7 @@ $$S=\sum_{i=0}^{\infty}\alpha^i=1+\alpha+\alpha^2+\ldots$$
 This series will converge if $$\lvert\alpha\rvert<1$$, in which case we have
 
 $$S=\dfrac{1}{1-\alpha}.$$
+
+<br>
+
+{% include custom/series_prob_next.html %}

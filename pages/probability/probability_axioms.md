@@ -1,10 +1,12 @@
 ---
-title: Axioms of Probability
+title: Probability Axioms
 sidebar: probability_sidebar
-permalink: axioms.html
+permalink: probability_axioms.html
 folder: probability
 toc: false
 usemathjax: true
+series: "Probability series"
+weight: 3
 ---
 
 ## Basic Notions and Notation
@@ -120,3 +122,7 @@ $$\mathbf{P}(A\cap B)\geq\mathbf{P}(A)+\mathbf{P}(B)-1.$$
 In general, for $$n$$ events $$A_1,\ldots,A_n$$,
 
 $$\mathbf{P}(A_1\cap\ldots\cap A_n)\geq\mathbf{P}(A_1)+\ldots+\mathbf{P}(A_n)-(n-1).$$
+
+<br>
+
+{% include custom/series_prob_next.html %}
