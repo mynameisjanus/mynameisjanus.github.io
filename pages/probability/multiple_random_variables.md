@@ -21,7 +21,7 @@ $$p_{X,Y,Z}(x,y,z)=\mathbf{P}(X=x,Y=y,Z=z)$$
 
 ### Functions of Multiple Random Variables
 
-$$\mathbb{E}[g(X,Y)]=\sum_{x}sum_{y}g(x,y)p_{X,Y}(x,y)$$
+$$\mathbb{E}[g(X,Y)]=\sum_{x}\sum_{y}g(x,y)p_{X,Y}(x,y)$$
 
 ## Linearity of Expectations
 

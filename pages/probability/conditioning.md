@@ -36,7 +36,13 @@ $$p_{X\lvert Y}(x\lvert y)=\dfrac{p_{X,Y}(x,y)}{p_Y(y)}$$
 
 If $$X$$ and $$Y$$ are independent, then
 
-$$\mathbb{E}[XY]=\mathbb{E}[X]\mathbb{E}[Y]$$
+$$\mathbb{E}[XY]=\mathbb{E}[X]\,\mathbb{E}[Y]$$
+
+$$g(X)$$ and $$h(Y)$$ are also independent, Random
+
+$$\mathbb{E}[g(X)h(Y)]=\mathbb{E}[g(x)]\,\mathbb{E}[h(Y)].$$
+
+$$\mathrm{var}(X+Y)=\mathrm{var}(X)+\mathrm{var}(Y).$$
 
 <br>
 
