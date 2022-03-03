@@ -13,7 +13,7 @@ weight: 13
 
 ### Conditional PMF and Expectation
 
-Assuming that $$\mathbf{P}(A)\geq 0$$,
+Assuming that $$\mathbf{P}(A)>0$$,
 
 $$p_{X\lvert A}(x)=\mathbf{P}(X=x\lvert A).$$
 

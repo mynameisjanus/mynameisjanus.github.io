@@ -41,7 +41,7 @@ $$\begin{align}
   <img src="images/prob/bernoulli.png" style="width:250px;height:auto;"/>
 </p>
 
-The **indicator random variable** $$I_A$$ takes on the value of $$1$$ if and only if the event $$A$$ occurs. Otherwise, it's $$0$$. Given that the probability of event $$A$$ occurring is $$\mathbf{P}(A)$$, then the expectation of an indicator random variable is
+The **indicator random variable** $$I_A$$ takes on the value $$1$$ if and only if the event $$A$$ occurs. Otherwise, it's $$0$$. Given that the probability of event $$A$$ occurring is $$\mathbf{P}(A)$$, then the expectation of an indicator random variable is
 
 $$\begin{align}
 \mathbb{E}[I_A]&=1\cdot\mathbf{P}(A)+0\cdot\mathbf{P}(A^\mathsf{C})\\

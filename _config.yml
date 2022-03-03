@@ -109,3 +109,13 @@ description: "Intended as a collection of resources for various data science top
 # the description is used in the feed.xml file
 
 github: mynameisjanus
+
+# Resume details
+resume_section_experience:      true
+resume_section_education:       true
+resume_section_projects:        true
+resume_section_skills:          true
+# resume_section_recognition:     false
+# resume_section_links:           false
+resume_section_associations:    true
+resume_section_interests:       true
