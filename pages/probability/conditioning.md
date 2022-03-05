@@ -11,21 +11,33 @@ weight: 13
 
 ## Conditioning on an Event
 
+<p align="center">
+  <img src="images/prob/conditioning.png" style="width:150px;height:auto;"/>
+</p>
+
 ### Conditional PMF and Expectation
 
-Assuming that $$\mathbf{P}(A)>0$$,
+We consider conditioning on an event $$A$$. Assuming that the probability that event $$A$$ occurs is positive, i.e., $$\mathbf{P}(A)>0$$, the **conditional PMF** of a random variable $$X$$ given that $$A$$ occurred is
 
 $$p_{X\lvert A}(x)=\mathbf{P}(X=x\lvert A).$$
 
-$$\sum_{x}p_{X\lvert A}(x)=1$$
+Like ordinary probabilities, it is normalized, i.e.,
 
-$$\mathbb{E}[X\lvert A]=\sum_{x}xp_{X\lvert A}(x)$$
+$$\sum_{x}p_{X\lvert A}(x)=1.$$
 
-$$\mathbb{E}[g(X)\lvert A]=\sum_{x}g(x)p_{X\lvert A}(x)$$
+The **conditional expectation** of $$X$$ is then
+
+$$\mathbb{E}[X\lvert A]=\sum_{x}xp_{X\lvert A}(x).$$
+
+Given a function of $$X$$, $$g(X)$$, its conditional expectation is
+
+$$\mathbb{E}[g(X)\lvert A]=\sum_{x}g(x)p_{X\lvert A}(x).$$
 
 ### Total Expectation Theorem
 
-$$\mathbb{E}[X]=\mathbf{P}(A_1)\mathbb{E}[X\lvert A_1]+\ldots+\mathbf{P}(A_n)\mathbb{E}[X\lvert A_n]$$
+If we divide the sample space into $$n$$ disjoint events $$A_1,\ldots,A_n,$$ then the expectation of $$X$$ is
+
+$$\mathbb{E}[X]=\mathbf{P}(A_1)\mathbb{E}[X\lvert A_1]+\ldots+\mathbf{P}(A_n)\mathbb{E}[X\lvert A_n].$$
 
 
 ## Conditioning on another Random Variable

@@ -47,11 +47,19 @@ and similarly for $$p_{Y,Z}(y,z)$$, $$p_{X,Z}(x,z)$$, $$p_{Y}(y)$$ and $$p_{Z}(z
 
 ### Functions of Multiple Random Variables
 
+Now, consider a function of two random variables $$g(X,Y)$$. It is also a random variable, i.e., $$g(X,Y)=Z$$ with PMF
+
+$$p_Z(z)=\mathbf{P}(g(X,Y)=z)=\sum_{(x,y):\,g(x,y)=z}p_{X,Y}(x,y).$$
+
+The latter states that we have to sum the joint probability mass function over all pairs $$(x,y)$$ such that $$g(x,y)=z$$. Its expectation is
+
 $$\mathbb{E}[g(X,Y)]=\sum_{x}\sum_{y}g(x,y)p_{X,Y}(x,y).$$
 
 ## Linearity of Expectations
 
-$$\mathbb{E}[X_1+\ldots+X_n]=\mathbb{E}[X_1]+\ldots+\mathbb{E}[X_n]$$
+Consider now the sum of $$n$$ random variables $$X_1, X_2,\ldots,X_n$$. Because expectations are linear, we have
+
+$$\mathbb{E}[X_1+\ldots+X_n]=\mathbb{E}[X_1]+\ldots+\mathbb{E}[X_n].$$
 
 
 <br>

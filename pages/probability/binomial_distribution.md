@@ -10,7 +10,9 @@ weight: 15
 ---
 
 
-
+<p align="center">
+  <img src="images/prob/binomial.png" style="width:400px;height:auto;"/>
+</p>
 
 <br>
 
