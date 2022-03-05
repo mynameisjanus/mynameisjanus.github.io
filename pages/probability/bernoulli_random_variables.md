@@ -16,6 +16,10 @@ $$X=\begin{cases}
 0, & \text{with probability}\quad 1-p.
 \end{cases}$$
 
+We can write the PMF of a Bernoulli random variable as
+
+$$p_X(x)=p^x(1-p)^{1-x}.$$
+
 ### Expectation and Variance
 
 The expectation of a Bernoulli random variable is
