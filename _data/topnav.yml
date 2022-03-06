@@ -13,11 +13,11 @@ topnav_dropdowns:
         - title: Discrete Random Variables
           url: /random_variables.html
         - title: Continuous Random Variables
-        - title: More Random Variables
+        - title: Further Topics
         - title: Bayesian Inference
-        - title: Limit Theorems and Classical Statistics
-        - title: Bernoulli and Poisson Processes
-        - title: Markov Chains
+        - title: Limit Theorems
+        - title: Stochastic Processes
+        - title: Markov Processes
     - title: Statistics and Data Analysis
       folderitems:
         - title: Introduction
@@ -37,13 +37,3 @@ topnav_dropdowns:
         - title: Neural Networks
         - title: Unsupervised Learning
         - title: Reinforcement Learning
-
-## Topnav single links
-## if you want to list an external url, use external_url instead of url. the theme will apply a different link base.
-topnav:
-- title: Topnav
-  items:
-    - title: GitHub
-      external_url: https://github.com/mynameisjanus
-
-# Copyright 2021 Google LLC

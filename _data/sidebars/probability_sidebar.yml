@@ -117,3 +117,47 @@ entries:
     - title: Probability Density Function
       url: continuouspdf.html
       output: web, pdf
+
+  - title: Further Topics
+    output: web, pdf
+    folderitems:
+
+    - title: Derived Distributions
+      url:
+      output: web, pdf
+
+    - title: Covariance and Correlation
+      url:
+      output: web, pdf
+
+  - title: Bayesian Inference
+    output: web, pdf
+    folderitems:
+
+    - title:
+      url:
+      output: web, pdf
+
+  - title: Limit Theorems
+    output: web, pdf
+    folderitems:
+
+    - title: The Law of Large Numbers
+      url:
+      output: web, pdf
+
+  - title: Stochastic Processes
+    output: web, pdf
+    folderitems:
+
+    - title: Stochastic Processes
+      url:
+      output: web, pdf
+
+  - title: Markov Processes
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url:
+      output: web, pdf

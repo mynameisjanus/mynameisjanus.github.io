@@ -15,6 +15,12 @@ Number of tosses until the first Head
 
 $$p_X(k)=\mathbf{P}(X=k)=(1-p)^{k-1}p$$
 
+## Expectation
+
+## Variance
+
+$$\mathrm{var}(X)=\dfrac{1-p}{p^2}$$
+
 ## Conditioning
 
 ### Memorylessness
@@ -27,7 +33,7 @@ $$p_X(k)=\mathbf{P}(X=k)=(1-p)^{k-1}p$$
 library(tidyverse)
 
 reps <- 10000 # number of replications
-p <- 0.6      # probability of success
+p <- 0.5      # probability of success
 
 # Initialize vector for the replications
 tosses_to_success <- 0

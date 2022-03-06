@@ -35,7 +35,7 @@ $$\mathrm{var}(X)=np(1-p)$$
 library(tidyverse)
 
 n <- 25        # number of trials
-p <- 0.7       # probability of success
+p <- 0.5       # probability of success
 reps <- 10000  # number of replications
 
 num_success <- replicate(reps, {
