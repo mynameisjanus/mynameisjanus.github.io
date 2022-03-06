@@ -123,10 +123,18 @@ entries:
     folderitems:
 
     - title: Derived Distributions
-      url:
+      url: derived_distributions.html
       output: web, pdf
 
-    - title: Covariance and Correlation
+    - title: Covariance
+      url: covariance.html
+      output: web, pdf
+
+    - title: Correlation
+      url: correlation.html
+      output: web, pdf
+
+    - title: Revisiting Conditioning
       url:
       output: web, pdf
 
@@ -146,11 +154,35 @@ entries:
       url:
       output: web, pdf
 
+    - title: The Central Limit Theorem
+      url:
+      output: web, pdf
+
   - title: Stochastic Processes
     output: web, pdf
     folderitems:
 
-    - title: Stochastic Processes
+    - title: The Bernoulli Process
+      url:
+      output: web, pdf
+
+    - title: Merging of Bernoulli Processes
+      url:
+      output: web, pdf
+
+    - title: Splitting of Bernoulli Process
+      url:
+      output: web, pdf
+
+    - title: The Poisson Process
+      url:
+      output: web, pdf
+
+    - title: Merging of Poisson Processes
+      url:
+      output: web, pdf
+
+    - title: Splitting of a Poisson Process
       url:
       output: web, pdf
 

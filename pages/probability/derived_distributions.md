@@ -1,10 +1,10 @@
 ---
-title: Probability Density Function
+title: Derived Distributions
 sidebar: probability_sidebar
-permalink: expectation_variance.html
+permalink: derived_distributions.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 18
+weight:
 ---

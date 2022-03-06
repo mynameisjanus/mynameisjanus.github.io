@@ -11,7 +11,7 @@ weight: 15
 
 
 <p align="center">
-  <img src="images/prob/binomial.png" style="width:400px;height:auto;"/>
+  <img src="images/prob/binomial.png" style="width:300px;height:auto;"/>
 </p>
 
 Number of successes in $$n$$ independent trials.

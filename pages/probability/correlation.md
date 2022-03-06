@@ -1,10 +1,10 @@
 ---
-title: Probability Density Function
+title: Correlation
 sidebar: probability_sidebar
-permalink: expectation_variance.html
+permalink: correlation.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 18
+weight:
 ---
