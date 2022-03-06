@@ -42,7 +42,23 @@ $$\mathbb{E}[X]=\mathbf{P}(A_1)\mathbb{E}[X\lvert A_1]+\ldots+\mathbf{P}(A_n)\ma
 
 ## Conditioning on another Random Variable
 
-$$p_{X\lvert Y}(x\lvert y)=\dfrac{p_{X,Y}(x,y)}{p_Y(y)}$$
+We can also condition a random variable on another random variable. The conditional PMF of $$X$$ given that $$Y=y$$ is defined by
+
+$$p_{X\lvert Y}(x\lvert y)=\dfrac{p_{X,Y}(x,y)}{p_Y(y)},$$
+
+assuming that $$p_Y(y)>0$$. We can also condition on two random variables with the conditional PMF being
+
+$$p_{X\lvert Y,Z}(x\lvert y,z)=\dfrac{p_{X,Y,Z}(x,y,z)}{p_{Y,Z}(y,z)}.$$
+
+### Conditional Expectation
+
+The **conditional expectation** of a random variable $$X$$ conditioned on $$Y=y$$ is
+
+$$\mathbb{E}[X\lvert Y=y]=\sum_{x}xp_{X\lvert Y}(x\lvert y).$$
+
+Moreover, for any function $$g(X)$$,
+
+$$\mathbb{E}[g(X)\lvert Y=y]=\sum_{x}g(x)p_{X\lvert Y}(x\lvert y).$$
 
 ## Independence
 

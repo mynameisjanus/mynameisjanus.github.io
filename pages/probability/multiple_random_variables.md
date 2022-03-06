@@ -28,7 +28,7 @@ $$p_X(x)=\sum_{x}p_{X,Y}(x,y)\qquad p_Y(y)=\sum_{x}p_{X,Y}(x,y)$$
 
 ### More than 2 Random Variables
 
-We can general this concept to three or more random variables. If we have three random variables, $$X$$, $$Y$$ and $$Z$$, the PMF is
+We can generalize this concept to three or more random variables. If we have three random variables, $$X$$, $$Y$$ and $$Z$$, the PMF is
 
 $$p_{X,Y,Z}(x,y,z)=\mathbf{P}(X=x,Y=y,Z=z)$$
 

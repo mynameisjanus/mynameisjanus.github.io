@@ -114,6 +114,6 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title:
-      url:
+    - title: Probability Density Function
+      url: continuouspdf.html
       output: web, pdf
