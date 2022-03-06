@@ -34,21 +34,20 @@ $$\mathrm{var}(X)=np(1-p)$$
 ```r
 library(tidyverse)
 
-n <- 25     # number of trials
-p <- 0.7    # probability of success
-rep <- 10000  # number of replications
+n <- 25        # number of trials
+p <- 0.7       # probability of success
+reps <- 10000  # number of replications
 
-num_success <- replicate(rep, {
-  exp <- sample(c(0,1), size = n, replace = TRUE, prob = c(1-p, p))
+num_success <- replicate(reps, {
+  exp <- sample(c(0, 1), size = n, replace = TRUE, prob = c(1-p, p))
   sum(x)
-  })
+})
 
-# Plot the percentage of replications
+# Plot the number of success versus the percentage of replications
 data.frame(num_success) %>%
-  ggplot(aes(num_success, y=..density..)) +
-  geom_histogram(binwidth = 0.5, color = "lightblue", fill = "dodgerblue") +
-  labs(x = "Number of Success", y = "Probability") +
-  theme_void()
+  ggplot(aes(num_success)) +
+  geom_bar(aes(y = ..prop..)) +
+  labs(x = "Number of Successes", y = "Probability")
 ```
 <br>
 
