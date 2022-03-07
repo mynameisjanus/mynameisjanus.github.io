@@ -118,6 +118,24 @@ entries:
       url: continuouspdf.html
       output: web, pdf
 
+    - title: Conditioning
+      url:
+      output: web, pdf
+
+    - title: Continuous Uniform Distribution
+      url:
+      output: web, pdf
+
+    - title: Exponential Distribution
+      url:
+      output: web, pdf
+
+    - title: The Gaussian Distribution
+      url:
+      output: web, pdf
+
+
+
   - title: Further Topics
     output: web, pdf
     folderitems:

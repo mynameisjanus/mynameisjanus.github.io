@@ -9,6 +9,10 @@ series: "Probability series"
 weight: 16
 ---
 
+<p align="center">
+  <img src="images/prob/geom_dist.png" style="width:200px;height:auto;"/>
+</p>
+
 Number of tosses until the first Head
 
 ## Probability Mass Function
@@ -16,6 +20,8 @@ Number of tosses until the first Head
 $$p_X(k)=\mathbf{P}(X=k)=(1-p)^{k-1}p$$
 
 ## Expectation
+
+$$\mathbb{E}[X]=\dfrac{1}{p}$$
 
 ## Variance
 
