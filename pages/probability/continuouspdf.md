@@ -57,10 +57,13 @@ $$\mathrm{var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f_X(x)\,\mathrm{d}x.$$
 
 ## Cumulative Distribution Function
 
-$$F_X(x)=\mathbf{P}(X\leq x)=\int_{-\infty}^{x}f_X(t)\,\mathrm{d}t$$
+The **cumulative distribution function** is defined as the probability that a random variable $$X$$ is less than $$x$$, i.e.,
 
+$$F_X(x)=\mathbf{P}(X\leq x)=\int_{-\infty}^{x}f_X(t)\,\mathrm{d}t.$$
 
-$$f_X(x)=\dfrac{\mathrm{d}F_X(x)}{\mathrm{d}x}$$
+Using the fundamental theorem of calculus, we can calculate the probability density function from the cumulative distribution function, i.e.,
+
+$$f_X(x)=\dfrac{\mathrm{d}F_X(x)}{\mathrm{d}x}.$$
 
 ### Properties of the CDF
 

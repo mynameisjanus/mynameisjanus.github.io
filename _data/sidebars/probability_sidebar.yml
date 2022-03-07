@@ -82,7 +82,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Introduction to Random Variables
+    - title: Discrete Random Variables
       url: /random_variables.html
       output: web, pdf
 
@@ -114,12 +114,16 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Probability Density Function
+    - title: Continuous Random Variables
       url: continuouspdf.html
       output: web, pdf
 
+    - title: Multiple Random Variables
+      url: multiple_rv.html
+      output: web, pdf
+
     - title: Conditioning
-      url:
+      url: conditioning_cont.html
       output: web, pdf
 
     - title: Continuous Uniform Distribution
