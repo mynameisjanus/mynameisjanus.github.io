@@ -1,12 +1,12 @@
 ---
 title: Probability Density Function
 sidebar: probability_sidebar
-permalink: continuouspdf.html
+permalink: continuous_pdf.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 18
+weight: 19
 ---
 
 ## Probability Density Function
@@ -32,7 +32,7 @@ Instead of taking sums, we use integration to calculate the expectation of a con
 
 $$\mathbb{E}[X]=\int_{-\infty}^{\infty}xf_X(x)\,\mathrm{d}x.$$
 
-### Properties
+### Properties of the Expectation
 
 * If $$X\geq 0$$, then $$\mathbb{E}[X]\geq 0$$.
 * If $$a\leq X\leq b$$, then $$a\leq\mathbb{E}[X]\leq b$$.
@@ -53,7 +53,6 @@ $$\mathrm{var}(X)=\mathbb{E}[(x-\mu)^2]$$
 where $$\mu=\mathbb{E}[X]$$. However, the explicit formula for calculating it is
 
 $$\mathrm{var}(X)=\int_{-\infty}^{\infty}(x-\mu)^2f_X(x)\,\mathrm{d}x.$$
-
 
 ## Cumulative Distribution Function
 

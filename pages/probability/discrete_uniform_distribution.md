@@ -1,14 +1,13 @@
 ---
-title: Derived Distributions
+title: Discrete Uniform Distribution
 sidebar: probability_sidebar
-permalink: derived_distributions.html
+permalink: discrete_uniform_distribution.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight:
+weight: 14
 ---
-
 
 <br>
 

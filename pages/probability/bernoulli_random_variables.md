@@ -6,7 +6,7 @@ folder: probability
 usemathjax: true
 toc: false
 series: "Probability series"
-weight: 14
+weight: 15
 ---
 
 Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable. A **Bernoulli random variable** $$X$$ takes on the value $$1$$ with probability $$p$$ or $$0$$ with probability $$1-p$$, i.e.,

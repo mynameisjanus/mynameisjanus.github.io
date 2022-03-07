@@ -94,6 +94,10 @@ entries:
       url: /conditioning.html
       output: web, pdf
 
+    - title: Discrete Uniform Distribution
+      url: /discrete_uniform_distribution.html
+      output: web, pdf
+
     - title: Bernoulli Random Variables
       url: /bernoulli_random_variables.html
       output: web, pdf
@@ -115,7 +119,7 @@ entries:
     folderitems:
 
     - title: Continuous Random Variables
-      url: continuouspdf.html
+      url: continuous_pdf.html
       output: web, pdf
 
     - title: Multiple Random Variables
@@ -124,6 +128,10 @@ entries:
 
     - title: Conditioning
       url: conditioning_cont.html
+      output: web, pdf
+
+    - title: Bayes' Rule
+      url: bayes_rule.html
       output: web, pdf
 
     - title: Continuous Uniform Distribution
@@ -135,7 +143,7 @@ entries:
       output: web, pdf
 
     - title: The Gaussian Distribution
-      url:
+      url: gaussian.html
       output: web, pdf
 
 

@@ -1,12 +1,12 @@
 ---
-title: Derived Distributions
+title: The Bayes' Rule
 sidebar: probability_sidebar
-permalink: derived_distributions.html
+permalink: bayes_rule.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight:
+weight: 22
 ---
 
 
