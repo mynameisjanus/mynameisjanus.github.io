@@ -1,7 +1,7 @@
 ---
 title: The Gaussian Distribution
 sidebar: probability_sidebar
-permalink: gaussian.html
+permalink: gaussian_distribution.html
 folder: probability
 toc: false
 usemathjax: true

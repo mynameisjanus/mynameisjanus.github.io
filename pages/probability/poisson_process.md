@@ -1,14 +1,13 @@
 ---
-title: Bayes' Rule
+title: The Poisson Process
 sidebar: probability_sidebar
-permalink: bayes_rule.html
+permalink: poisson_process.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 23
+weight:
 ---
-
 
 <br>
 

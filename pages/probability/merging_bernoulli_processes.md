@@ -1,14 +1,13 @@
 ---
-title: Bayes' Rule
+title: Merging of Bernoulli Processes
 sidebar: probability_sidebar
-permalink: bayes_rule.html
+permalink: merging_bernoulli_processes.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 23
+weight:
 ---
-
 
 <br>
 

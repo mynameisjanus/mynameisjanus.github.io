@@ -1,14 +1,15 @@
 ---
-title: Bayes' Rule
+title: Markov Processes II
 sidebar: probability_sidebar
-permalink: bayes_rule.html
+permalink: markov_processes_2.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 23
+weight:
 ---
 
+## Steady State Probabilities
 
 <br>
 
