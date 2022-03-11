@@ -1,7 +1,7 @@
 ---
 title: Conditioning
 sidebar: probability_sidebar
-permalink: conditioning.html
+permalink: conditioning_discrete.html
 folder: probability
 usemathjax: true
 toc: false

@@ -1,12 +1,12 @@
 ---
 title: Conditioning
 sidebar: probability_sidebar
-permalink: conditioning_cont.html
+permalink: conditioning_continuous.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 21
+weight: 22
 ---
 
 ## Conditioning on an Event

@@ -1,7 +1,7 @@
 ---
 title: Multiple Random Variables
 sidebar: probability_sidebar
-permalink: multiple_random_variables.html
+permalink: multiple_discrete_rv.html
 folder: probability
 usemathjax: true
 toc: false

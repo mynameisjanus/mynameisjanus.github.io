@@ -1,12 +1,12 @@
 ---
 title: Multiple Random Variables
 sidebar: probability_sidebar
-permalink: multiple_rv.html
+permalink: multiple_continuous_rv.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 20
+weight: 21
 ---
 
 ## Joint Probability Distribution Function

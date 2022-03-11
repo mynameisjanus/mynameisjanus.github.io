@@ -1,17 +1,21 @@
 ---
-title: Hypergeometric Distribution
+title: The Poisson Distribution
 sidebar: probability_sidebar
-permalink: hypergeometric_distribution.html
+permalink: poisson_distribution.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 18
+weight: 19
 ---
 
 ## Probability Mass Function
 
-$$p_X(k)=\mathbf{P}(X=k)=\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n}{m}}$$
+$$p_X(k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$$
+
+## Expectation
+
+## Variance
 
 <br>
 

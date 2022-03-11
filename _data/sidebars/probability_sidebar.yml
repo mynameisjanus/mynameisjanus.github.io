@@ -87,11 +87,11 @@ entries:
       output: web, pdf
 
     - title: Multiple Random Variables
-      url: /multiple_random_variables.html
+      url: /multiple_discrete_rv.html
       output: web, pdf
 
     - title: Conditioning
-      url: /conditioning.html
+      url: /conditioning_discrete.html
       output: web, pdf
 
     - title: Discrete Uniform Distribution
@@ -114,28 +114,32 @@ entries:
       url: /hypergeometric_distribution.html
       output: web, pdf
 
+    - title: Poisson Distribution
+      url: /poisson_distribution.html
+      output: web, pdf
+
   - title: Continuous Random Variables
     output: web, pdf
     folderitems:
 
     - title: Continuous Random Variables
-      url: continuous_pdf.html
+      url: /continuous_pdf.html
       output: web, pdf
 
     - title: Multiple Random Variables
-      url: multiple_rv.html
+      url: /multiple_continuous_rv.html
       output: web, pdf
 
     - title: Conditioning
-      url: conditioning_cont.html
+      url: /conditioning_continuous.html
       output: web, pdf
 
     - title: Bayes' Rule
-      url: bayes_rule.html
+      url: /bayes_rule.html
       output: web, pdf
 
     - title: Continuous Uniform Distribution
-      url:
+      url: /continuous_uniform.html
       output: web, pdf
 
     - title: Exponential Distribution
@@ -143,7 +147,7 @@ entries:
       output: web, pdf
 
     - title: The Gaussian Distribution
-      url: gaussian.html
+      url: /gaussian.html
       output: web, pdf
 
 
