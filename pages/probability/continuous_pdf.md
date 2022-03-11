@@ -1,5 +1,5 @@
 ---
-title: Probability Density Function
+title: Continuous Random Variables
 sidebar: probability_sidebar
 permalink: continuous_pdf.html
 folder: probability

@@ -17,11 +17,25 @@ Number of tosses until the first Head
 
 ## Probability Mass Function
 
+$$k=1,2,\ldots$$
+
 $$p_X(k)=\mathbf{P}(X=k)=(1-p)^{k-1}p$$
 
 ## Expectation
 
 $$\mathbb{E}[X]=\dfrac{1}{p}$$
+
+{{site.data.alerts.proof}}
+<p>
+$$\begin{align}
+\mathbb{E}[X]&=\sum_{k=1}^{\infty}kp(1-p)^{k-1}\\
+&=-p\,\dfrac{\mathrm{d}}{\mathrm{d}p}\sum_{k=1}^{\infty}(1-p)^k\\
+&=-p\,\dfrac{\mathrm{d}}{\mathrm{d}p}\left[-1+\sum_{k=0}^{\infty}(1-p)^k\right]\\
+&=-p\,\dfrac{\mathrm{d}}{\mathrm{d}p}\left(-1+\dfrac{1}{p}\right)\\
+&=\frac{1}{p}
+\end{align}$$
+</p>
+{{site.data.alerts.end}}
 
 ## Variance
 
@@ -29,9 +43,13 @@ $$\mathrm{var}(X)=\dfrac{1-p}{p^2}$$
 
 ## Conditioning
 
+Conditioned on $$X>1$$, $$X-1$$ is geometric with parameter $$p$$.
+
 ### Memorylessness
 
+The number of remaining coin tosses, conditioned on  Tails in the first toss, is Geometric with parameter $$p$$.
 
+Conditioned on $$X>n$$, $$X-n$$ is geometric with parameter $$p$$.
 
 ## Monte Carlo Simulation
 
