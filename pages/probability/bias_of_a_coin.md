@@ -27,6 +27,11 @@ $$\theta^k(1-\theta)^{n-k}$$
 
 {{site.data.alerts.note}}
 <p>
-$$\int_{0}^{1}\theta^\alpha(1-\theta)^\beta\mathrm{d}\theta=\dfrac{\alpha!\,\beta!}{(\alpha+\beta+1)!}\qquad\text{for}\qquad\alpha,\beta\geq0$$
+$$\int_{0}^{1}\theta^\alpha(1-\theta)^\beta\mathrm{d}\theta=\dfrac{\alpha!\,\beta!}{(\alpha+\beta+1)!}\qquad\text{for}\quad\alpha,\beta\geq0$$
 </p>
 {{site.data.alerts.end}}
+
+
+<br>
+
+{% include custom/series_prob_next.html %}

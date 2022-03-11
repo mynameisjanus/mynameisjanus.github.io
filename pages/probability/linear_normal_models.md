@@ -1,15 +1,15 @@
 ---
-title: Linear Least Mean Squares Estimation
+title: Linear Models with Normal Noise
 sidebar: probability_sidebar
-permalink: linear_lms.html
+permalink: linear_normal_models.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 33
+weight: 32
 ---
 
-
+$$X_i=\sum_{j=1}^{m}a_{ij}\Theta_j+W_i$$
 
 <br>
 

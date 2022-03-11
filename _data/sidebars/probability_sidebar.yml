@@ -178,6 +178,10 @@ entries:
       url: /bias_of_a_coin.html
       output: web, pdf
 
+    - title: Linear Models with Normal Noise
+      url: /linear_normal_models.html
+      output: web, pdf
+
     - title: LLMS Estimation
       url: /linear_lms.html
       output: web, pdf
