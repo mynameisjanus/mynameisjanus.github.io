@@ -143,33 +143,27 @@ entries:
       output: web, pdf
 
     - title: Exponential Distribution
-      url:
+      url: /exponential_distribution.html
       output: web, pdf
 
     - title: The Gaussian Distribution
-      url: /gaussian.html
+      url: /gaussian_distribution.html
       output: web, pdf
-
-
 
   - title: Further Topics
     output: web, pdf
     folderitems:
 
     - title: Derived Distributions
-      url: derived_distributions.html
+      url: /derived_distributions.html
       output: web, pdf
 
-    - title: Covariance
-      url: covariance.html
-      output: web, pdf
-
-    - title: Correlation
-      url: correlation.html
+    - title: Covariance and Correlation
+      url: /covariance_and_correlation.html
       output: web, pdf
 
     - title: Revisiting Conditioning
-      url:
+      url: /revisiting_conditioning.html
       output: web, pdf
 
   - title: Bayesian Inference

@@ -13,7 +13,9 @@ topnav_dropdowns:
         - title: Discrete Random Variables
           url: /random_variables.html
         - title: Continuous Random Variables
+          url: /continuous_pdf.html
         - title: Further Topics
+          url: /derived_distributions.html
         - title: Bayesian Inference
         - title: Limit Theorems
         - title: Stochastic Processes
