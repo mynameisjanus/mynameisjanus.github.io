@@ -170,20 +170,20 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title:
-      url:
+    - title: The Bayesian Inference Framework
+      url: /bayesian_inference_framework.html
       output: web, pdf
 
   - title: Limit Theorems
     output: web, pdf
     folderitems:
 
-    - title: The Law of Large Numbers
-      url:
+    - title: The Weak Law of Large Numbers
+      url: /weak_law_of_large_numbers.html
       output: web, pdf
 
     - title: The Central Limit Theorem
-      url:
+      url: /central_limit_theorem.html
       output: web, pdf
 
   - title: Stochastic Processes
