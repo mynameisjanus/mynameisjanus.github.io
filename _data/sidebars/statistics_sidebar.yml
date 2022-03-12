@@ -33,29 +33,91 @@ entries:
     - title: Introduction
       url: /statistics_intro.html
       output: web, pdf
+    - title: Concepts from Probability
+      url: /probability_concepts.html
+      output: web, pdf
+    - title: Statistical Modeling
+      url: /statistical_modeling.html
+      output: web, pdf
 
   - title: Foundation of Inference
     output: web, pdf
     folderitems:
-    - title: Parametric Models
-      url:
-      output: web, pdf
     - title: Parametric Estimation
-      url:
+      url: /parametric_estimation.html
       output: web, pdf
     - title: Confidence Intervals
-      url:
+      url: /confidence_intervals.html
+      output: web, pdf
+    - title: The Delta Method
+      url: /delta_method.html
+      output: web, pdf
+    - title: Introduction to Hypothesis Testing
+      url: /intro_to_hypothesis_testing.html
+      output: web, pdf
+    - title: Levels and p-Values
+      url: /levels_and_pvalues.html
       output: web, pdf
 
   - title: Methods of Estimation
     output: web, pdf
     folderitems:
-    - title:
+    - title: Total Variation Distance
+      url:
+      output: web, pdf
+    - title: Kullback-Leibler Divergence
+      url:
+      output: web, pdf
+    - title: Maximum Likelihood Principle
+      url:
+      output: web, pdf
+    - title: Maximum Likelihood Estimation
+      url:
+      output: web, pdf
+    - title: Covariance Matrices
+      url:
+      output: web, pdf
+    - title: Multivariate Statistics
+      url:
+      output: web, pdf
+    - title: Fisher Information
+      url:
+      output: web, pdf
+    - title: MLE and the Method of Moments
+      url:
+      output: web, pdf
+    - title: M-Estimation
+      url:
+      output: web, pdf
 
   - title: Hypothesis Testing
     output: web, pdf
     folderitems:
-    - title:
+    - title: Chi-squared Distribution and t-Test
+      url:
+      output: web, pdf
+    - title: Wald's Test
+      url:
+      output: web, pdf
+    - title: Likelihood Ratio Test
+      url:
+      output: web, pdf
+    - title: Implicit Hypothesis
+      url:
+      output: web, pdf
+    - title: Chi-squared Test for Multinomial Distribution
+      url:
+      output:
+    - title: Goodness of Fit Test
+      url:
+      output: web, pdf
+    - title: Kolmogorov-Smirnov Test
+      url:
+      output: web, pdf
+    - title: Kolmogorov-Lilliefors Test
+      url:
+      output: web, pdf
+    - title: QQ-Plot
       url:
       output: web, pdf
 
@@ -92,6 +154,9 @@ entries:
   - title: Generalized Linear Model
     output: web, pdf
     folderitems:
-    - title:
+    - title: Exponential Families
+      url:
+      output: web, pdf
+    - title: The Canonical Link Function
       url:
       output: web, pdf
