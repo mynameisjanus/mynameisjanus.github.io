@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 32
+weight: 33
 ---
 
 $$X_i=\sum_{j=1}^{m}a_{ij}\Theta_j+W_i$$

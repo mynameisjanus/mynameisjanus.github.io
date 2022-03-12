@@ -121,17 +121,19 @@ entries:
       url:
       output: web, pdf
 
-  - title: Bayesian Statistics
-    output: web, pdf
-    folderitems:
-    - title:
-      url:
-      output: web, pdf
-
   - title: Linear Regression
     output: web, pdf
     folderitems:
-    - title:
+    - title: Univariate Linear Regression
+      url:
+      output: web, pdf
+    - title: Multivariate Linear Regression
+      url:
+      output: web, pdf
+    - title: Statistical Inference
+      url:
+      output: web, pdf
+    - title: Ridge Regression
       url:
       output: web, pdf
 
@@ -158,5 +160,15 @@ entries:
       url:
       output: web, pdf
     - title: The Canonical Link Function
+      url:
+      output: web, pdf
+    - title: Logistic Regression
+      url:
+      output: web, pdf
+
+  - title: Bayesian Statistics
+    output: web, pdf
+    folderitems:
+    - title:
       url:
       output: web, pdf

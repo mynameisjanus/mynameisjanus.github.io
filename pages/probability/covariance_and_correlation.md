@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 28
+weight: 29
 ---
 
 ## Definition

@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 22
+weight: 23
 ---
 
 ## Conditioning on an Event

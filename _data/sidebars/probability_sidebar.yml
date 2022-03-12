@@ -106,6 +106,10 @@ entries:
       url: /binomial_distribution.html
       output: web, pdf
 
+    - title: Negative Binomial Distribution
+      url: /negative_binomial_distribution.html
+      output: web, pdf
+
     - title: Geometric Distribution
       url: /geometric_distribution.html
       output: web, pdf

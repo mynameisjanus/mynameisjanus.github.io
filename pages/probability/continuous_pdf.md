@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 20
+weight: 21
 ---
 
 ## Probability Density Function

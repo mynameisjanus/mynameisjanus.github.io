@@ -1,14 +1,13 @@
 ---
-title: Linear Least Mean Squares Estimation
+title: Negative Binomial Distribution
 sidebar: probability_sidebar
-permalink: linear_lms.html
+permalink: negative_binomial_distribution.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 34
+weight: 17
 ---
-
 
 
 <br>

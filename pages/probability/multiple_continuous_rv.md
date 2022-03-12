@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 21
+weight: 22
 ---
 
 ## Joint Probability Distribution Function

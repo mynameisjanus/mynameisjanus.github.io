@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 27
+weight: 28
 ---
 
 ## Linear Function of a Discrete Random Variable
