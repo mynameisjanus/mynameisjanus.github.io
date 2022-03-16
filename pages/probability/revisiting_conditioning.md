@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 30
+weight: 31
 ---
 
 ### Conditional Expectation as a Random Variable

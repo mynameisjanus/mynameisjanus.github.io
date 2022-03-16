@@ -1,15 +1,13 @@
 ---
-title: Linear Models with Normal Noise
+title: Gamma Distribution
 sidebar: probability_sidebar
-permalink: linear_normal_models.html
+permalink: gamma_distribution.html
 folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 34
+weight: 27
 ---
-
-$$X_i=\sum_{j=1}^{m}a_{ij}\Theta_j+W_i$$
 
 <br>
 

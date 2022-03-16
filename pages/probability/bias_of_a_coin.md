@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 32
+weight: 33
 ---
 
 ### Continuous $$\Theta$$, Discrete $$K$$

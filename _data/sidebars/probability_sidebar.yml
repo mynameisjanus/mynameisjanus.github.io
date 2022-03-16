@@ -150,6 +150,10 @@ entries:
       url: /exponential_distribution.html
       output: web, pdf
 
+    - title: Gamma Distribution
+      url: /gamma_distribution.html
+      output: web, pdf
+
     - title: The Gaussian Distribution
       url: /gaussian_distribution.html
       output: web, pdf

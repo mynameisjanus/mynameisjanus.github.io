@@ -6,7 +6,7 @@ folder: probability
 toc: false
 usemathjax: true
 series: "Probability series"
-weight: 31
+weight: 32
 ---
 
 ## The Output of Bayesian Inference
