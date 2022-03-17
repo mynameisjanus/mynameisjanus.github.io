@@ -9,7 +9,7 @@ series: "Probability series"
 weight: 15
 ---
 
-Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable. A **Bernoulli random variable** $$X$$ takes on the value $$1$$ with probability $$p$$ or $$0$$ with probability $$1-p$$, i.e.,
+Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable denoted by $$\mathrm{Ber}(p)$$. A **Bernoulli random variable** $$X$$ takes on the value $$1$$ with probability $$p$$ or $$0$$ with probability $$1-p$$, i.e.,
 
 $$X=\begin{cases}
 1, & \text{with probability}\quad p\\

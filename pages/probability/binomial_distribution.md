@@ -23,11 +23,54 @@ $$p_X(k)=\binom{n}{k}p^k(1-p)^{n-k}$$
 
 ## Expectation
 
-$$\mathbb{E}[X]=np$$
+The expectation of a binomial distribution is
+
+$$\begin{align}
+\mathbb{E}[X]&=\sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
+&=\sum_{k=1}^{n}k\,\dfrac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\
+&=\sum_{k=1}^{n}\dfrac{n!}{(k-1)!(n-k)!}p^k(1-p)^{n-k}\\
+&=np\sum_{k=1}^{n}\dfrac{(n-1)!}{(k-1)!(n-k)!}p^{k-1}(1-p)^{n-k}.
+\end{align}$$
+
+We let $$k=j+1$$ so that
+
+$$\mathbb{E}[X]=np\sum_{j=0}^{n-1}\dfrac{(n-1)!}{j!(n-1-j)!}p^j(1-p)^{n-1-j}.$$
+
+Now, from the binomial expansion formula, we have
+
+$$(a+b)^{n-1}=\sum_{i=0}^{n-1}\dfrac{(n-1)!}{i!(n-1-i)!}\,a^{i}b^{n-1-i}$$
+
+so that
+
+$$\begin{align}
+\mathbb{E}[X]&=np\left[p+(1-p)\right]^{n-1}\\
+&=np.
+\end{align}$$
+
+### Simpler Calculation
+
+A simpler way to calculate the expectation of a binomial random variable is to realize that it is the sum of $$n$$ independent Bernoulli random variables, each with parameter $$p$$, i.e.,
+
+$$X=X_1+\ldots+X_n$$
+
+so that, by linearity,
+
+$$\begin{align}
+\mathbb{E}[X]&=\mathbb{E}[X_1]+\ldots+\mathbb{E}[X_n]\\
+&=p+\ldots+p\\
+&=np.
+\end{align}$$
 
 ## Variance
 
-$$\mathrm{var}(X)=np(1-p)$$
+To calculate the variance, we have
+
+$$\begin{align}
+\mathrm{var}(X)&=\mathrm{var}(X_1+\ldots+X_n)\\
+&=\mathrm{var}(X_1)+\ldots+\mathrm{var}(X_n)\\
+&=p(1-p)+\ldots+p(1-p)\\
+&=np(1-p).
+\end{align}$$
 
 ## Monte Carlo Simulation
 
