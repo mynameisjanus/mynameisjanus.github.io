@@ -14,12 +14,15 @@ weight: 16
   <img src="images/prob/binomial.png" style="width:200px;height:auto;"/>
 </p>
 
-Number of successes in $$n$$ independent trials.
-Parameters $$n$$ and $$p$$
+Consider $$n$$ independent trials where the outcome of each trial is either a success with probability $$p$$, or a failure with probability $$1-p$$. The number of successes in $$n$$ independent trials is described by a **binomial distribution** with parameters $$n$$ and $$p$$.
 
 ## Probability Mass Function
 
+The probability mass function of a binomial distribution is given by
+
 $$p_X(k)=\binom{n}{k}p^k(1-p)^{n-k}$$
+
+where $$k=0,1,2,\ldots,n.$$
 
 ## Expectation
 

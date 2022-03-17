@@ -9,13 +9,19 @@ series: "Probability series"
 weight: 20
 ---
 
+parameter $$\lambda$$
+
 ## Probability Mass Function
 
 $$p_X(k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$$
 
 ## Expectation
 
+$$\mathbb{E}[X]=\lambda$$
+
 ## Variance
+
+$$\mathrm{var}(X)=\lambda$$
 
 <br>
 

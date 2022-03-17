@@ -62,13 +62,15 @@ $$\mathbb{E}[g(X)\lvert Y=y]=\sum_{x}g(x)p_{X\lvert Y}(x\lvert y).$$
 
 ## Independence
 
-If $$X$$ and $$Y$$ are independent, then
+There are several statements we can make when two random variables, $$X$$ and $$Y$$, are independent. First,
 
-$$\mathbb{E}[XY]=\mathbb{E}[X]\,\mathbb{E}[Y]$$
+$$\mathbb{E}[XY]=\mathbb{E}[X]\,\mathbb{E}[Y].$$
 
-If $$X$$ and $$Y$$ are independent, then $$g(X)$$ and $$h(Y)$$ are also independent.
+Moreover, $$g(X)$$ and $$h(Y)$$ are also independent, and
 
 $$\mathbb{E}[g(X)h(Y)]=\mathbb{E}[g(x)]\,\mathbb{E}[h(Y)].$$
+
+Finally, the variance of their sum is
 
 $$\mathrm{var}(X+Y)=\mathrm{var}(X)+\mathrm{var}(Y).$$
 
