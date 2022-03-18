@@ -14,7 +14,7 @@ weight: 16
   <img src="images/prob/binomial.png" style="width:200px;height:auto;"/>
 </p>
 
-Consider $$n$$ independent trials where the outcome of each trial is either a success with probability $$p$$, or a failure with probability $$1-p$$. The number of successes in $$n$$ independent trials is described by a **binomial distribution** with parameters $$n$$ and $$p$$.
+Consider $$n$$ independent trials where the outcome of each trial is either a success with probability $$p$$, or a failure with probability $$1-p$$. The number of successes in $$n$$ independent trials is described by a **binomial distribution** with two parameters $$n$$ and $$p$$. We denote it by $$\mathrm{Binom}(n,p)$$.
 
 ## Probability Mass Function
 

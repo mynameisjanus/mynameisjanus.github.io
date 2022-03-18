@@ -13,17 +13,21 @@ weight: 17
   <img src="images/prob/geom_dist.png" style="width:200px;height:auto;"/>
 </p>
 
-Number of tosses until the first Head
+The **geometric distribution** represents the number of independent Bernoulli trials until the first success. For example, it describes the number of coin tosses needed to get a head, where head is considered as a success. It is a discrete probability distribution with one parameter $$p$$ and denoted by $$\mathrm{Geom}(p)$$.
 
 ## Probability Mass Function
 
-$$k=1,2,\ldots$$
+The probability mass function of a geometric distribution is given by
 
-$$p_X(k)=\mathbf{P}(X=k)=(1-p)^{k-1}p$$
+$$p_X(k)=(1-p)^{k-1}p$$
+
+where $$k=1,2,\ldots$$
 
 ## Expectation
 
-$$\mathbb{E}[X]=\dfrac{1}{p}$$
+The mean of a geometric distribution with parameter $$p$$ is
+
+$$\mathbb{E}[X]=\dfrac{1}{p}.$$
 
 {{site.data.alerts.proof}}
 <p>
