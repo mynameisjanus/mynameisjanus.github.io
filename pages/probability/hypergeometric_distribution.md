@@ -19,11 +19,11 @@ $$p_X(k)=\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n
 
 ## Expectation
 
-$$\mathbb{E}[X]=$$
+$$\mathbb{E}[X]=\frac{mr}{n}$$
 
 ## Variance
 
-$$\mathrm{var}(X)=$$
+$$\mathrm{var}(X)=\frac{mr(n-r)(n-m)}{n^2(n-1)}$$
 
 <br>
 
