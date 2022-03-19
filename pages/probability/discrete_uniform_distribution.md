@@ -19,23 +19,34 @@ $$p_X(x)=\dfrac{1}{b-a+1}.$$
 
 ### Expectation
 
-$$\begin{align}
+The mean of a discrete uniform random variable is
+
+$$\mathbb{E}[X]=\frac{a+b}{2}.$$
+
+{{site.data.alerts.proof}}
+<p>$$\begin{align}
 \mathbb{E}[X]&=\frac{1}{b-a+1}\left(a+a+1+\ldots+b-1+b\right)\\
 &=\frac{1}{b-a+1}\left(\frac{b-a+1}{2}\right)\left(a+b\right)\\
 &=\frac{a+b}{2}
-\end{align}$$
+\end{align}$$</p>
+{{site.data.alerts.end}}
 
 ### Variance
 
+The variance of a discrete uniform random variable is
+
+$$\mathrm{var}(X)=\tfrac{1}{12}(b-a)(b-a+2).$$
+
+{{site.data.alerts.proof}}
+<p> To calculate the variance, we have
 $$\begin{align}
 \mathrm{var}(X)&=\mathbb{E}[X^2]-(\mathbb{E}[X])^2\\
-&=\frac{1}{b-a+1}\left[(a)^2+(a+1)^2+\ldots+(b)^2\right]-\left(\frac{a+b}{2}\right)^2
+&=\frac{1}{b-a+1}\left[(a)^2+(a+1)^2+\ldots+(b)^2\right]-\left(\frac{a+b}{2}\right)^2.
 \end{align}$$
 
-Before we proceed, we have to figure out the sum $$a^2+\ldots+b^2$$.
+Before we proceed, we have to figure out the sum $$a^2+\ldots+b^2.$$
 
-{{site.data.alerts.note}}
-<p> In this section, we will calculate the sum $$a^2+(a+1)^2+\ldots+b^2.$$
+In the following, we will calculate the sum $$a^2+(a+1)^2+\ldots+b^2.$$
 
 Recall from high school algebra that
 
@@ -75,8 +86,6 @@ $$\begin{align}
 a^2+\ldots+b^2&=\frac{b-a+1}{3}\left[b^2+b(a-1)+(a-1)^2+\frac{3}{2}(a+b)-1\right]\\
 &=\frac{b-a+1}{3}\left[b^2+ab+a^2+\tfrac{1}{2}(b-a)\right].
 \end{align}$$
-</p>
-{{site.data.alerts.end}}
 
 Continuing our calculation of the variance, we have
 
@@ -86,6 +95,8 @@ $$\begin{align}
 &=\tfrac{1}{12}\left[\left(b^2-2ab+a^2\right)+2(b-a)\right]\\
 &=\tfrac{1}{12}(b-a)(b-a+2).
 \end{align}$$
+</p>
+{{site.data.alerts.end}}
 
 <br>
 

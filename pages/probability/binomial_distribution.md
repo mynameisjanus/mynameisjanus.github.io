@@ -28,6 +28,10 @@ where $$k=0,1,2,\ldots,n.$$
 
 The expectation of a binomial distribution is
 
+$$\mathbb{E}[X]=np.$$
+
+{{site.data.alerts.proof}}
+<p>
 $$\begin{align}
 \mathbb{E}[X]&=\sum_{k=0}^{n}k\binom{n}{k}p^k(1-p)^{n-k}\\
 &=\sum_{k=1}^{n}k\,\dfrac{n!}{k!(n-k)!}p^k(1-p)^{n-k}\\
@@ -49,6 +53,8 @@ $$\begin{align}
 \mathbb{E}[X]&=np\left[p+(1-p)\right]^{n-1}\\
 &=np.
 \end{align}$$
+</p>
+{{site.data.alerts.end}}
 
 ### Simpler Calculation
 
@@ -66,7 +72,12 @@ $$\begin{align}
 
 ## Variance
 
-To calculate the variance, we have
+The variance of a binomial distribution is
+
+$$\mathrm{var}(X)=np(1-p).$$
+
+{{site.data.alerts.proof}}
+<p> To calculate the variance, we have
 
 $$\begin{align}
 \mathrm{var}(X)&=\mathrm{var}(X_1+\ldots+X_n)\\
@@ -74,6 +85,8 @@ $$\begin{align}
 &=p(1-p)+\ldots+p(1-p)\\
 &=np(1-p).
 \end{align}$$
+</p>
+{{site.data.alerts.end}}
 
 ## Monte Carlo Simulation
 

@@ -47,13 +47,11 @@ $$\mathrm{var}(X)=\dfrac{1-p}{p^2}$$
 
 ## Conditioning
 
-Conditioned on $$X>1$$, $$X-1$$ is geometric with parameter $$p$$.
+Suppose now that the first trial was a failure. What is the distribution of the remaining trials until the first success? Because we are dealing with independent trials, the remaining trials will still have a geometric distribution, i.e., conditioned on $$X>1$$, $$X-1$$ is geometric with parameter $$p$$.
 
 ### Memorylessness
 
-The number of remaining coin tosses, conditioned on  Tails in the first toss, is Geometric with parameter $$p$$.
-
-Conditioned on $$X>n$$, $$X-n$$ is geometric with parameter $$p$$.
+In general, if the first $$n$$ trials are failures, then the remaining trials will still be geometric, i.e., conditioned on $$X>n$$, $$X-n$$ is geometric with parameter $$p$$. This property is called **memorylessness**.
 
 ## Monte Carlo Simulation
 
@@ -81,8 +79,12 @@ for (i in 1:reps) {
 data.frame(tosses_to_success) %>%
   ggplot(aes(tosses_to_success, y = ..prop..)) +
   geom_bar() +
-  labs(x = "Number of Tosses Until Success", y = "Probability")
+  labs(x = "Number of Tosses Until First Success", y = "Probability")
 ```
+
+<p align="center">
+  <img src="images/prob/geom_plot.png" style="width:600px;height:auto;"/>
+</p>
 
 <br>
 
