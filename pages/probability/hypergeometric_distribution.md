@@ -9,9 +9,21 @@ series: "Probability series"
 weight: 19
 ---
 
+parameters: population size, event count, sample size
+
 ## Probability Mass Function
 
-$$p_X(k)=\mathbf{P}(X=k)=\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n}{m}}$$
+The probability mass function for a hypergeometric distribution is
+
+$$p_X(k)=\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n}{m}}.$$
+
+## Expectation
+
+$$\mathbb{E}[X]=$$
+
+## Variance
+
+$$\mathrm{var}(X)=$$
 
 <br>
 

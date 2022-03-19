@@ -9,7 +9,6 @@ series: "Probability series"
 weight: 16
 ---
 
-
 <p align="center">
   <img src="images/prob/binomial.png" style="width:200px;height:auto;"/>
 </p>
