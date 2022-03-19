@@ -43,7 +43,50 @@ $$\begin{align}
 
 ## Variance
 
-$$\mathrm{var}(X)=\dfrac{1-p}{p^2}$$
+The variance of a geometric random variable with parameter $$p$$ is
+
+$$\mathrm{var}(X)=\dfrac{1-p}{p^2}.$$
+
+{{site.data.alerts.proof}}
+<p>
+To begin, we have
+
+$$\begin{align}
+\mathrm{var}(X)&=\mathbb{E}[X^2]-(\mathbb{E}[X])^2\\
+&=\sum_{k=1}^{\infty}k^2p(1-p)^{k-1}-\left(\frac{1}{p}\right)^2.
+\end{align}$$
+
+Let's calculate the first term.
+
+$$\begin{align}
+\sum_{k=1}^{\infty}k^2p(1-p)^{k-1}&=-\sum_{k=1}^{\infty}kp\,\frac{\mathrm{d}}{\mathrm{d}p}(1-p)^k\\
+&=-\sum_{k=1}^{\infty}kp\,\frac{\mathrm{d}}{\mathrm{d}p}\left[(1-p)^{k-1}(1-p)\right]\\
+&=-\sum_{k=1}^{\infty}kp\!\left[(1-p)\frac{\mathrm{d}}{\mathrm{d}p}(1-p)^{k-1}-(1-p)^{k-1}\right]\\
+&=-p(1-p)\frac{\mathrm{d}}{\mathrm{d}p}\sum_{k=1}^{\infty}k(1-p)^{k-1}+\sum_{k=1}^{\infty}kp(1-p)^{k-1}\\
+&=p(1-p)\frac{\mathrm{d}^2}{\mathrm{d}p^2}\sum_{k=1}^{\infty}(1-p)^k+\mathbb{E}[X]
+\end{align}$$
+Using the geometric series formula
+
+$$\sum_{k=0}^{\infty}x^k=\dfrac{1}{1-x}\qquad \text{for }|x|<1$$
+
+we have
+
+$$\begin{align}
+\sum_{k=1}^{\infty}k^2p(1-p)^{k-1}&=p(1-p)\frac{\mathrm{d}^2}{\mathrm{d}p^2}\!\left[\dfrac{1}{1-(1-p)}-1\right]+\frac{1}{p}\\
+&=p(1-p)\frac{\mathrm{d}^2}{\mathrm{d}p^2}\!\left(\frac{1}{p}-1\right)+\frac{1}{p}\\
+&=p(1-p)\!\left(\frac{2}{p^3}\right)+\frac{1}{p}\\
+&=\frac{2(1-p)}{p^2}+\frac{1}{p}\\
+&=\frac{2-p}{p^2}.
+\end{align}$$
+
+Finally,
+
+$$\begin{align}
+\mathrm{var}(X)&=\frac{2-p}{p^2}-\frac{1}{p^2}\\
+&=\frac{1-p}{p^2}.
+\end{align}$$
+</p>
+{{site.data.alerts.end}}
 
 ## Conditioning
 
