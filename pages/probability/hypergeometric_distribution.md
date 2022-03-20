@@ -25,6 +25,8 @@ $$\mathbb{E}[X]=\frac{mr}{n}$$
 
 $$\mathrm{var}(X)=\frac{mr(n-r)(n-m)}{n^2(n-1)}$$
 
+## Monte Carlo Simulation
+
 <br>
 
 {% include custom/series_prob_next.html %}
