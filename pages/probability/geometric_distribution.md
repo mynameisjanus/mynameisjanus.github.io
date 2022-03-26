@@ -96,6 +96,13 @@ Suppose now that the first trial was a failure. What is the distribution of the 
 
 In general, if the first $$n$$ trials are failures, then the remaining trials will still be geometric, i.e., conditioned on $$X>n$$, $$X-n$$ is geometric with parameter $$p$$. This property is called **memorylessness**.
 
+<br>
+
+{{site.data.alerts.note}}
+<p> Another way of deriving the variance of a geometric random variable is by using its memorylessness property.
+</p>
+{{site.data.alerts.end}}
+
 ## Monte Carlo Simulation
 
 ```r

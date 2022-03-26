@@ -9,9 +9,15 @@ series: "Probability series"
 weight: 20
 ---
 
-parameter $$\lambda$$
+<p align="center">
+  <img src="images/prob/poisson.png" style="width:200px;height:auto;"/>
+</p>
+
+The **Poisson random variable** describes the probability that a given number of events occurs within a fixed time interval. It is a discrete random variable with a single parameter $$\lambda$$.
 
 ## Probability Mass Function
+
+The Poisson distribution has the PMF
 
 $$p_X(k)=\dfrac{\lambda^k}{k!}e^{-\lambda}$$
 
@@ -60,6 +66,36 @@ Then,
 $$\mathrm{var}(X)=\lambda^2+\lambda-\lambda^2=\lambda.$$
 </p>
 {{site.data.alerts.end}}
+
+## Binomial versus Poisson Distributions
+
+## Monte Carlo Simulation
+
+```r
+library(tidyverse)
+
+# Set the parameters
+p <- 0.01
+n <- 300
+# lambda = p*n
+
+B <- 10000  # Number of replications
+
+num_arrivals <- replicate(B, {
+  arrival <- sample(c(0,1), size = n, replace = TRUE, prob = c(1-p,p))
+  sum(arrival)
+})
+
+# Plot the distribution
+data.frame(num_arrivals) %>%
+  ggplot(aes(num_arrivals, y = ..prop..)) +
+  geom_bar(width = 0.5, color = "dodgerblue", fill = "dodgerblue") +
+  labs(x="Number of Arrivals", y="Probability")
+```
+
+<p align="center">
+  <img src="images/prob/poisson_dist.png" style="width:600px;height:auto;"/>
+</p>
 
 <br>
 

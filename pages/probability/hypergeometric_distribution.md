@@ -101,7 +101,7 @@ B <- 10000  # Number of replications
 trials <- replicate(B, {
   items_picked <- sample(bowl, m, replace = FALSE)
   sum(items_picked)
-  })
+})
 
 # Plot the distribution
 data.frame(trials) %>%
