@@ -69,6 +69,40 @@ $$\mathrm{var}(X)=\lambda^2+\lambda-\lambda^2=\lambda.$$
 
 ## Binomial versus Poisson Distributions
 
+We will show that the Poisson distribution is the limit of the binomial distribution as $$n\rightarrow\infty$$ and $$p\rightarrow0$$ with the identification $$np=\lambda$$.
+
+First, we divide the fixed time interval into $$n$$ subintervals so that the probability of getting 2 or more arrivals in one subinterval is negligible. Each subinterval can be described by a Bernoulli random variable and the probability of an arrival is $$p=\frac{\lambda}{n}$$. The number of arrivals for the entire time interval is then described by a binomial random variable with the PMF
+
+$$\mathbf{P}(X=k)=\binom{n}{k}\!\left(\frac{\lambda}{n}\right)^k\!\left(1-\frac{\lambda}{n}\right)^{n-k}.$$
+
+We can rewrite this equation, rearrange the terms as
+
+$$\frac{\lambda^k}{k!}\frac{n!}{(n-k)!\,n^k}\left(1-\frac{\lambda}{n}\right)^n\left(1-\frac{\lambda}{n}\right)^{-k}$$
+
+and take the limit as $$n\rightarrow\infty$$. Note that
+
+$$\begin{align}
+\frac{n!}{(n-k)!\,n^k}&=\frac{n(n-1)\cdots(n-k+1)(n-k)!}{(n-k)!\,n^k}\\
+&=\frac{n(n-1)\cdots(n-k+1)}{n^k}\\
+&=1\left(1-\frac{1}{n}\right)\cdots\left(1-\frac{k-1}{n}\right)
+\end{align}$$
+
+so that
+
+$$\lim\limits_{n\rightarrow\infty}\frac{n!}{(n-k)!\,n^k}=1.$$
+
+We also have
+
+$$\lim\limits_{n\rightarrow\infty}\left(1-\frac{\lambda}{n}\right)^{-k}=1.$$
+
+Lastly, from the definition of an exponential function, we have
+
+$$\lim\limits_{n\rightarrow\infty}\left(1-\frac{\lambda}{n}\right)^n=e^{-\lambda}.$$
+
+We have shown that the Poisson distribution is the limit of the binomial distribution when the number of trials becomes infinitely large and the probability of success or arrival becomes very small, i.e.,
+
+$$\lim\limits_{n\rightarrow\infty}\binom{n}{k}\!\left(\frac{\lambda}{n}\right)^k\!\left(1-\frac{\lambda}{n}\right)^{n-k}=\frac{\lambda^k}{k!}e^{-\lambda}.$$
+
 ## Monte Carlo Simulation
 
 ```r
@@ -94,7 +128,7 @@ data.frame(num_arrivals) %>%
 ```
 
 <p align="center">
-  <img src="images/prob/poisson_dist.png" style="width:600px;height:auto;"/>
+  <img src="images/prob/poisson_dist.png" style="width:500px;height:auto;"/>
 </p>
 
 <br>
