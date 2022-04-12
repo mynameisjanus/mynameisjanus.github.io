@@ -70,6 +70,18 @@ $$f_X(x)=\dfrac{\mathrm{d}F_X(x)}{\mathrm{d}x}.$$
 * As $$x\rightarrow -\infty$$, $$F_X(x)\rightarrow 0$$.
 * As $$x\rightarrow +\infty$$, $$F_X(x)\rightarrow 1$$.
 
+## Standardized Random Variables
+
+Let $$X$$ have mean $$\mu$$ and variance $$\sigma^2$$. Also, let
+
+$$Y=\frac{X-\mu}{\sigma}.$$
+
+Then,
+
+$$\mathbb{E}[Y]=0\qquad\text{and}\qquad\mathrm{var}(Y)=1,$$
+
+i.e., $$Y$$ is a standard random variable. If $$X$$ is a normal random variable, then $$Y\sim\mathcal{N}(0,1)$$, i.e., $$Y$$ is the **standard normal random variable**.
+
 <br>
 
 {% include custom/series_prob_next.html %}

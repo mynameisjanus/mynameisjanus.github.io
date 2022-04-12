@@ -69,7 +69,7 @@ $$\mathrm{var}(X)=\lambda^2+\lambda-\lambda^2=\lambda.$$
 
 ## Binomial versus Poisson Distributions
 
-We will show that the Poisson distribution is the limit of the binomial distribution as $$n\rightarrow\infty$$ and $$p\rightarrow0$$ with the identification $$np=\lambda$$.
+We will show that the Poisson distribution is the limit of the binomial distribution as $$n\rightarrow\infty$$ and $$p\rightarrow0$$ while holding $$\lambda$$ constant, with $$\lambda=np$$.
 
 First, we divide the fixed time interval into $$n$$ subintervals so that the probability of getting 2 or more arrivals in one subinterval is negligible. Each subinterval can be described by a Bernoulli random variable and the probability of an arrival is $$p=\frac{\lambda}{n}$$. The number of arrivals for the entire time interval is then described by a binomial random variable with the PMF
 
