@@ -12,6 +12,8 @@ site_title: The Science of Data
 company_name: Copyright 2022 The Science of Data
 # this appears in the footer
 
+github: [metadata]
+
 github_editme_path:
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
