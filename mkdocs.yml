@@ -66,6 +66,9 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
 
+hooks:
+  - hooks/strip_blank_lines.py
+
 plugins:
   - search
 
