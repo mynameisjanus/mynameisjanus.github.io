@@ -1,0 +1,70 @@
+site_name: Building Quantitative Trading Systems
+site_description: How professional quantitative trading systems are actually built.
+site_url: https://mynameisjanus.github.io/
+site_author: Janus B. Advincula
+repo_url: https://github.com/mynameisjanus/mynameisjanus.github.io
+repo_name: mynameisjanus/mynameisjanus.github.io
+copyright: "&copy; Janus B. Advincula. All rights reserved."
+
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  icon:
+    logo: material/chart-line
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
