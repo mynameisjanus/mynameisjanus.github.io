@@ -1,0 +1,11 @@
+/* Centered figure images (used by migrated appendix pages) */
+img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Slightly tighter grid cards on the landing page */
+.md-typeset .grid.cards > ul > li {
+  border-radius: 0.4rem;
+}

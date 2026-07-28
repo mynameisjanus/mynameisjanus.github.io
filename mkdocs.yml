@@ -1,0 +1,237 @@
+site_name: Building Quantitative Trading Systems
+site_description: How professional quantitative trading systems are actually built.
+site_url: https://mynameisjanus.github.io/
+site_author: Janus B. Advincula
+repo_url: https://github.com/mynameisjanus/mynameisjanus.github.io
+repo_name: mynameisjanus/mynameisjanus.github.io
+copyright: "&copy; Janus B. Advincula. All rights reserved."
+
+theme:
+  name: material
+  favicon: assets/favicon.ico
+  icon:
+    logo: material/chart-line
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.footer
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - toc.follow
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - toc:
+      permalink: true
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.arithmatex:
+      generic: true
+      smart_dollar: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
+
+plugins:
+  - search
+
+nav:
+  - Home: index.md
+  - Course:
+      - Part I — Foundations:
+          - part-01-foundations/index.md
+          - part-01-foundations/01-what-is-algorithmic-trading.md
+          - part-01-foundations/02-types-of-market-participants.md
+          - part-01-foundations/03-market-microstructure.md
+          - part-01-foundations/04-exchanges-brokers-ecns.md
+          - part-01-foundations/05-asset-classes.md
+          - part-01-foundations/06-market-regimes.md
+          - part-01-foundations/07-trend-following-vs-mean-reversion.md
+          - part-01-foundations/08-statistical-arbitrage.md
+          - part-01-foundations/09-high-frequency-trading.md
+          - part-01-foundations/10-why-most-retail-strategies-fail.md
+      - Part II — Python:
+          - part-02-python/index.md
+          - part-02-python/01-numpy-and-vectorization.md
+          - part-02-python/02-pandas-and-polars.md
+          - part-02-python/03-typing-dataclasses-structure.md
+          - part-02-python/04-async-and-apis.md
+          - part-02-python/05-sql-and-data-storage.md
+          - part-02-python/06-plotting.md
+          - part-02-python/07-logging-and-config.md
+      - Part III — Statistics:
+          - part-03-statistics/index.md
+          - part-03-statistics/01-probability-and-random-variables.md
+          - part-03-statistics/02-returns-and-distributions.md
+          - part-03-statistics/03-time-series.md
+          - part-03-statistics/04-hypothesis-testing-and-multiple-testing.md
+          - part-03-statistics/05-bootstrap-and-monte-carlo.md
+          - part-03-statistics/06-bayesian-methods-and-hmms.md
+      - Part IV — Strategy Development:
+          - part-04-strategy-development/index.md
+          - part-04-strategy-development/01-momentum-and-trend-following.md
+          - part-04-strategy-development/02-mean-reversion-and-pairs-trading.md
+          - part-04-strategy-development/03-cross-sectional-and-volatility-strategies.md
+          - part-04-strategy-development/04-seasonality-and-calendar-effects.md
+          - part-04-strategy-development/05-feature-and-signal-engineering.md
+          - part-04-strategy-development/06-position-sizing-and-risk-budgeting.md
+          - part-04-strategy-development/07-portfolio-construction-and-transaction-costs.md
+          - part-04-strategy-development/08-validation-and-overfitting.md
+      - Part V — Backtesting Engine:
+          - part-05-backtesting-engine/index.md
+          - part-05-backtesting-engine/01-architecture-and-event-driven-design.md
+          - part-05-backtesting-engine/02-portfolio-accounting.md
+          - part-05-backtesting-engine/03-order-management-and-fill-simulation.md
+          - part-05-backtesting-engine/04-performance-metrics-and-reporting.md
+          - part-05-backtesting-engine/05-trade-logs-and-visualization.md
+      - Part VI — Live Infrastructure:
+          - part-06-live-infrastructure/index.md
+          - part-06-live-infrastructure/01-system-architecture.md
+          - part-06-live-infrastructure/02-scheduling-and-data-plumbing.md
+          - part-06-live-infrastructure/03-docker-and-cloud-deployment.md
+          - part-06-live-infrastructure/04-monitoring-logging-alerting.md
+          - part-06-live-infrastructure/05-resilience-and-risk-controls.md
+          - part-06-live-infrastructure/06-secrets-paper-live-compliance.md
+      - Part VII — Machine Learning:
+          - part-07-machine-learning/index.md
+          - part-07-machine-learning/01-feature-engineering-for-ml.md
+          - part-07-machine-learning/02-tree-ensembles.md
+          - part-07-machine-learning/03-deep-learning.md
+          - part-07-machine-learning/04-reinforcement-learning-and-meta-labeling.md
+          - part-07-machine-learning/05-production-ml.md
+      - Part VIII — Portfolio Management:
+          - part-08-portfolio-management/index.md
+          - part-08-portfolio-management/01-risk-measurement.md
+          - part-08-portfolio-management/02-kelly-vol-targeting-leverage.md
+          - part-08-portfolio-management/03-risk-parity-diversification-factors.md
+          - part-08-portfolio-management/04-portfolio-optimization-and-correlation.md
+          - part-08-portfolio-management/05-drawdowns-tail-risk-stress-testing.md
+      - Part IX — Software Engineering:
+          - part-09-software-engineering/index.md
+          - part-09-software-engineering/01-git-and-code-review.md
+          - part-09-software-engineering/02-testing-and-cicd.md
+          - part-09-software-engineering/03-package-structure-config-di.md
+          - part-09-software-engineering/04-architecture-patterns-and-message-queues.md
+          - part-09-software-engineering/05-profiling-refactoring-versioning.md
+      - Part X — Trading Business:
+          - part-10-trading-business/index.md
+          - part-10-trading-business/01-capital-fund-structures-fees.md
+          - part-10-trading-business/02-investor-reporting-due-diligence.md
+          - part-10-trading-business/03-operations-compliance-tax.md
+          - part-10-trading-business/04-research-workflow-hiring-scaling.md
+  - Capstones:
+      - capstones/index.md
+      - capstones/01-momentum-strategy.md
+      - capstones/02-mean-reversion-validation.md
+      - capstones/03-pairs-trading-cointegration.md
+      - capstones/04-portfolio-optimizer.md
+      - capstones/05-event-driven-backtester.md
+      - capstones/06-paper-trading-system.md
+      - capstones/07-live-deployment.md
+  - Advanced Modules:
+      - advanced/index.md
+      - advanced/01-bayesian-optimization.md
+      - advanced/02-particle-and-kalman-filters.md
+      - advanced/03-stochastic-calculus.md
+      - advanced/04-optimal-execution-almgren-chriss.md
+      - advanced/05-market-impact-models.md
+      - advanced/06-rl-for-execution.md
+      - advanced/07-alternative-data.md
+      - advanced/08-gpu-acceleration-cuda.md
+      - advanced/09-distributed-backtesting.md
+      - advanced/10-high-performance-computing.md
+      - advanced/11-options-pricing.md
+      - advanced/12-market-making.md
+      - advanced/13-crypto-microstructure.md
+  - Appendix:
+      - appendix/index.md
+      - Probability:
+          - "Mathematical Background": appendix/probability/01-math-background.md
+          - "Sample Spaces": appendix/probability/02-sample-spaces.md
+          - "Probability Axioms": appendix/probability/03-probability-axioms.md
+          - "Basic Principles of Counting": appendix/probability/04-basic-principles-of-counting.md
+          - "Binomial Probability": appendix/probability/05-binomial-probability.md
+          - "Multinomial Probability": appendix/probability/06-multinomial-probability.md
+          - "Hypergeometric Probability": appendix/probability/07-hypergeometric-probability.md
+          - "Conditional Probability": appendix/probability/08-definition-conditional.md
+          - "Bayes' Theorem": appendix/probability/09-bayes-theorem.md
+          - "Independence": appendix/probability/10-independence.md
+          - "Discrete Random Variables": appendix/probability/11-random-variables.md
+          - "Multiple Random Variables (Discrete)": appendix/probability/12-multiple-discrete-rv.md
+          - "Conditioning (Discrete)": appendix/probability/13-conditioning-discrete.md
+          - "Discrete Uniform Distribution": appendix/probability/14-discrete-uniform-distribution.md
+          - "Bernoulli Random Variables": appendix/probability/15-bernoulli-random-variables.md
+          - "Binomial Distribution": appendix/probability/16-binomial-distribution.md
+          - "Geometric Distribution": appendix/probability/17-geometric-distribution.md
+          - "Negative Binomial Distribution": appendix/probability/18-negative-binomial-distribution.md
+          - "Hypergeometric Distribution": appendix/probability/19-hypergeometric-distribution.md
+          - "The Poisson Distribution": appendix/probability/20-poisson-distribution.md
+          - "Continuous Random Variables": appendix/probability/21-continuous-pdf.md
+          - "Multiple Random Variables (Continuous)": appendix/probability/22-multiple-continuous-rv.md
+          - "Conditioning (Continuous)": appendix/probability/23-conditioning-continuous.md
+          - "Bayes' Rule": appendix/probability/24-bayes-rule.md
+          - "Continuous Uniform Distribution": appendix/probability/25-continuous-uniform.md
+          - "Exponential Distribution": appendix/probability/26-exponential-distribution.md
+          - "Gamma Distribution": appendix/probability/27-gamma-distribution.md
+          - "The Gaussian Distribution": appendix/probability/28-gaussian-distribution.md
+          - "Derived Distributions": appendix/probability/29-derived-distributions.md
+          - "Covariance and Correlation": appendix/probability/30-covariance-and-correlation.md
+          - "Revisiting Conditioning": appendix/probability/31-revisiting-conditioning.md
+          - "The Bayesian Inference Framework": appendix/probability/32-bayesian-inference-framework.md
+          - "The Unknown Bias of a Coin": appendix/probability/33-bias-of-a-coin.md
+          - "Linear Models with Normal Noise": appendix/probability/34-linear-normal-models.md
+          - "Linear Least Mean Squares Estimation": appendix/probability/35-linear-lms.md
+          - "The Weak Law of Large Numbers": appendix/probability/36-weak-law-of-large-numbers.md
+          - "The Central Limit Theorem": appendix/probability/37-central-limit-theorem.md
+          - "The Bernoulli Process": appendix/probability/38-bernoulli-process.md
+          - "Splitting of Bernoulli Processes": appendix/probability/39-splitting-bernoulli-processes.md
+          - "Merging of Bernoulli Processes": appendix/probability/40-merging-bernoulli-processes.md
+          - "The Poisson Process": appendix/probability/41-poisson-process.md
+          - "Markov Processes I": appendix/probability/42-markov-processes-1.md
+          - "Markov Processes II": appendix/probability/43-markov-processes-2.md
+      - Statistics:
+          - "Introduction": appendix/statistics/01-statistics-intro.md
+          - "Concepts from Probability": appendix/statistics/02-probability-concepts.md
+          - "Statistical Modeling": appendix/statistics/03-statistical-modeling.md
+          - "Parametric Estimation": appendix/statistics/04-parametric-models.md
+          - "Confidence Intervals": appendix/statistics/05-confidence-intervals.md
+          - "The Delta Method": appendix/statistics/06-delta-method.md
+          - "Introduction to Hypothesis Testing": appendix/statistics/07-intro-to-hypothesis-testing.md
+          - "Levels and p-Values": appendix/statistics/08-levels-and-pvalues.md
+  - About:
+      - about/index.md
+      - Support This Site: about/support.md
