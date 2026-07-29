@@ -177,59 +177,190 @@ nav:
       - advanced/13-crypto-microstructure.md
   - Appendix:
       - appendix/index.md
-      - Probability:
-          - "Mathematical Background": appendix/probability/01-math-background.md
-          - "Sample Spaces": appendix/probability/02-sample-spaces.md
-          - "Probability Axioms": appendix/probability/03-probability-axioms.md
-          - "Basic Principles of Counting": appendix/probability/04-basic-principles-of-counting.md
-          - "Binomial Probability": appendix/probability/05-binomial-probability.md
-          - "Multinomial Probability": appendix/probability/06-multinomial-probability.md
-          - "Hypergeometric Probability": appendix/probability/07-hypergeometric-probability.md
-          - "Conditional Probability": appendix/probability/08-definition-conditional.md
-          - "Bayes' Theorem": appendix/probability/09-bayes-theorem.md
-          - "Independence": appendix/probability/10-independence.md
-          - "Discrete Random Variables": appendix/probability/11-random-variables.md
-          - "Multiple Random Variables (Discrete)": appendix/probability/12-multiple-discrete-rv.md
-          - "Conditioning (Discrete)": appendix/probability/13-conditioning-discrete.md
-          - "Discrete Uniform Distribution": appendix/probability/14-discrete-uniform-distribution.md
-          - "Bernoulli Random Variables": appendix/probability/15-bernoulli-random-variables.md
-          - "Binomial Distribution": appendix/probability/16-binomial-distribution.md
-          - "Geometric Distribution": appendix/probability/17-geometric-distribution.md
-          - "Negative Binomial Distribution": appendix/probability/18-negative-binomial-distribution.md
-          - "Hypergeometric Distribution": appendix/probability/19-hypergeometric-distribution.md
-          - "The Poisson Distribution": appendix/probability/20-poisson-distribution.md
-          - "Continuous Random Variables": appendix/probability/21-continuous-pdf.md
-          - "Multiple Random Variables (Continuous)": appendix/probability/22-multiple-continuous-rv.md
-          - "Conditioning (Continuous)": appendix/probability/23-conditioning-continuous.md
-          - "Bayes' Rule": appendix/probability/24-bayes-rule.md
-          - "Continuous Uniform Distribution": appendix/probability/25-continuous-uniform.md
-          - "Exponential Distribution": appendix/probability/26-exponential-distribution.md
-          - "Gamma Distribution": appendix/probability/27-gamma-distribution.md
-          - "The Gaussian Distribution": appendix/probability/28-gaussian-distribution.md
-          - "Derived Distributions": appendix/probability/29-derived-distributions.md
-          - "Covariance and Correlation": appendix/probability/30-covariance-and-correlation.md
-          - "Revisiting Conditioning": appendix/probability/31-revisiting-conditioning.md
-          - "The Bayesian Inference Framework": appendix/probability/32-bayesian-inference-framework.md
-          - "The Unknown Bias of a Coin": appendix/probability/33-bias-of-a-coin.md
-          - "Linear Models with Normal Noise": appendix/probability/34-linear-normal-models.md
-          - "Linear Least Mean Squares Estimation": appendix/probability/35-linear-lms.md
-          - "The Weak Law of Large Numbers": appendix/probability/36-weak-law-of-large-numbers.md
-          - "The Central Limit Theorem": appendix/probability/37-central-limit-theorem.md
-          - "The Bernoulli Process": appendix/probability/38-bernoulli-process.md
-          - "Splitting of Bernoulli Processes": appendix/probability/39-splitting-bernoulli-processes.md
-          - "Merging of Bernoulli Processes": appendix/probability/40-merging-bernoulli-processes.md
-          - "The Poisson Process": appendix/probability/41-poisson-process.md
-          - "Markov Processes I": appendix/probability/42-markov-processes-1.md
-          - "Markov Processes II": appendix/probability/43-markov-processes-2.md
-      - Statistics:
-          - "Introduction": appendix/statistics/01-statistics-intro.md
-          - "Concepts from Probability": appendix/statistics/02-probability-concepts.md
-          - "Statistical Modeling": appendix/statistics/03-statistical-modeling.md
-          - "Parametric Estimation": appendix/statistics/04-parametric-models.md
-          - "Confidence Intervals": appendix/statistics/05-confidence-intervals.md
-          - "The Delta Method": appendix/statistics/06-delta-method.md
-          - "Introduction to Hypothesis Testing": appendix/statistics/07-intro-to-hypothesis-testing.md
-          - "Levels and p-Values": appendix/statistics/08-levels-and-pvalues.md
+      - Part I — Mathematical Foundations:
+          - appendix/part-01-mathematical-foundations/index.md
+          - appendix/part-01-mathematical-foundations/01-sets-and-functions.md
+          - appendix/part-01-mathematical-foundations/02-counting-principles.md
+          - appendix/part-01-mathematical-foundations/03-mathematical-notation.md
+          - appendix/part-01-mathematical-foundations/04-sequences-and-series.md
+          - appendix/part-01-mathematical-foundations/05-linear-algebra-review.md
+      - Part II — Foundations of Probability:
+          - appendix/part-02-probability-foundations/index.md
+          - appendix/part-02-probability-foundations/01-probability-spaces.md
+          - appendix/part-02-probability-foundations/02-probability-axioms.md
+          - appendix/part-02-probability-foundations/03-conditional-probability.md
+          - appendix/part-02-probability-foundations/04-bayes-rule.md
+          - appendix/part-02-probability-foundations/05-independence.md
+          - appendix/part-02-probability-foundations/06-law-of-total-probability.md
+      - Part III — Random Variables:
+          - appendix/part-03-random-variables/index.md
+          - appendix/part-03-random-variables/01-random-variables.md
+          - appendix/part-03-random-variables/02-cumulative-distribution-functions.md
+          - appendix/part-03-random-variables/03-probability-mass-functions.md
+          - appendix/part-03-random-variables/04-probability-density-functions.md
+          - appendix/part-03-random-variables/05-joint-distributions.md
+          - appendix/part-03-random-variables/06-marginal-distributions.md
+          - appendix/part-03-random-variables/07-conditional-distributions.md
+          - appendix/part-03-random-variables/08-functions-of-random-variables.md
+          - appendix/part-03-random-variables/09-change-of-variables.md
+      - Part IV — Expectation and Moments:
+          - appendix/part-04-expectation-and-moments/index.md
+          - appendix/part-04-expectation-and-moments/01-expected-value.md
+          - appendix/part-04-expectation-and-moments/02-variance.md
+          - appendix/part-04-expectation-and-moments/03-higher-order-moments.md
+          - appendix/part-04-expectation-and-moments/04-covariance.md
+          - appendix/part-04-expectation-and-moments/05-correlation.md
+          - appendix/part-04-expectation-and-moments/06-conditional-expectation.md
+          - appendix/part-04-expectation-and-moments/07-law-of-total-expectation.md
+          - appendix/part-04-expectation-and-moments/08-law-of-total-variance.md
+      - Part V — Common Probability Distributions:
+          - appendix/part-05-common-distributions/index.md
+          - appendix/part-05-common-distributions/01-bernoulli-distribution.md
+          - appendix/part-05-common-distributions/02-binomial-distribution.md
+          - appendix/part-05-common-distributions/03-geometric-distribution.md
+          - appendix/part-05-common-distributions/04-negative-binomial-distribution.md
+          - appendix/part-05-common-distributions/05-hypergeometric-distribution.md
+          - appendix/part-05-common-distributions/06-poisson-distribution.md
+          - appendix/part-05-common-distributions/07-multinomial-distribution.md
+          - appendix/part-05-common-distributions/08-discrete-uniform-distribution.md
+          - appendix/part-05-common-distributions/09-continuous-uniform-distribution.md
+          - appendix/part-05-common-distributions/10-exponential-distribution.md
+          - appendix/part-05-common-distributions/11-gamma-distribution.md
+          - appendix/part-05-common-distributions/12-beta-distribution.md
+          - appendix/part-05-common-distributions/13-chi-square-distribution.md
+          - appendix/part-05-common-distributions/14-students-t-distribution.md
+          - appendix/part-05-common-distributions/15-f-distribution.md
+          - appendix/part-05-common-distributions/16-gaussian-distribution.md
+          - appendix/part-05-common-distributions/17-lognormal-distribution.md
+          - appendix/part-05-common-distributions/18-weibull-distribution.md
+      - Part VI — Multivariate Probability:
+          - appendix/part-06-multivariate-probability/index.md
+          - appendix/part-06-multivariate-probability/01-multivariate-random-variables.md
+          - appendix/part-06-multivariate-probability/02-covariance-matrices.md
+          - appendix/part-06-multivariate-probability/03-correlation-matrices.md
+          - appendix/part-06-multivariate-probability/04-linear-transformations.md
+          - appendix/part-06-multivariate-probability/05-multivariate-gaussian.md
+          - appendix/part-06-multivariate-probability/06-conditional-gaussian.md
+      - Part VII — Asymptotic Theory:
+          - appendix/part-07-asymptotic-theory/index.md
+          - appendix/part-07-asymptotic-theory/01-weak-law-of-large-numbers.md
+          - appendix/part-07-asymptotic-theory/02-strong-law-of-large-numbers.md
+          - appendix/part-07-asymptotic-theory/03-central-limit-theorem.md
+          - appendix/part-07-asymptotic-theory/04-delta-method.md
+          - appendix/part-07-asymptotic-theory/05-slutskys-theorem.md
+          - appendix/part-07-asymptotic-theory/06-continuous-mapping-theorem.md
+      - Part VIII — Stochastic Processes:
+          - appendix/part-08-stochastic-processes/index.md
+          - appendix/part-08-stochastic-processes/01-random-processes.md
+          - appendix/part-08-stochastic-processes/02-bernoulli-processes.md
+          - appendix/part-08-stochastic-processes/03-poisson-processes.md
+          - appendix/part-08-stochastic-processes/04-renewal-processes.md
+          - appendix/part-08-stochastic-processes/05-markov-chains.md
+          - appendix/part-08-stochastic-processes/06-continuous-time-markov-chains.md
+          - appendix/part-08-stochastic-processes/07-hidden-markov-models.md
+          - appendix/part-08-stochastic-processes/08-brownian-motion.md
+          - appendix/part-08-stochastic-processes/09-geometric-brownian-motion.md
+          - appendix/part-08-stochastic-processes/10-martingales.md
+          - appendix/part-08-stochastic-processes/11-random-walks.md
+      - Part IX — Monte Carlo Methods:
+          - appendix/part-09-monte-carlo-methods/index.md
+          - appendix/part-09-monte-carlo-methods/01-random-number-generation.md
+          - appendix/part-09-monte-carlo-methods/02-sampling-methods.md
+          - appendix/part-09-monte-carlo-methods/03-monte-carlo-simulation.md
+          - appendix/part-09-monte-carlo-methods/04-importance-sampling.md
+          - appendix/part-09-monte-carlo-methods/05-rejection-sampling.md
+          - appendix/part-09-monte-carlo-methods/06-variance-reduction.md
+          - appendix/part-09-monte-carlo-methods/07-bootstrap-methods.md
+          - appendix/part-09-monte-carlo-methods/08-jackknife-methods.md
+      - Part X — Foundations of Statistics:
+          - appendix/part-10-statistics-foundations/index.md
+          - appendix/part-10-statistics-foundations/01-population-vs-sample.md
+          - appendix/part-10-statistics-foundations/02-descriptive-statistics.md
+          - appendix/part-10-statistics-foundations/03-sampling-distributions.md
+          - appendix/part-10-statistics-foundations/04-statistical-models.md
+          - appendix/part-10-statistics-foundations/05-bias-and-variance.md
+      - Part XI — Parameter Estimation:
+          - appendix/part-11-parameter-estimation/index.md
+          - appendix/part-11-parameter-estimation/01-point-estimation.md
+          - appendix/part-11-parameter-estimation/02-properties-of-estimators.md
+          - appendix/part-11-parameter-estimation/03-maximum-likelihood-estimation.md
+          - appendix/part-11-parameter-estimation/04-method-of-moments.md
+          - appendix/part-11-parameter-estimation/05-bayesian-estimation.md
+          - appendix/part-11-parameter-estimation/06-maximum-a-posteriori-estimation.md
+          - appendix/part-11-parameter-estimation/07-confidence-intervals.md
+          - appendix/part-11-parameter-estimation/08-bootstrap-confidence-intervals.md
+      - Part XII — Hypothesis Testing:
+          - appendix/part-12-hypothesis-testing/index.md
+          - appendix/part-12-hypothesis-testing/01-hypothesis-testing-framework.md
+          - appendix/part-12-hypothesis-testing/02-test-statistics.md
+          - appendix/part-12-hypothesis-testing/03-p-values.md
+          - appendix/part-12-hypothesis-testing/04-type-i-and-type-ii-errors.md
+          - appendix/part-12-hypothesis-testing/05-statistical-power.md
+          - appendix/part-12-hypothesis-testing/06-likelihood-ratio-tests.md
+          - appendix/part-12-hypothesis-testing/07-parametric-tests.md
+          - appendix/part-12-hypothesis-testing/08-nonparametric-tests.md
+          - appendix/part-12-hypothesis-testing/09-permutation-tests.md
+          - appendix/part-12-hypothesis-testing/10-bootstrap-tests.md
+      - Part XIII — Regression and Statistical Models:
+          - appendix/part-13-regression/index.md
+          - appendix/part-13-regression/01-simple-linear-regression.md
+          - appendix/part-13-regression/02-multiple-linear-regression.md
+          - appendix/part-13-regression/03-generalized-linear-models.md
+          - appendix/part-13-regression/04-logistic-regression.md
+          - appendix/part-13-regression/05-regularization.md
+          - appendix/part-13-regression/06-model-diagnostics.md
+          - appendix/part-13-regression/07-residual-analysis.md
+      - Part XIV — Model Selection:
+          - appendix/part-14-model-selection/index.md
+          - appendix/part-14-model-selection/01-bias-variance-tradeoff.md
+          - appendix/part-14-model-selection/02-cross-validation.md
+          - appendix/part-14-model-selection/03-information-criteria.md
+          - appendix/part-14-model-selection/04-feature-selection.md
+          - appendix/part-14-model-selection/05-model-averaging.md
+      - Part XV — Multiple Testing:
+          - appendix/part-15-multiple-testing/index.md
+          - appendix/part-15-multiple-testing/01-multiple-comparisons.md
+          - appendix/part-15-multiple-testing/02-bonferroni-correction.md
+          - appendix/part-15-multiple-testing/03-false-discovery-rate.md
+          - appendix/part-15-multiple-testing/04-data-snooping-bias.md
+          - appendix/part-15-multiple-testing/05-whites-reality-check.md
+          - appendix/part-15-multiple-testing/06-hansens-spa-test.md
+      - Part XVI — Bayesian Statistics:
+          - appendix/part-16-bayesian-statistics/index.md
+          - appendix/part-16-bayesian-statistics/01-bayesian-framework.md
+          - appendix/part-16-bayesian-statistics/02-prior-distributions.md
+          - appendix/part-16-bayesian-statistics/03-posterior-distributions.md
+          - appendix/part-16-bayesian-statistics/04-conjugate-priors.md
+          - appendix/part-16-bayesian-statistics/05-bayesian-updating.md
+          - appendix/part-16-bayesian-statistics/06-bayesian-model-comparison.md
+          - appendix/part-16-bayesian-statistics/07-bayesian-prediction.md
+      - Part XVII — Statistical Computing:
+          - appendix/part-17-statistical-computing/index.md
+          - appendix/part-17-statistical-computing/01-numerical-optimization.md
+          - appendix/part-17-statistical-computing/02-numerical-integration.md
+          - appendix/part-17-statistical-computing/03-em-algorithm.md
+          - appendix/part-17-statistical-computing/04-markov-chain-monte-carlo.md
+          - appendix/part-17-statistical-computing/05-gibbs-sampling.md
+          - appendix/part-17-statistical-computing/06-metropolis-hastings.md
+      - Part XVIII — Applications to Quantitative Finance:
+          - appendix/part-18-quant-finance-applications/index.md
+          - appendix/part-18-quant-finance-applications/01-kelly-criterion.md
+          - appendix/part-18-quant-finance-applications/02-probability-of-ruin.md
+          - appendix/part-18-quant-finance-applications/03-drawdown-probabilities.md
+          - appendix/part-18-quant-finance-applications/04-hitting-times.md
+          - appendix/part-18-quant-finance-applications/05-first-passage-times.md
+          - appendix/part-18-quant-finance-applications/06-queue-models.md
+          - appendix/part-18-quant-finance-applications/07-order-arrival-processes.md
+          - appendix/part-18-quant-finance-applications/08-bayesian-signal-updating.md
+          - appendix/part-18-quant-finance-applications/09-monte-carlo-option-pricing.md
+          - appendix/part-18-quant-finance-applications/10-portfolio-risk-simulation.md
+          - appendix/part-18-quant-finance-applications/11-value-at-risk.md
+          - appendix/part-18-quant-finance-applications/12-expected-shortfall.md
+          - appendix/part-18-quant-finance-applications/13-heavy-tailed-returns.md
+          - appendix/part-18-quant-finance-applications/14-extreme-value-theory.md
+          - appendix/part-18-quant-finance-applications/15-copulas.md
+          - appendix/part-18-quant-finance-applications/16-regime-detection.md
+          - appendix/part-18-quant-finance-applications/17-hidden-state-models.md
   - About:
       - about/index.md
       - Support This Site: about/support.md
