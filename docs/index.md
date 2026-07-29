@@ -17,7 +17,7 @@ This course teaches you to work the way quantitative researchers and systematic 
 | **Beginner** | I–II | Understand markets and market structure; work fluently with market data in Python. |
 | **Intermediate** | III–IV | Perform rigorous statistical research and evaluate strategies honestly. |
 | **Advanced** | V–VII | Build a production-quality backtesting engine and live trading infrastructure; apply machine learning responsibly. |
-| **Professional** | VIII–X + Capstones | Design, deploy, monitor, and maintain an institutional-grade systematic trading platform. |
+| **Professional** | VIII–X | Design, deploy, monitor, and maintain an institutional-grade systematic trading platform. |
 
 ## The course
 
@@ -82,12 +82,6 @@ This course teaches you to work the way quantitative researchers and systematic 
     ---
 
     Fund structures, fees, investor reporting, due diligence, operations, compliance, hiring, and scaling.
-
--   :material-trophy: **[Capstone Projects](capstones/index.md)**
-
-    ---
-
-    Seven progressively more realistic deliverables, ending with a live cloud deployment under monitoring and risk controls.
 
 -   :material-rocket-launch: **[Optional Advanced Modules](advanced/index.md)**
 

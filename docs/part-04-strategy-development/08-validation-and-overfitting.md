@@ -15,7 +15,7 @@ By the end of this lesson you will be able to:
 
 ## Outline
 
-1. The overfitting problem — why this is the capstone of strategy development
+1. The overfitting problem — why this is the culmination of strategy development
 2. Walk-forward optimization — windows, refitting, degradation analysis
 3. Purged cross-validation — leakage from overlapping labels and how purging removes it
 4. Embargoes — construction, parameter choice, and what they protect against

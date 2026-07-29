@@ -1,6 +1,6 @@
 # Optional Advanced Modules
 
-These modules are for experienced learners who have completed the core parts of the course and want depth in a specific area. Each module is self-contained: it states its own prerequisites, and none of the capstones depend on any of them. Take the ones relevant to the roles or markets you are targeting — an execution researcher needs the impact and Almgren–Chriss modules; someone heading toward derivatives desks needs stochastic calculus and options pricing; nobody needs all thirteen.
+These modules are for experienced learners who have completed the core parts of the course and want depth in a specific area. Each module is self-contained: it states its own prerequisites, and no core lesson depends on any of them. Take the ones relevant to the roles or markets you are targeting — an execution researcher needs the impact and Almgren–Chriss modules; someone heading toward derivatives desks needs stochastic calculus and options pricing; nobody needs all thirteen.
 
 | Module | Focus |
 |--------|-------|

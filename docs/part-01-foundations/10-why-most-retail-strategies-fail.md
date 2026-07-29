@@ -1,6 +1,6 @@
 # Why Most Retail Strategies Fail
 
-Most retail systematic strategies lose money, and the uncomfortable part is that this outcome is largely decided before the first live trade. It is not primarily bad luck, and it is not that markets are perfectly efficient — professional desks extract real edges every day. It is that the standard retail *process* manufactures strategies that were never real: statistical mirages, built on biased data, evaluated without costs, sized without risk mathematics, and deployed without monitoring. This lesson is the capstone of Part I: everything that follows in the course is, one way or another, the antidote.
+Most retail systematic strategies lose money, and the uncomfortable part is that this outcome is largely decided before the first live trade. It is not primarily bad luck, and it is not that markets are perfectly efficient — professional desks extract real edges every day. It is that the standard retail *process* manufactures strategies that were never real: statistical mirages, built on biased data, evaluated without costs, sized without risk mathematics, and deployed without monitoring. This lesson is the summation of Part I: everything that follows in the course is, one way or another, the antidote.
 
 Read it as a checklist of the failure modes the rest of this course engineers out.
 
