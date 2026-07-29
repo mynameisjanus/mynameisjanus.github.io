@@ -25,5 +25,6 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [Introduction to Hypothesis Testing](../appendix/statistics/07-intro-to-hypothesis-testing.md)
-- [Levels and p-Values](../appendix/statistics/08-levels-and-pvalues.md)
+- [The Hypothesis Testing Framework](../appendix/part-12-hypothesis-testing/01-hypothesis-testing-framework.md)
+- [Test Statistics](../appendix/part-12-hypothesis-testing/02-test-statistics.md)
+- [p-values](../appendix/part-12-hypothesis-testing/03-p-values.md)

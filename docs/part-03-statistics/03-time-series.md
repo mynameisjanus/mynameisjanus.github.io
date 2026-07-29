@@ -25,5 +25,5 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [Statistical Modeling](../appendix/statistics/03-statistical-modeling.md)
-- [Markov Processes I](../appendix/probability/42-markov-processes-1.md)
+- [Statistical Models](../appendix/part-10-statistics-foundations/04-statistical-models.md)
+- [Markov Chains](../appendix/part-08-stochastic-processes/05-markov-chains.md)

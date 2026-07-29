@@ -59,7 +59,7 @@ stateDiagram-v2
     Crisis --> HighVol: liquidations complete
 ```
 
-The standard formal tool for this inference is the Hidden Markov Model: assume the market occupies one of a few unobserved states, each generating returns with its own mean and variance, with probabilistic transitions between states — then infer the current state from the data. We study HMM-based regime detection in Part III. The underlying machinery — Markov chains, transition matrices, stationary distributions — is covered in the appendix: [Markov Processes I](../appendix/probability/42-markov-processes-1.md) and [Markov Processes II](../appendix/probability/43-markov-processes-2.md). If those are unfamiliar, read them before Part III; the HMM material assumes them.
+The standard formal tool for this inference is the Hidden Markov Model: assume the market occupies one of a few unobserved states, each generating returns with its own mean and variance, with probabilistic transitions between states — then infer the current state from the data. We study HMM-based regime detection in Part III. The underlying machinery — Markov chains, transition matrices, stationary distributions — is covered in the appendix: [Markov Chains](../appendix/part-08-stochastic-processes/05-markov-chains.md) and [Hidden Markov Models](../appendix/part-08-stochastic-processes/07-hidden-markov-models.md). If those are unfamiliar, read them before Part III; the HMM material assumes them.
 
 !!! abstract "Key takeaways"
     - Market returns are not one stationary distribution; they move between persistent regimes with different volatility, correlation, and autocorrelation structure.

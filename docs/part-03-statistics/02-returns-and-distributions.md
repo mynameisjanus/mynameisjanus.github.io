@@ -25,5 +25,5 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [The Gaussian Distribution](../appendix/probability/28-gaussian-distribution.md)
-- [Derived Distributions](../appendix/probability/29-derived-distributions.md)
+- [The Gaussian Distribution](../appendix/part-05-common-distributions/16-gaussian-distribution.md)
+- [Functions of Random Variables](../appendix/part-03-random-variables/08-functions-of-random-variables.md)

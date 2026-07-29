@@ -25,6 +25,6 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [The Bayesian Inference Framework](../appendix/probability/32-bayesian-inference-framework.md)
-- [Markov Processes I](../appendix/probability/42-markov-processes-1.md)
-- [Markov Processes II](../appendix/probability/43-markov-processes-2.md)
+- [The Bayesian Framework](../appendix/part-16-bayesian-statistics/01-bayesian-framework.md)
+- [Markov Chains](../appendix/part-08-stochastic-processes/05-markov-chains.md)
+- [Hidden Markov Models](../appendix/part-08-stochastic-processes/07-hidden-markov-models.md)

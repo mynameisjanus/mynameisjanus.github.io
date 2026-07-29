@@ -25,7 +25,7 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [Mathematical Background](../appendix/probability/01-math-background.md)
-- [Conditional Probability](../appendix/probability/08-definition-conditional.md)
-- [Discrete Random Variables](../appendix/probability/11-random-variables.md)
-- [Continuous Random Variables](../appendix/probability/21-continuous-pdf.md)
+- [Sets and Functions](../appendix/part-01-mathematical-foundations/01-sets-and-functions.md)
+- [Conditional Probability](../appendix/part-02-probability-foundations/03-conditional-probability.md)
+- [Random Variables](../appendix/part-03-random-variables/01-random-variables.md)
+- [Probability Density Functions](../appendix/part-03-random-variables/04-probability-density-functions.md)

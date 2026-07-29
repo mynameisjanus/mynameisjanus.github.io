@@ -17,4 +17,4 @@ This module builds the continuous-time mathematics underlying derivatives pricin
 
 ## Recommended background
 
-- [Appendix — the Gaussian distribution](../appendix/probability/28-gaussian-distribution.md)
+- [Appendix — the Gaussian distribution](../appendix/part-05-common-distributions/16-gaussian-distribution.md)

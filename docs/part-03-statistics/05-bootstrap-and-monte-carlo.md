@@ -25,5 +25,5 @@ By the end of this lesson you will be able to:
 
 ## Prerequisites
 
-- [The Weak Law of Large Numbers](../appendix/probability/36-weak-law-of-large-numbers.md)
-- [The Central Limit Theorem](../appendix/probability/37-central-limit-theorem.md)
+- [The Weak Law of Large Numbers](../appendix/part-07-asymptotic-theory/01-weak-law-of-large-numbers.md)
+- [The Central Limit Theorem](../appendix/part-07-asymptotic-theory/03-central-limit-theorem.md)
