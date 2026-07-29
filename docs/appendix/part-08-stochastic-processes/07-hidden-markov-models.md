@@ -1,99 +1,113 @@
-# Markov Processes II
+# Hidden Markov Models
 
-[Markov Processes I](42-markov-processes-1.md) built the chain machinery — the Markov property, transition matrices, $n$-step probabilities, recurrence — and introduced Hidden Markov Models up through the forward algorithm and filtering. This page finishes both stories. For observable chains: where does the chain settle in the long run (steady-state probabilities), and how long does it stay in a state once it arrives (sojourn times)? For HMMs: how to infer states retrospectively (smoothing), how to recover the single most likely hidden path (Viterbi), and how to estimate the parameters from data alone (Baum–Welch).
+This page assumes the chain machinery of [Markov Chains](05-markov-chains.md). In the checkout counter there, the state is observable — you can count the queue. In the regime problem, it is not. Nobody publishes today's regime; we see returns, which are noisy *emissions* from whatever state the market occupies. The formal object for this situation is the Hidden Markov Model.
 
-## Steady State Probabilities
+## Definition
 
-The two-state chain in Part I gave a strong hint. With leaving probabilities $a$ and $b$,
+A **Hidden Markov Model** consists of two coupled processes:
 
-$$r_{11}(n)=\frac{b}{a+b}+\frac{a}{a+b}(1-a-b)^n\;\longrightarrow\;\frac{b}{a+b},$$
+- a **hidden state chain** $X_0,X_1,\ldots,X_T$: a Markov chain on $S=\{1,\ldots,m\}$ with transition matrix $P=[p_{ij}]$ and initial distribution $\pi_0$, exactly as before — except that $X_n$ is never observed;
+- an **observation process** $Y_0,Y_1,\ldots,Y_T$: at each time $n$, the current state emits an observation drawn from a state-specific **emission distribution** with density (or PMF) $f_i(y)$ when $X_n=i$.
 
-and $r_{21}(n)$ converges to the *same* limit: after many transitions, the probability of finding the chain in state $1$ no longer depends on where it started. The general result:
+The coupling assumption: *conditioned on the entire hidden path, the observations are independent, and each depends only on the concurrent state*:
 
-!!! abstract "Steady-State Convergence Theorem"
-    Let $X_n$ be a finite-state Markov chain with a **single recurrent class** that is **aperiodic**. Then for every $j$, the limit
+$$p(y_0,y_1,\ldots,y_T\mid x_0,x_1,\ldots,x_T)=\prod_{n=0}^{T}f_{x_n}(y_n).$$
 
-    $$\pi_j=\lim_{n\to\infty}r_{ij}(n)$$
+The model is parameterized by $\lambda=(\pi_0,P,\{f_i\})$. For regime detection on returns, the standard choice is **Gaussian emissions**: state $i$ generates returns from a [normal distribution](../part-05-common-distributions/16-gaussian-distribution.md) with state-specific mean and variance,
 
-    exists and is independent of the initial state $i$. The $\pi_j$ are the unique nonnegative solution of the **balance equations** together with normalization:
+$$f_i(y)=\frac{1}{\sqrt{2\pi\sigma_i^2}}\exp\!\left(-\frac{(y-\mu_i)^2}{2\sigma_i^2}\right).$$
 
-    $$\pi_j=\sum_{k=1}^{m}\pi_k\,p_{kj}\quad(j=1,\ldots,m),\qquad \sum_{k=1}^{m}\pi_k=1.$$
+A two-state Gaussian HMM already captures the essential regime phenomenology: a persistent low-volatility state and a persistent high-volatility state, each with its own mean return.
 
-    Moreover $\pi_j=0$ for every transient state $j$ and $\pi_j>0$ for every recurrent state $j$.
+```mermaid
+flowchart LR
+    X0(("X&#8320;")) --> X1(("X&#8321;")) --> X2(("X&#8322;")) --> Xd["&#8943;"]
+    X0 --> Y0(["Y&#8320;"])
+    X1 --> Y1(["Y&#8321;"])
+    X2 --> Y2(["Y&#8322;"])
+```
 
-The balance equations are easy to motivate: start from the Chapman–Kolmogorov recursion $r_{ij}(n)=\sum_k r_{ik}(n-1)\,p_{kj}$ and let $n\to\infty$ on both sides. If the limits exist, they must satisfy $\pi_j=\sum_k\pi_k p_{kj}$ — the hard part of the theorem (which we will not prove) is that the limits *do* exist under the stated conditions. In matrix language, the row vector $\pi=(\pi_1,\ldots,\pi_m)$ satisfies $\pi=\pi P$: the steady-state distribution is a left eigenvector of the transition matrix with eigenvalue $1$, normalized to sum to $1$. A distribution with this property is also called **stationary**: if $X_0\sim\pi$, then $X_n\sim\pi$ for all $n$ — the chain is in "statistical equilibrium" from the start.
+The dependency structure: the hidden chain (circles) evolves on its own; each observation (rounded boxes) hangs off its state. All statistical dependence between observations at different times flows *through* the hidden chain — that is what makes the computations below tractable.
 
-For the two-state chain, the balance equation for state $1$ reads $\pi_1=\pi_1(1-a)+\pi_2 b$, i.e. $\pi_1 a=\pi_2 b$ — the long-run flow $1\to 2$ matches the flow $2\to 1$. With $\pi_1+\pi_2=1$,
+## The Joint Likelihood
 
-$$\pi_1=\frac{b}{a+b},\qquad \pi_2=\frac{a}{a+b},$$
+Combining the trajectory formula for the chain with the emission factorization gives the complete joint density of states and observations:
 
-matching the limit computed directly in Part I.
+$$p(x_{0:T},y_{0:T})=\pi_0(x_0)\,f_{x_0}(y_0)\prod_{n=1}^{T}p_{x_{n-1}x_n}\,f_{x_n}(y_n),$$
 
-The steady-state probabilities carry three equivalent interpretations:
+where $x_{0:T}$ abbreviates $(x_0,\ldots,x_T)$. Every HMM computation is some manipulation of this one expression: summing it over paths, maximizing it over paths, or maximizing its expectation over parameters.
 
-1. **Limiting probability**: $\pi_j$ is (approximately) the probability of finding the chain in state $j$ at a fixed faraway time, regardless of the start.
-2. **Long-run fraction of time**: if $v_{ij}(n)$ counts visits to $j$ in the first $n$ transitions starting from $i$, then $v_{ij}(n)/n\to\pi_j$ with probability $1$. Likewise the long-run frequency of $j\to k$ transitions is $\pi_j p_{jk}$ — a fact we exploit twice below.
-3. **Mean recurrence time**: the expected number of transitions between successive visits to $j$ is $t_j^{*}=1/\pi_j$. Rare states are rarely refreshed.
+## The Three Computational Problems
 
-!!! note "Steady state as unconditional regime frequency"
-    For a regime chain, $\pi$ answers "ignoring all current information, what fraction of the time does the market spend in each regime?" A two-state fit with $a=\mathbf{P}(\text{calm}\to\text{turbulent})=0.02$ and $b=\mathbf{P}(\text{turbulent}\to\text{calm})=0.10$ gives $\pi=(5/6,\,1/6)$: calm five days out of six. The filtered probability from Part I is the *conditional* refinement of this unconditional base rate — with no recent data, your best guess reverts to $\pi$.
+| Problem | Question | Algorithm |
+|---|---|---|
+| Evaluation | What is the likelihood $p(y_{0:T};\lambda)$ of the observed data? | Forward algorithm |
+| Inference | Which state is the chain in? — filtered $\mathbf{P}(X_n=i\mid y_{0:n})$, smoothed $\mathbf{P}(X_n=i\mid y_{0:T})$, and the most likely path | Forward (filtering); forward–backward (smoothing); Viterbi (best path) |
+| Learning | Which parameters $\lambda=(\pi_0,P,\{f_i\})$ best explain the data? | Baum–Welch (EM) |
 
-### Why the Conditions Matter
+All three are developed below on this page.
 
-Both hypotheses of the theorem are load-bearing.
+## The Forward Algorithm
 
-- **Multiple recurrent classes**: with two absorbing states, $r_{ij}(n)$ still converges but the limit depends on the start — a chain absorbed in class $A$ never reports statistics of class $B$. Balance equations then have multiple solutions.
-- **Periodicity**: take $p_{12}=p_{21}=1$. Then $r_{11}(n)$ alternates $1,0,1,0,\ldots$ and never converges, even though the time-average fraction of visits still converges to $\tfrac12$. Aperiodicity is what upgrades convergence of *averages* to convergence of *probabilities*.
+The evaluation problem looks innocent: to get $p(y_{0:T})$, just sum the joint likelihood over all hidden paths,
 
-### Birth–Death Chains and the Checkout Counter
+$$p(y_{0:T})=\sum_{x_0=1}^{m}\cdots\sum_{x_T=1}^{m}\pi_0(x_0)\,f_{x_0}(y_0)\prod_{n=1}^{T}p_{x_{n-1}x_n}\,f_{x_n}(y_n).$$
 
-A **birth–death chain** is one whose transitions move at most one step: from state $i$, up with probability $b_i$, down with probability $d_i$, staying put otherwise (the checkout counter of Part I is exactly this). For such chains the balance equations collapse to a one-line **local balance** relation:
+But there are $m^{T+1}$ paths. For a modest three-state model on one year of daily returns ($m=3$, $T=251$), that is $3^{252}\approx 10^{120}$ terms — the sum is unusable as written. The forward algorithm computes it exactly in $O(m^2T)$ operations by pushing the sums inside the product.
 
-$$\pi_i\,b_i=\pi_{i+1}\,d_{i+1},\qquad i=0,1,\ldots,m-1.$$
+Define the **forward variable**
 
-??? note "Proof"
-    Consider the "cut" between states $\{0,\ldots,i\}$ and $\{i+1,\ldots,m\}$. Because the chain moves one step at a time, every crossing left-to-right is an $i\to i+1$ transition and every crossing right-to-left is an $i+1\to i$ transition. Crossings must alternate — the chain cannot cross the cut rightward twice without crossing back in between — so in $n$ transitions the numbers of crossings in the two directions differ by at most $1$. Dividing by $n$ and letting $n\to\infty$, the long-run frequencies of the two transition types are equal. By interpretation 2 above these frequencies are $\pi_i b_i$ and $\pi_{i+1}d_{i+1}$.
+$$\alpha_n(i)=p(y_{0:n},X_n=i),$$
 
-Iterating local balance gives an explicit product formula, up to the normalizing constant:
+the joint density of the observations up to time $n$ *and* the event that the chain is currently in state $i$. It satisfies:
 
-$$\pi_i=\pi_0\prod_{k=0}^{i-1}\frac{b_k}{d_{k+1}},\qquad \sum_{i=0}^{m}\pi_i=1.$$
+**Initialization.**
 
-For the checkout counter, every interior ratio is
+$$\alpha_0(i)=\pi_0(i)\,f_i(y_0),\qquad i=1,\ldots,m.$$
 
-$$\rho=\frac{p(1-q)}{q(1-p)},$$
+**Recursion.** For $n=0,1,\ldots,T-1$,
 
-so the steady-state probabilities scale geometrically in $\rho$ (with small corrections at the two boundary states). The single number $\rho$ — arrival pressure over service pressure — governs congestion: if $\rho<1$ the distribution piles up near an empty queue; if $\rho>1$ it piles up at capacity; if $\rho=1$ it is (nearly) uniform.
+$$\alpha_{n+1}(j)=\left[\sum_{i=1}^{m}\alpha_n(i)\,p_{ij}\right]f_j(y_{n+1}),\qquad j=1,\ldots,m.$$
 
-### Sojourn Times: How Long Does a Regime Last?
+**Termination.**
 
-Suppose the chain has just entered state $i$. Each subsequent step, independently, it stays with probability $p_{ii}$ and leaves with probability $1-p_{ii}$ (to *some* other state). The number of steps $T_i$ spent in state $i$ before leaving is therefore [geometric](17-geometric-distribution.md) with parameter $1-p_{ii}$:
+$$p(y_{0:T})=\sum_{i=1}^{m}\alpha_T(i).$$
 
-$$\mathbf{P}(T_i=k)=p_{ii}^{\,k-1}(1-p_{ii}),\qquad \mathbb{E}[T_i]=\frac{1}{1-p_{ii}}.$$
+??? note "Proof of the recursion"
+    Two conditional-independence facts follow from the joint likelihood by summing out the unwanted variables: given $X_n=i$, the next state is independent of the observation history, $\mathbf{P}(X_{n+1}=j\mid X_n=i,\,y_{0:n})=p_{ij}$; and given $X_{n+1}=j$, the new observation is independent of everything earlier, $p(y_{n+1}\mid X_{n+1}=j,\,X_n=i,\,y_{0:n})=f_j(y_{n+1})$. Then, decomposing over the state at time $n$,
 
-This turns the diagonal of an estimated transition matrix directly into regime persistence:
+    $$\begin{align}
+    \alpha_{n+1}(j)&=p(y_{0:n+1},X_{n+1}=j)\\
+    &=\sum_{i=1}^{m}p(y_{0:n},X_n=i,X_{n+1}=j,y_{n+1})\\
+    &=\sum_{i=1}^{m}p(y_{0:n},X_n=i)\;\mathbf{P}(X_{n+1}=j\mid X_n=i,y_{0:n})\;p(y_{n+1}\mid X_{n+1}=j,X_n=i,y_{0:n})\\
+    &=\sum_{i=1}^{m}\alpha_n(i)\,p_{ij}\,f_j(y_{n+1})\\
+    &=\left[\sum_{i=1}^{m}\alpha_n(i)\,p_{ij}\right]f_j(y_{n+1}).
+    \end{align}$$
 
-| $p_{ii}$ | Expected duration |
-|---|---|
-| $0.90$ | $10$ days |
-| $0.98$ | $50$ days |
-| $0.995$ | $200$ days |
+    The termination formula is the total probability theorem: $p(y_{0:T})=\sum_i p(y_{0:T},X_T=i)=\sum_i\alpha_T(i)$.
 
-!!! warning "Geometric durations are an assumption, not a finding"
-    The geometric law is *forced by the Markov property*: memorylessness means the regime's remaining lifetime never depends on how long it has already lasted. Real regimes may age — a two-year-old calm period may genuinely be more fragile than a two-month-old one — and a fitted HMM cannot represent that. This is a known limitation to keep in mind when interpreting fitted models (semi-Markov models relax it, at a cost in complexity).
+Each time step costs $m$ multiplications for each of $m$ states, so the full pass is $O(m^2T)$: for the three-state, one-year example, a few thousand multiplications instead of $10^{120}$ terms. The structural reason this works is the Markov property itself — $\alpha_n$ is a *sufficient summary* of the entire history $y_{0:n}$ for everything the future can ask, so the computation never needs to look back.
 
-### Speed of Convergence
+## Filtering: Which State Is the Chain in Now?
 
-How fast is steady state reached? In the two-state chain the answer was exact: the deviation decays like $(1-a-b)^n$, and $1-a-b$ is precisely the second eigenvalue of $P$. This generalizes: for a chain satisfying the convergence theorem, $r_{ij}(n)$ approaches $\pi_j$ geometrically at a rate governed by the second-largest eigenvalue modulus of $P$. Persistent regimes (diagonal entries near $1$) mean a second eigenvalue near $1$ and slow **mixing** — which cuts both ways. It makes unconditional long-run statistics slow to trust, but it is exactly why *conditional* inference pays: a state that decays slowly is a state worth estimating.
+The forward variables deliver, as a free by-product, the answer to the question the regime lesson actually poses in real time. By the definition of conditional probability,
 
-## Hidden Markov Models: Smoothing, Decoding, Learning
+$$\mathbf{P}(X_n=i\mid y_{0:n})=\frac{p(y_{0:n},X_n=i)}{p(y_{0:n})}=\frac{\alpha_n(i)}{\sum_{j=1}^{m}\alpha_n(j)}.$$
 
-Recall the setup from Part I: hidden chain $X_n$ on $\{1,\ldots,m\}$ with parameters $\lambda=(\pi_0,P,\{f_i\})$, observations $y_{0:T}$, joint likelihood
+This is the **filtered state probability**: the posterior distribution over the current hidden state given all data observed *so far*. Unwinding one step of the recursion shows that filtering is exactly sequential [Bayesian inference](../part-16-bayesian-statistics/01-bayesian-framework.md):
 
-$$p(x_{0:T},y_{0:T})=\pi_0(x_0)\,f_{x_0}(y_0)\prod_{n=1}^{T}p_{x_{n-1}x_n}f_{x_n}(y_n),$$
+$$\underbrace{\mathbf{P}(X_{n+1}=j\mid y_{0:n})}_{\text{predict: propagate through }P}=\sum_{i=1}^{m}\mathbf{P}(X_n=i\mid y_{0:n})\,p_{ij},$$
 
-and forward variables $\alpha_n(i)=p(y_{0:n},X_n=i)$ computed by the forward recursion. The forward pass answered "what is the likelihood?" and "what state now?". Three questions remain.
+$$\underbrace{\mathbf{P}(X_{n+1}=j\mid y_{0:n+1})}_{\text{update: reweight by the new data}}\propto\mathbf{P}(X_{n+1}=j\mid y_{0:n})\,f_j(y_{n+1}).$$
 
-### The Backward Algorithm
+Each day: push yesterday's posterior through the transition matrix (the *prior* for today), multiply by the likelihood of today's observation under each state, normalize. This predict–update cycle runs in $O(m^2)$ per new observation, making it directly usable in a live trading system.
+
+!!! note "Filtering is the tradeable quantity"
+    $\mathbf{P}(X_n=i\mid y_{0:n})$ uses only information available at time $n$ — it can drive a real-time decision without lookahead. Its retrospective cousin, the *smoothed* probability $\mathbf{P}(X_n=i\mid y_{0:T})$, uses the whole sample including the future, and is therefore for historical analysis only. The distinction, and the backward recursion that computes the smoothed version, are developed below — confusing the two is a classic source of lookahead bias in regime-switching backtests.
+
+The forward pass answered "what is the likelihood?" and "what state now?". Three questions remain: how to infer states retrospectively (smoothing), how to recover the single most likely hidden path (decoding), and how to estimate the parameters from data alone (learning).
+
+## The Backward Algorithm
 
 Define the **backward variable** as the density of the *future* observations given the current state:
 
@@ -117,7 +131,7 @@ $$\beta_n(i)=\sum_{j=1}^{m}p_{ij}\,f_j(y_{n+1})\,\beta_{n+1}(j).$$
 
 Like the forward pass, the backward pass costs $O(m^2T)$. As a consistency check, $p(y_{0:T})=\sum_i\pi_0(i)f_i(y_0)\beta_0(i)$ — the same number the forward pass produces at termination.
 
-### Smoothing: the Forward–Backward Algorithm
+## Smoothing: the Forward–Backward Algorithm
 
 The **smoothed** state probability conditions on the *entire* sample:
 
@@ -136,9 +150,9 @@ $$\gamma_n(i)=\mathbf{P}(X_n=i\mid y_{0:T})=\frac{\alpha_n(i)\,\beta_n(i)}{\disp
 Intuitively, $\alpha_n(i)$ scores state $i$ by how well it explains the past, $\beta_n(i)$ by how well it sets up the future, and smoothing multiplies the two. Smoothed probabilities are sharper than filtered ones — a spike of volatility that, in real time, was ambiguous ("noise or new regime?") is resolved by seeing what came after.
 
 !!! warning "Filtering vs smoothing: the lookahead trap"
-    $\gamma_n(i)$ conditions on $y_{n+1:T}$ — data that did not exist at time $n$. Smoothed regime labels are the right tool for *historical analysis* ("how did the strategy perform in each regime?") and for parameter estimation below. They are the wrong input for a *backtest of a regime-switching rule*: trading at time $n$ on $\gamma_n$ silently imports the future and produces regime timing no live system can reproduce. Backtests must use the filtered probabilities $\mathbf{P}(X_n=i\mid y_{0:n})$ from Part I.
+    $\gamma_n(i)$ conditions on $y_{n+1:T}$ — data that did not exist at time $n$. Smoothed regime labels are the right tool for *historical analysis* ("how did the strategy perform in each regime?") and for parameter estimation below. They are the wrong input for a *backtest of a regime-switching rule*: trading at time $n$ on $\gamma_n$ silently imports the future and produces regime timing no live system can reproduce. Backtests must use the filtered probabilities $\mathbf{P}(X_n=i\mid y_{0:n})$ from the filtering section above.
 
-### Decoding: the Viterbi Algorithm
+## Decoding: the Viterbi Algorithm
 
 Smoothing answers state questions one time-point at a time. A different question is: what is the single most likely *sequence* of hidden states,
 
@@ -172,7 +186,7 @@ $$\delta_{n+1}(j)=\Bigl[\max_{1\le i\le m}\ \delta_n(i)\,p_{ij}\Bigr]f_j(y_{n+1}
 
 The cost is $O(m^2T)$, the same as the forward pass. In practice Viterbi is always run on logarithms — products of thousands of small numbers underflow — which turns the recursion into $\log\delta_{n+1}(j)=\max_i[\log\delta_n(i)+\log p_{ij}]+\log f_j(y_{n+1})$, a max-plus recursion that is numerically bulletproof. Viterbi paths are the standard way to paint historical regime labels on a price chart; the smoothed $\gamma$'s are the right object when you need *probabilities* rather than a single label.
 
-### Learning: the Baum–Welch Algorithm
+## Learning: the Baum–Welch Algorithm
 
 Everything so far assumed the parameters $\lambda=(\pi_0,P,\{f_i\})$ were known. In practice nothing is known: from returns alone we must estimate the transition matrix, each regime's mean and variance, and the initial distribution. Maximum likelihood asks for
 
@@ -270,7 +284,7 @@ with equality only at a stationary point.
 !!! warning "What EM does not guarantee"
     Monotone ascent, yes; the global maximum, no. The HMM likelihood surface is multimodal, and Baum–Welch converges to a local maximum that depends on the initialization. Standard practice: run from several starting points (e.g. states initialized by sorting observations into volatility buckets, or by k-means on rolling volatility) and keep the best likelihood. Watch for two failure modes: **degenerate solutions**, where a state collapses onto a handful of observations and $\hat\sigma_i^2\to 0$ sends the likelihood to infinity (cured by a variance floor or a prior), and **label switching** — the likelihood is invariant to permuting the states, so "state 1" means nothing until you impose a convention, such as ordering states by $\hat\sigma_i$.
 
-### Numerical Scaling
+## Numerical Scaling
 
 The forward variable $\alpha_n(i)$ is a joint density of $n+1$ observations: it shrinks (or grows) geometrically in $n$ and underflows double-precision arithmetic within a few hundred steps. The standard fix normalizes at every step: set $\tilde\alpha_0(j)=\pi_0(j)f_j(y_0)$ and, for $n\ge 1$,
 
@@ -287,7 +301,7 @@ c_n=p(y_n\mid y_{0:n-1}),\qquad
 
 The backward variables are rescaled by the same constants $c_n$, which cancel in the ratios defining $\gamma$ and $\xi$, so forward–backward and Baum–Welch run unchanged on the scaled quantities. The identity $\log p(y_{0:T})=\sum_n\log c_n$ has a bonus interpretation: the log-likelihood is a sum of *one-step-ahead predictive* log-densities, i.e. exactly a walk-forward evaluation of the model's next-day forecasts — the quantity you would want for comparing models anyway. (The alternative to scaling is to run everything in log-space with the log-sum-exp trick; Viterbi, which uses only products and maxima, needs plain logarithms and no scaling at all.)
 
-### Choosing the Number of States
+## Choosing the Number of States
 
 The number of hidden states $m$ is not estimated by Baum–Welch — it is chosen by the modeler, and the likelihood alone cannot choose it, since more states never fit worse. A Gaussian HMM with $m$ states has
 
@@ -299,7 +313,7 @@ $$\mathrm{AIC}=-2\log\hat L+2k,\qquad \mathrm{BIC}=-2\log\hat L+k\log(T+1),$$
 
 trade fit against complexity (smaller is better); BIC penalizes harder and typically selects fewer states. A more honest criterion for trading use is out-of-sample one-step predictive log-likelihood — fit on one span, evaluate $\sum\log c_n$ on the next — since predictive performance is what a live system experiences. On daily financial returns, two or three states usually suffice; beyond that, extra states tend to fit noise, split existing regimes into near-duplicates (aggravating label switching), and destabilize the estimated transition matrix.
 
-### From Machinery to Markets
+## From Machinery to Markets
 
 A two-state Gaussian HMM fitted to daily equity-index returns reliably recovers the same structure (numbers below are representative orders of magnitude, not estimates to reuse):
 
@@ -310,6 +324,6 @@ A two-state Gaussian HMM fitted to daily equity-index returns reliably recovers 
 | Persistence $\hat p_{ii}$ | $0.98$–$0.99$ | $0.90$–$0.96$ |
 | Steady-state $\pi_i$ | $\sim 0.8$–$0.9$ | $\sim 0.1$–$0.2$ |
 
-Every row is one of the objects built in these two pages: the emission parameters separate the regimes by volatility (and, weakly, by mean); the diagonal of $P$ gives expected durations of months and weeks respectively via $1/(1-p_{ii})$; the stationary distribution gives unconditional regime frequencies; and the filtered probability $\mathbf{P}(X_n=\text{turbulent}\mid y_{0:n})$ is a real-time, lookahead-free regime signal that can gate position sizing.
+Every row is one of the objects built here and in [Markov Chains](05-markov-chains.md): the emission parameters separate the regimes by volatility (and, weakly, by mean); the diagonal of $P$ gives expected durations of months and weeks respectively via $1/(1-p_{ii})$; the stationary distribution gives unconditional regime frequencies; and the filtered probability $\mathbf{P}(X_n=\text{turbulent}\mid y_{0:n})$ is a real-time, lookahead-free regime signal that can gate position sizing.
 
 Keep the model's honest limitations in view: the regimes are constructs of a fitted model, not observable facts; sojourn times are forced to be geometric; parameters are assumed constant while markets drift; and Gaussian emissions understate tails *within* a regime (Student-$t$ emissions are a common upgrade — much of the unconditional fat-tailedness of returns is, however, already generated by the mixture of regimes itself). These trade-offs, and the full application to real return data — fitting, state-count selection, regime-conditional performance analysis, and regime-aware sizing — are taken up in [Bayesian Methods and Hidden Markov Models](../../part-03-statistics/06-bayesian-methods-and-hmms.md), with the motivating market context in [Market Regimes](../../part-01-foundations/06-market-regimes.md).

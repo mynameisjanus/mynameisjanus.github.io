@@ -6,6 +6,23 @@ The hypergeometric distribution is a discrete random variable with three paramet
 
 The key difference between the hypergeometric and the binomial distributions is the sampling method. In the hypergeometric case, we are sampling **without replacement** so that the trials are dependent, i.e., the outcome of a trial affects the outcome of the following trials. In the binomial case, they are independent because we are sampling **with replacement**. To illustrate this, consider a bowl with 7 black and 3 white marbles. For the first trial, the probability of picking a black marble is $\tfrac{7}{10}$. If we picked a black marble and did not replace it, the probability of picking another black marble in the second trial will be $\tfrac{6}{9}$. However, if we replaced it, then the probability of getting a black marble the second time will still be $\tfrac{7}{10}$.
 
+## Counting Derivation
+
+  ![](../../assets/images/prob/hypergeom.png){ width="100" .center }
+
+Consider a bowl with $n$ items of which $r$ are *red*. We randomly pick $m$ items from this bowl **without replacement**, i.e., we don't return to the bowl the items that we've picked. What is the probability that $k$ of the items we picked are red?
+
+!!! warning
+    This might seem to be exactly like the multinomial probability but it is not. In this problem, we are only interested in having $k$ red items out of the $m$ items that we've picked. Moreover, we are sampling without replacement. In the multinomial case, we can either sample with replacement or think of the bowl as having an infinite number of items so that, if we pick an item, the probability of getting the next item with the same color is unchanged.
+
+To solve this problem, we first calculate the size of our sample space. This is simply the number of ways to pick $m$ items from $n$ items and it is
+
+$$\text{size}(\Omega)=\lvert\Omega\rvert=\binom{n}{m}.$$
+
+Next, we pick $k$ items from the $r$ red ones. The number of ways to do this is $\binom{r}{k}$. Once we have the red items, we pick the remaining $(m-k)$ items from the $(n-r)$ non-red items. There are $\binom{n-r}{m-k}$ ways to do this. We multiply these two to get the number of ways to get $k$ red items out of the $m$ items we picked. Therefore, the probability of getting $k$ red items, if we picked $m$ items, is
+
+$$\dfrac{\displaystyle\binom{r}{k}\binom{n-r}{m-k}}{\displaystyle\binom{n}{m}}.$$
+
 ## Probability Mass Function
 
 The probability mass function for a hypergeometric distribution is
