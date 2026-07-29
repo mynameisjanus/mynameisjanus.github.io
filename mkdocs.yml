@@ -49,9 +49,12 @@ markdown_extensions:
       alternate_style: true
   - pymdownx.superfences:
       custom_fences:
+        # fence_div_format keeps diagrams out of Material's built-in mermaid
+        # renderer (which shrinks wide diagrams); javascripts/mermaid.mjs
+        # renders them at natural size instead.
         - name: mermaid
           class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+          format: !!python/name:pymdownx.superfences.fence_div_format
   - pymdownx.arithmatex:
       generic: true
       smart_dollar: true
@@ -62,6 +65,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/mermaid.mjs
 
 extra_css:
   - stylesheets/extra.css

@@ -9,3 +9,15 @@ img.center {
 .md-typeset .grid.cards > ul > li {
   border-radius: 0.4rem;
 }
+
+/* Mermaid diagrams render at natural size (see javascripts/mermaid.mjs);
+   center narrow ones, scroll wide ones instead of shrinking the text */
+.md-typeset div.mermaid {
+  overflow-x: auto;
+}
+
+.md-typeset div.mermaid svg {
+  display: block;
+  margin: 0 auto;
+  max-width: none; /* Material clamps svg to the column, undoing natural size */
+}
