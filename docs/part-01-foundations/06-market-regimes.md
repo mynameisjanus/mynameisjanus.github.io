@@ -35,7 +35,7 @@ The second regime effect is nastier because it attacks diversification itself. I
 The mechanism is not mysterious. In stress, the marginal seller is not trading views — they are meeting margin calls, cutting risk, or facing redemptions. Forced sellers sell *what they can*, not what they want to, so liquidation pressure hits everything simultaneously. The common factor driving all assets becomes "leveraged holders need cash," and against that factor, your carefully estimated correlation matrix is fiction.
 
 !!! warning "Diversification is regime-dependent"
-    A correlation matrix estimated over calm years systematically overstates the protection you will have when you actually need it. Risk models that ignore this are precise in normal times and wrong at the exact moment being right matters most. We will return to this when we build risk models: stress correlations, not average correlations, should size your tail risk.
+    A correlation matrix estimated over calm years systematically overstates the protection you will have when you actually need it. Risk models that ignore this are precise in normal times and wrong at the exact moment being right matters most. We will return to this when we cover risk models in Part VIII: stress correlations, not average correlations, should size your tail risk.
 
 ## Every strategy is an implicit regime bet
 
@@ -59,7 +59,7 @@ stateDiagram-v2
     Crisis --> HighVol: liquidations complete
 ```
 
-The standard formal tool for this inference is the Hidden Markov Model: assume the market occupies one of a few unobserved states, each generating returns with its own mean and variance, with probabilistic transitions between states — then infer the current state from the data. We build HMM-based regime detection in Part III. The underlying machinery — Markov chains, transition matrices, stationary distributions — is covered in the appendix: [Markov Processes I](../appendix/probability/42-markov-processes-1.md) and [Markov Processes II](../appendix/probability/43-markov-processes-2.md). If those are unfamiliar, read them before Part III; the HMM material assumes them.
+The standard formal tool for this inference is the Hidden Markov Model: assume the market occupies one of a few unobserved states, each generating returns with its own mean and variance, with probabilistic transitions between states — then infer the current state from the data. We study HMM-based regime detection in Part III. The underlying machinery — Markov chains, transition matrices, stationary distributions — is covered in the appendix: [Markov Processes I](../appendix/probability/42-markov-processes-1.md) and [Markov Processes II](../appendix/probability/43-markov-processes-2.md). If those are unfamiliar, read them before Part III; the HMM material assumes them.
 
 !!! abstract "Key takeaways"
     - Market returns are not one stationary distribution; they move between persistent regimes with different volatility, correlation, and autocorrelation structure.

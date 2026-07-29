@@ -39,13 +39,13 @@ The structural implications, concretely:
 
 ## The economics: tiny edge, enormous volume
 
-A back-of-envelope: a maker netting one-tenth of a cent per share must trade 100 million shares to make $100,000. Major firms trade billions of shares' worth of volume; per-trade profitability is fractions of a basis point, win rates barely above 50%, and the aggregate becomes reliable only through millions of trades a day. The Sharpe ratios are extraordinary — double digits at the top firms — not because any trade is smart but because the law of large numbers operates at industrial scale.
+A back-of-envelope: a maker netting one-tenth of a cent per share must trade 100 million shares to make \$100,000. Major firms trade billions of shares' worth of volume; per-trade profitability is fractions of a basis point, win rates barely above 50%, and the aggregate becomes reliable only through millions of trades a day. The Sharpe ratios are extraordinary — double digits at the top firms — not because any trade is smart but because the law of large numbers operates at industrial scale.
 
 The active risk management problem is **inventory**. A maker who keeps buying accumulates a long position — unwanted directional exposure. The standard response is *quote skewing*: when inventory grows long, lower both your bid and ask, making further buys less likely and sells more likely, steering inventory back toward zero. Position limits are tight, and books are typically flattened by the end of each day; the ideal HFT firm goes home flat, having earned the spread thousands of times and held nothing.
 
 ## Why you will not compete here — and what transfers anyway
 
-Be clear-eyed: the table above is a paywall. Colocation, direct exchange feeds, purpose-built hardware, and the engineering team to run them represent a fixed cost in the millions per year before the first profitable trade — and a strategy at the microsecond horizon competes with firms that have spent a decade and nine figures on the problem. This course will not pretend otherwise: everything we build targets horizons of minutes to months, where speed is not the edge.
+Be clear-eyed: the table above is a paywall. Colocation, direct exchange feeds, purpose-built hardware, and the engineering team to run them represent a fixed cost in the millions per year before the first profitable trade — and a strategy at the microsecond horizon competes with firms that have spent a decade and nine figures on the problem. This course will not pretend otherwise: everything here targets horizons of minutes to months, where speed is not the edge.
 
 But the microstructure lessons transfer completely, and they are among the most valuable in this part:
 
