@@ -1,6 +1,6 @@
 # Market Microstructure
 
-Prices do not move because of some abstract force of supply and demand. They move because specific orders arrive at a specific data structure — the limit order book — and a matching engine processes them in a specific sequence. Microstructure is the study of that machinery, and it is where trading intuition either gets built or gets faked. A researcher who understands the book knows why their backtest's assumed fills are optimistic, why their limit orders fill exactly when they wish they hadn't, and why "the spread" is the most honest price in finance. This lesson builds that understanding and produces the first course deliverable: the order-flow diagram.
+Prices do not move because of some abstract force of supply and demand. They move because specific orders arrive at a specific data structure — the limit order book — and a matching engine processes them in a specific sequence. Microstructure is the study of that machinery, and it is where trading intuition either gets built or gets faked. A researcher who understands the book knows why their backtest's assumed fills are optimistic, why their limit orders fill exactly when they wish they hadn't, and why "the spread" is the most honest price in finance. This lesson builds that understanding and distills it into the first of the course's key diagrams: the order-flow diagram.
 
 ## The limit order book
 
@@ -49,9 +49,9 @@ which is only non-negative when the spread satisfies $s \ge 2p\ell/(1-p)$. This 
 
 The implication for you is uncomfortable and essential: **when your limit order fills, ask why.** Fills are not random. Your resting bid executes most readily when someone with better information or a broader view of flow decided your price was worth hitting. Every backtest that assumes limit orders fill whenever price touches them is quietly assuming away adverse selection — and it is the single most common way paper profits vanish in production.
 
-## Deliverable: the order-flow diagram
+## The order-flow diagram
 
-Here is the first course deliverable — the path of a single order through the system, including a partial fill and the broadcast back out. Study it until every arrow is obvious; you will implement several of these hops yourself later in the course.
+Here is the first of those key diagrams — the path of a single order through the system, including a partial fill and the broadcast back out. Study it until every arrow is obvious; several of these hops reappear when Part VI examines live trading architecture.
 
 ```mermaid
 sequenceDiagram
@@ -71,7 +71,7 @@ sequenceDiagram
     D-->>T: Public feed: last sale + new best bid/offer
 ```
 
-Two details deserve attention. First, risk checks sit *before* the matching engine — no order reaches the market unexamined, a structure you met in lesson 1 and will build in Part VI. Second, there are two information paths back: the **private** execution report (only you learn your fill details immediately) and the **public** market data feed (everyone sees the trade print and the changed book). The gap between what you know privately and what the market knows publicly is measured in microseconds — and entire business models live inside it.
+Two details deserve attention. First, risk checks sit *before* the matching engine — no order reaches the market unexamined, a structure you met in lesson 1 and will see again in Part VI. Second, there are two information paths back: the **private** execution report (only you learn your fill details immediately) and the **public** market data feed (everyone sees the trade print and the changed book). The gap between what you know privately and what the market knows publicly is measured in microseconds — and entire business models live inside it.
 
 !!! abstract "Key takeaways"
     - The limit order book is two price-sorted queues; spread, depth, and price-time priority jointly determine what any trade actually costs.
@@ -83,4 +83,4 @@ Two details deserve attention. First, risk checks sit *before* the matching engi
 
 ## Where this goes next
 
-You now understand one venue's machinery. But no real market is one venue — it is a fragmented web of exchanges, ECNs, dark pools, and wholesalers, stitched together by regulation and routing. [Lesson 4](04-exchanges-brokers-ecns.md) maps that web and carries two more deliverables: the market-structure diagram and the trade-lifecycle diagram.
+You now understand one venue's machinery. But no real market is one venue — it is a fragmented web of exchanges, ECNs, dark pools, and wholesalers, stitched together by regulation and routing. [Lesson 4](04-exchanges-brokers-ecns.md) maps that web and adds two more key diagrams: the market-structure diagram and the trade-lifecycle diagram.

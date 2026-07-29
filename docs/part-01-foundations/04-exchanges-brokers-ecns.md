@@ -1,6 +1,6 @@
 # Exchanges, Brokers, and ECNs
 
-Type a ticker into a brokerage app, click buy, and a fill comes back in under a second. The interface implies a single "market" that took your order. There is no such place. Your order entered a fragmented web of exchanges, alternative venues, dark pools, and wholesalers, was routed by economics you did not choose, matched somewhere you probably cannot name, and then handed to a clearinghouse you have never thought about. For a systematic trader this plumbing is not trivia — it determines your fill quality, your costs, your capital efficiency, and your counterparty risk. This lesson maps the web and produces two course deliverables: the market-structure diagram and the trade-lifecycle diagram.
+Type a ticker into a brokerage app, click buy, and a fill comes back in under a second. The interface implies a single "market" that took your order. There is no such place. Your order entered a fragmented web of exchanges, alternative venues, dark pools, and wholesalers, was routed by economics you did not choose, matched somewhere you probably cannot name, and then handed to a clearinghouse you have never thought about. For a systematic trader this plumbing is not trivia — it determines your fill quality, your costs, your capital efficiency, and your counterparty risk. This lesson maps the web and distills it into two key diagrams: the market-structure diagram and the trade-lifecycle diagram.
 
 ## The venue landscape
 
@@ -36,9 +36,9 @@ After the match, the trade goes to a **clearinghouse** (central counterparty, CC
 
 Why should a strategy researcher care? Because margin rules set your leverage, settlement cycles set your cash timing, and CCP protections define your worst-case counterparty risk. Crypto's recurring disasters — exchanges that were simultaneously venue, broker, and custodian, with no CCP — are a standing demonstration of what this layer is *for*.
 
-## Deliverable: the market-structure diagram
+## The market-structure diagram
 
-The first deliverable of this lesson: the two canonical routes an order can take. Retail flow travels the left path — broker to wholesaler, touching an exchange only residually. Institutional flow travels the right — DMA and a smart order router spraying lit venues, ECNs, and dark pools, all referenced to the consolidated NBBO.
+The first diagram captures the two canonical routes an order can take. Retail flow travels the left path — broker to wholesaler, touching an exchange only residually. Institutional flow travels the right — DMA and a smart order router spraying lit venues, ECNs, and dark pools, all referenced to the consolidated NBBO.
 
 ```mermaid
 flowchart TD
@@ -53,9 +53,9 @@ flowchart TD
     ECN --> TAPE
 ```
 
-## Deliverable: the trade-lifecycle diagram
+## The trade-lifecycle diagram
 
-The second deliverable follows one trade end to end — from click to custody. Execution is the fast, visible part; everything after the exchange match is the slower machinery that makes ownership real.
+The second diagram follows one trade end to end — from click to custody. Execution is the fast, visible part; everything after the exchange match is the slower machinery that makes ownership real.
 
 ```mermaid
 sequenceDiagram
@@ -75,7 +75,7 @@ sequenceDiagram
     CU-->>T: Securities delivered vs payment, held in custody
 ```
 
-Keep both diagrams. They are the skeleton on which the rest of the course hangs: backtest cost models must respect the routing layer, and live infrastructure must respect the clearing layer.
+Internalize both diagrams. They are the skeleton on which the rest of the course hangs: backtest cost models must respect the routing layer, and live infrastructure must respect the clearing layer.
 
 !!! abstract "Key takeaways"
     - There is no single "market": liquidity fragments across exchanges, ECNs/ATSs, dark pools, and wholesalers, unified only by the NBBO reference price.

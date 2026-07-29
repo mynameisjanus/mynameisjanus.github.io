@@ -78,4 +78,4 @@ Read the arrows as order flow. The double-headed arrow is the tell: market maker
 
 ## Where this goes next
 
-You now know who is trading. Next you need to know *how* their intentions collide: the limit order book, order types, matching engines, and the adverse-selection logic that governs every fill. That machinery — and the first course deliverable, the order-flow diagram — is [Lesson 3](03-market-microstructure.md).
+You now know who is trading. Next you need to know *how* their intentions collide: the limit order book, order types, matching engines, and the adverse-selection logic that governs every fill. That machinery — and the first of the course's key diagrams, the order-flow diagram — is [Lesson 3](03-market-microstructure.md).
