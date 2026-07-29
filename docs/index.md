@@ -2,7 +2,7 @@
 
 **How professional quantitative trading systems are actually built.**
 
-This course teaches you to work the way quantitative researchers and systematic traders work — from market structure and statistics through strategy research, a hand-built backtesting engine, and live trading infrastructure, all the way to running a systematic trading business. By the end you will have a working, end-to-end trading stack, not a folder of disconnected notebooks.
+This course teaches you to work the way quantitative researchers and systematic traders work — from market structure and statistics through strategy research, backtesting, and live trading infrastructure, all the way to running a systematic trading business. By the end you will understand how a complete trading stack fits together — data to signals to orders to fills to risk controls — as one coherent system, not a collection of disconnected topics.
 
 !!! success "Who this course is for"
     People who want to become quantitative researchers or systematic traders: you are comfortable learning real mathematics and writing real software, and you want to know how professional desks research, validate, deploy, and operate strategies.
@@ -16,8 +16,8 @@ This course teaches you to work the way quantitative researchers and systematic 
 |---|---|---|
 | **Beginner** | I–II | Understand markets and market structure; work fluently with market data in Python. |
 | **Intermediate** | III–IV | Perform rigorous statistical research and evaluate strategies honestly. |
-| **Advanced** | V–VII | Build a production-quality backtesting engine and live trading infrastructure; apply machine learning responsibly. |
-| **Professional** | VIII–X | Design, deploy, monitor, and maintain an institutional-grade systematic trading platform. |
+| **Advanced** | V–VII | Understand how production-quality backtesting engines and live trading infrastructure are designed; apply machine learning responsibly. |
+| **Professional** | VIII–X | Manage portfolios and risk, engineer research code to professional standards, and understand how a systematic trading business operates. |
 
 ## The course
 
@@ -47,11 +47,11 @@ This course teaches you to work the way quantitative researchers and systematic 
 
     The largest part: momentum, mean reversion, pairs, volatility, signal engineering, sizing — and the validation gauntlet that kills overfit strategies.
 
--   :material-engine: **[Part V — Building a Backtesting Engine](part-05-backtesting-engine/index.md)**
+-   :material-engine: **[Part V — Inside a Backtesting Engine](part-05-backtesting-engine/index.md)**
 
     ---
 
-    Build an event-driven backtester from scratch: accounting, order management, fill simulation, metrics, and reporting.
+    The anatomy of an event-driven backtester: accounting, order management, fill simulation, metrics, and reporting.
 
 -   :material-server-network: **[Part VI — Live Trading Infrastructure](part-06-live-infrastructure/index.md)**
 

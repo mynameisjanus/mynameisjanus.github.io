@@ -1,4 +1,4 @@
-# About the Instructor
+# About the Author
 
 ![Janus B. Advincula](../assets/images/profile.jpg){ width="180" .center }
 

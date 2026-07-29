@@ -46,7 +46,7 @@ An edge is a positive expected return, after all costs, arising from an identifi
 
 Two properties hold for every edge: it has a counterparty, and it decays. Someone is transferring money to you, and either they eventually stop or competitors compete the transfer away. Edge is a perishable inventory, which is why research is a continuous function, not a phase.
 
-## The pipeline you will build
+## The production pipeline
 
 Every live systematic operation, from a two-person shop to a major fund, reduces to the same pipeline: a strategy proposes trades, a risk engine vetoes or resizes them, an execution engine works them into the market, and a broker interface carries them to the exchange — with market data flowing back to close the loop.
 
@@ -59,10 +59,10 @@ flowchart LR
     X -- market data --> S
 ```
 
-Note the ordering. Risk sits *between* strategy and execution — no order reaches the market without passing it. That placement is a design decision you will implement yourself, not just read about.
+Note the ordering. Risk sits *between* strategy and execution — no order reaches the market without passing it. That placement is a deliberate design decision, and this course returns to it again and again.
 
-!!! note "You will build this"
-    This exact pipeline — strategy, risk engine, execution engine, broker API — is what you will construct, component by component, in [Part VI: Live Trading Infrastructure](../part-06-live-infrastructure/index.md). Everything before then builds the judgment needed to fill in each box responsibly.
+!!! note "Where this pipeline is covered"
+    This exact pipeline — strategy, risk engine, execution engine, broker API — is taken apart component by component in [Part VI: Live Trading Infrastructure](../part-06-live-infrastructure/index.md). Everything before then builds the judgment needed to understand what belongs in each box and why.
 
 !!! abstract "Key takeaways"
     - Algorithmic trading is defined by explicit, pre-specified, testable decision rules — not by speed, machine learning, or the absence of humans.

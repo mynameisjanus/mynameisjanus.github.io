@@ -1,10 +1,10 @@
-# Part V — Building a Backtesting Engine
+# Part V — Inside a Backtesting Engine
 
 Every quantitative strategy lives or dies by the quality of its simulation. A backtest that leaks future information, mishandles cash, or fills orders at fantasy prices will manufacture alpha that evaporates the moment real money is at risk. Professional desks treat the backtesting engine as core infrastructure — reviewed, tested, and trusted — because every research conclusion downstream depends on it.
 
-In this part, instead of relying on an existing framework, you build an event-driven backtester from scratch. The point is not to compete with mature libraries; it is to understand the mechanics — how market data becomes signals, signals become orders, and orders become fills — well enough that no framework is ever a black box to you again. Building the event loop, the portfolio ledger, and the fill simulator yourself is the only reliable way to internalize where look-ahead bias, accounting errors, and optimistic fill assumptions come from.
+In this part, instead of treating a backtester as a library you call, we take an event-driven engine apart piece by piece. The point is to understand the mechanics — how market data becomes signals, signals become orders, and orders become fills — well enough that no framework is ever a black box to you again. Studying the event loop, the portfolio ledger, and the fill simulator at this level of detail is the most reliable way to internalize where look-ahead bias, accounting errors, and optimistic fill assumptions come from.
 
-By the end of this part you have a functioning engine: an event queue, portfolio accounting that reconciles to the penny, a simulated broker with defensible fill models, a metrics and tearsheet layer, and structured trade logs with visualization. This is not a throwaway exercise — you extend this engine for the rest of the course, and it becomes the research harness for every strategy that follows.
+By the end of this part you know what a trustworthy engine consists of: an event queue, portfolio accounting that reconciles to the penny, a simulated broker with defensible fill models, a metrics and tearsheet layer, and structured trade logs with visualization. That knowledge carries through the rest of the course — whenever a backtest result looks too good, you will know exactly which internal assumption to interrogate.
 
 ## Modules
 
