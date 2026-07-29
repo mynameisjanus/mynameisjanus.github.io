@@ -1,4 +1,4 @@
-# Basic Principles of Counting
+# Counting Principles
 
   ![](../../assets/images/prob/bowl.png){ width="150" .center }
 

@@ -1,4 +1,4 @@
-# Bayes' Theorem
+# Bayes' Rule
 
   ![](../../assets/images/prob/total.png){ width="250" .center }
 

@@ -1,4 +1,4 @@
-# Bernoulli Random Variables
+# Bernoulli Distribution
 
 Consider a trial where there are only two possible outcomes: *success/failure*, *head/tail*, etc. To model this experiment, we use a Bernoulli random variable denoted by $\mathrm{Ber}(p)$. A **Bernoulli random variable** $X$ takes on the value $1$ with probability $p$ or $0$ with probability $1-p$, i.e.,
 

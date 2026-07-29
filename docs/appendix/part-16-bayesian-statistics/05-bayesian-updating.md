@@ -1,4 +1,4 @@
-# The Unknown Bias of a Coin
+# Bayesian Updating
 
 ### Continuous $\Theta$, Discrete $K$
 

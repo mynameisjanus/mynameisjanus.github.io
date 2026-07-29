@@ -1,4 +1,4 @@
-# Parametric Estimation
+# Point Estimation
 
 ## Statistic
 

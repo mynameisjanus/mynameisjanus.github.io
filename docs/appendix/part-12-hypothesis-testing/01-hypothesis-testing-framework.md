@@ -1,4 +1,4 @@
-# Introduction to Hypothesis Testing
+# The Hypothesis Testing Framework
 
 ## Statistical Formulation
 

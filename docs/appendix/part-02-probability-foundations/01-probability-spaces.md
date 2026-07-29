@@ -1,4 +1,4 @@
-# Sample Spaces
+# Probability Spaces
 
   ![](../../assets/images/prob/red-dice.png){ width="100" .center }
 

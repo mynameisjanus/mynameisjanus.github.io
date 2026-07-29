@@ -1,4 +1,4 @@
-# Multinomial Probability
+# Multinomial Distribution
 
   ![](../../assets/images/prob/bowl2.png){ width="150" .center }
 

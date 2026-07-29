@@ -1,4 +1,4 @@
-# Derived Distributions
+# Functions of Random Variables
 
 ## Linear Function of a Discrete Random Variable
 
@@ -17,7 +17,3 @@ $$f_Y(y)=\dfrac{1}{\lvert a\rvert}f_X\!\left(\frac{y-b}{a}\right)$$
 Two steps:
 * Find the CDF of $Y$
 * Differentiate
-
-## Function of Multiple Random Variables
-
-## Discrete Convolutional Mechanics

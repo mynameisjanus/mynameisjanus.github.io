@@ -1,4 +1,4 @@
-# The Bayesian Inference Framework
+# The Bayesian Framework
 
 ## The Output of Bayesian Inference
 

@@ -1,4 +1,4 @@
-# Statistical Modeling
+# Statistical Models
 
 ## Statistical Model
 
