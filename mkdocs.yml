@@ -2,8 +2,6 @@ site_name: Building Quantitative Trading Systems
 site_description: How professional quantitative trading systems are actually built.
 site_url: https://mynameisjanus.github.io/
 site_author: Janus B. Advincula
-repo_url: https://github.com/mynameisjanus/mynameisjanus.github.io
-repo_name: mynameisjanus/mynameisjanus.github.io
 copyright: "&copy; Janus B. Advincula. All rights reserved."
 
 theme:
