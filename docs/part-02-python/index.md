@@ -4,7 +4,7 @@ This is not a general Python course. There are hundreds of those, and almost non
 
 The treatment is opinionated in the way professional desks are opinionated. Vectorization is not a performance nicety; it is the difference between a research iteration taking seconds or hours. Type hints and dataclasses are not bureaucracy; they are how research code survives contact with a second person, including your future self. Every lesson works with market data from the first example, so the idioms you learn are the ones you will use daily: aligning timestamps, resampling bars, handling NaNs deliberately, and storing data so that yesterday's query gives yesterday's answer.
 
-By the end of this part you will have a working research stack — NumPy, Pandas/Polars, SQL, plotting, and a project structure with logging and configuration — that the statistics and strategy parts of the course build on directly. The mini-projects below stitch the individual lessons into an end-to-end pipeline.
+By the end of this part you will have a working research stack — NumPy, Pandas/Polars, SQL, plotting, and a project structure with logging and configuration — that the statistics and strategy parts of the course build on directly.
 
 ## Modules
 
@@ -17,10 +17,3 @@ By the end of this part you will have a working research stack — NumPy, Pandas
 | [SQL and Data Storage](05-sql-and-data-storage.md) | Schema design for market data, SQLite to PostgreSQL, Parquet, point-in-time correctness |
 | [Plotting for Research](06-plotting.md) | Equity curves, drawdowns, distributions, heatmaps, and IC-ready charts |
 | [Logging, Configuration, and Reproducibility](07-logging-and-config.md) | Structured logging, config management, and reproducible runs |
-
-## Mini-projects
-
-- **Market data downloader** — download historical market data from a public API, with rate limiting and retry handling.
-- **Vectorized indicators** — compute a set of standard indicators over a large universe using vectorized NumPy/Pandas, with no Python loops.
-- **OHLCV database** — design a schema and store OHLCV data in SQL with appropriate keys and indexes.
-- **Query and resample** — query historical data from the database and resample it to multiple bar frequencies without lookahead.
