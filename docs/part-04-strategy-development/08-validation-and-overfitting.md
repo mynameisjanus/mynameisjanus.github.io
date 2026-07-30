@@ -137,7 +137,7 @@ for emb in [0, 5, 10, 21, 42, 63]:
     print(f"embargo {emb:>2d} days: CV correlation {ic:+.3f}")
 # => embargo  0 days: CV correlation -0.087
 #    embargo  5 days: CV correlation -0.088
-#    embargo 10 days: CV correlation -0.088
+#    embargo 10 days: CV correlation -0.089
 #    embargo 21 days: CV correlation -0.091
 #    embargo 42 days: CV correlation -0.094
 #    embargo 63 days: CV correlation -0.095

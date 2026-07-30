@@ -207,10 +207,10 @@ for band in [0.0, 0.10, 0.25, 0.50]:
 # => band   0%: leverage resets/yr  252, notional traded 22.0x/yr, Sharpe 0.51
 #    band  10%: leverage resets/yr   30, notional traded 16.9x/yr, Sharpe 0.51
 #    band  25%: leverage resets/yr    8, notional traded 15.1x/yr, Sharpe 0.51
-#    band  50%: leverage resets/yr    2, notional traded 14.6x/yr, Sharpe 0.51
+#    band  50%: leverage resets/yr    2, notional traded 14.6x/yr, Sharpe 0.48
 ```
 
-Daily tracking rebalances 252 times a year and trades 22x the book; a 25% band rebalances *eight* times, trades 31% less notional, and the Sharpe does not move at the second decimal. Even the 50% band — two leverage adjustments a year — costs nothing visible here, though it leaves the book slower to de-risk when volatility regime-shifts, which is a tail exposure the full-sample Sharpe is too coarse to price; 25% is the defensible resting point. The economics are general: tracking error around an optimal position is a *second-order* loss (the optimum is flat at the top) while trading costs are *first-order*, so precision is almost always overpriced near the optimum. Bands, turnover penalties, and trade-when-it-matters scheduling are one family of solutions to the same inequality — and the same logic, run in reverse, indicts any backtest that rebalances daily by default: it is paying first-order costs for second-order benefits, and its net Sharpe is the one that pays.
+Daily tracking rebalances 252 times a year and trades 22x the book; a 25% band rebalances *eight* times, trades 31% less notional, and the Sharpe does not move at the second decimal. Only the 50% band — two leverage adjustments a year — finally shows a cost, dropping to 0.48, because a book that slow to de-risk holds stale leverage into volatility regime-shifts; 25% is the defensible resting point. The economics are general: tracking error around an optimal position is a *second-order* loss (the optimum is flat at the top) while trading costs are *first-order*, so precision is almost always overpriced near the optimum. Bands, turnover penalties, and trade-when-it-matters scheduling are one family of solutions to the same inequality — and the same logic, run in reverse, indicts any backtest that rebalances daily by default: it is paying first-order costs for second-order benefits, and its net Sharpe is the one that pays.
 
 ## Net of costs: who survives
 
