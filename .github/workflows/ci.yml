@@ -15,7 +15,28 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  # Cheap gates first: nothing reaches the build until the tree lints, the
+  # gate's own tests pass, and every lesson is structurally intact.
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: pip install -r requirements-dev.txt
+      # scripts/migrate_math_pages.py is a one-off Jekyll converter kept for
+      # provenance (see README) and is excluded rather than retro-fitted.
+      - name: Lint the maintained Python
+        run: ruff check hooks/ scripts/check_docs.py tests/
+      - name: Test the structure gate
+        run: pytest tests/ -q
+      - name: Check course structure
+        run: python scripts/check_docs.py docs
+
   build:
+    needs: check
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7

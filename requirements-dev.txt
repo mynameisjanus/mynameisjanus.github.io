@@ -1,0 +1,5 @@
+# Tooling for the CI gates. The scientific stack that lesson code runs against
+# lives in the local .venv and is pinned in each part's "Versions" note; it is
+# deliberately absent here, because CI has no market-data cache to run it on.
+ruff==0.16.1
+pytest==9.1.1
