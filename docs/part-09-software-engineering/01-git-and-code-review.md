@@ -411,12 +411,20 @@ manifest = {
     "data": {"data/prices.parquet": sha("data/prices.parquet")},
     "outputs": {"sharpe": round(sharpe, 4), "decisions": digest},
 }
+VOLATILE = {"code_version": "<this checkout's HEAD>",
+            "env_hash": "<this environment's pip freeze>"}
 print("  run manifest")
 for k, v in manifest.items():
-    print(f"    {k:14s} {v if not isinstance(v, dict) else json.dumps(v)}")
+    shown = VOLATILE.get(k, v if not isinstance(v, dict) else json.dumps(v))
+    print(f"    {k:14s} {shown}")
 
-print("\n  every frozen cache in the course, and Part VII's pinned claim")
-for p in sorted(Path("data").glob("*.parquet")):
+# named rather than globbed: `data/` grows as the course does, and a listing
+# that changes with it is exactly the drift this section is about
+CACHES = ["prices.parquet", "part4.parquet", "part5.parquet",
+          "part5trades.parquet", "part7.parquet", "part8.parquet"]
+print("\n  the caches frozen by Parts III through VIII, and Part VII's pinned claim")
+for name in CACHES:
+    p = Path("data") / name
     print(f"    {p.name:20s} {p.stat().st_size:>9,} bytes  {sha(p)}")
 pin = "b956966146cd"
 print(f"    Part VII pinned data sha256 {pin} -> {sha('data/part7.parquet')} "
@@ -440,18 +448,18 @@ for label, col, when, mult in [
     print(f"    {label:36s} {s:+7.4f}  {d}  {sha(out)}{flag}")
 # =>   run manifest
 #        config_hash    b13da803562b
-#        code_version   740aa584433d
-#        env_hash       b1e4e399922d
+#        code_version   <this checkout's HEAD>
+#        env_hash       <this environment's pip freeze>
 #        data           {"data/prices.parquet": "bdeae092cc47"}
 #        outputs        {"sharpe": 0.3025, "decisions": "103cae9b6e35"}
 #
-#      every frozen cache in the course, and Part VII's pinned claim
+#      the caches frozen by Parts III through VIII, and Part VII's pinned claim
+#        prices.parquet         218,897 bytes  bdeae092cc47
 #        part4.parquet          621,993 bytes  d4cdb11d5072
 #        part5.parquet          904,795 bytes  527bef3b66f5
 #        part5trades.parquet     38,670 bytes  80cb021f363d
 #        part7.parquet        3,260,866 bytes  b956966146cd
 #        part8.parquet        1,290,329 bytes  32458dd465e4
-#        prices.parquet         218,897 bytes  bdeae092cc47
 #        Part VII pinned data sha256 b956966146cd -> b956966146cd (HOLDS)
 #
 #      now change only the data; code, config and environment are untouched
@@ -463,7 +471,9 @@ for label, col, when, mult in [
 #        one bad mark: GLD / 10               +0.1432  f5116a3d5b17  dba948968d98
 ```
 
-Two of the manifest's fields will differ on your machine, and are supposed to: `code_version` is whatever commit you are standing on, and `env_hash` digests your installed packages. Everything else reproduces, including the line that matters most for this course's own credibility — **Part VII's pinned `b956966146cd` still verifies against the file on disk**, which is the freeze doctrine of [Part III](../part-03-statistics/01-probability-and-random-variables.md) and [Part IV](../part-04-strategy-development/02-mean-reversion-and-pairs-trading.md) holding across four parts and a year of downstream work. A pinned hash nobody ever checks is decoration; this one was checked, and it held.
+Two of the manifest's five fields are deliberately not printed, and the reason is the section's own subject. `code_version` is whatever commit you are standing on and `env_hash` digests your installed packages, so both are *supposed* to vary — which makes them useless as pinned output and essential inside the manifest, where their whole job is to record a context that differs. The block computes both and shows a placeholder instead. The cache listing is named rather than globbed for the same reason: `data/` gains a file in the next lesson, and a listing that silently grew would be precisely the undeclared drift this section exists to catch.
+
+Everything that remains does reproduce, including the line that matters most for this course's own credibility — **Part VII's pinned `b956966146cd` still verifies against the file on disk**, which is the freeze doctrine of [Part III](../part-03-statistics/01-probability-and-random-variables.md) and [Part IV](../part-04-strategy-development/02-mean-reversion-and-pairs-trading.md) holding across four parts and a year of downstream work. A pinned hash nobody ever checks is decoration; this one was checked, and it held.
 
 The perturbation table is where the section earns its place. A vendor re-adjusting a single dividend moves the Sharpe by **+0.0004** — invisible, harmless, and still worth recording, because a colleague who reruns your notebook and gets 0.3029 where you published 0.3025 will otherwise spend an afternoon hunting a bug in the code. That is the everyday value of a data hash: it converts a mystery into a diff.
 
