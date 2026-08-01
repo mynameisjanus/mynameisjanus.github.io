@@ -1,35 +1,30 @@
 # Part V — Common Probability Distributions
 
-A reference catalog of the standard families. Each page gives the distribution's PMF or density, expectation, and variance, and — where written — a Monte Carlo simulation in R. Discrete families first, then continuous.
+[Part IV](../part-04-expectation-and-moments/index.md) compressed laws into moments without naming a single one; this part hands out the names. A named family is a shape assumption with parameters attached, and the trade it offers is always the same: accept the shape and everything becomes computable — closed-form moments, closure under the operations you need, a likelihood you can maximise. The bill arrives where the shape is wrong, which for financial data is almost always the tail, and almost always in the direction that makes a risk number look smaller than it is.
 
-The two summary numbers every page reports are defined and developed in [Expected Value](../part-04-expectation-and-moments/01-expected-value.md) and [Variance](../part-04-expectation-and-moments/02-variance.md); this part supplies their values family by family rather than re-deriving what they are. Two results from there do most of the work below: linearity of expectation, which is why a binomial mean falls out of a sum of Bernoullis with no independence argument, and the computational formula $\mathrm{var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2$, which is the route almost every variance on these pages takes. Where a family has moments only up to a finite order — the Student's $t$ and the Cauchy among them — the reason is [Higher-Order Moments](../part-04-expectation-and-moments/03-higher-order-moments.md).
+The dependencies run in file order, with one exception worth knowing. The discrete block, [Bernoulli](01-bernoulli-distribution.md) through [Discrete Uniform](08-discrete-uniform-distribution.md), is self-contained and reads straight through. The continuous block routes through the Gaussian: [Chi-Square](15-chi-square-distribution.md), [Student's t](16-students-t-distribution.md) and [F](17-f-distribution.md) are all built from independent standard normals, so [The Gaussian Distribution](11-gaussian-distribution.md) reads before all three, and [Gamma Distribution](13-gamma-distribution.md) reads before 14 through 17 because each of them is a gamma in disguise or a ratio of two. Where this part stops is worth stating too: the two summary numbers every page reports are defined in [Expected Value](../part-04-expectation-and-moments/01-expected-value.md) and [Variance](../part-04-expectation-and-moments/02-variance.md) and are not re-derived here, with the reason a family can run out of moments given in [Higher-Order Moments](../part-04-expectation-and-moments/03-higher-order-moments.md); nothing is a vector, so the multivariate normal and every covariance matrix are [Part VI](../part-06-multivariate-probability/index.md); the central limit theorem is invoked repeatedly and proved in [Part VII](../part-07-asymptotic-theory/index.md); no estimator's properties are established, which is [Part XI](../part-11-parameter-estimation/index.md); the tests these families are null distributions *for* are [Part XII](../part-12-hypothesis-testing/index.md); the conjugacy that pages 13 and 14 set up is developed in [Part XVI](../part-16-bayesian-statistics/index.md); and the tail question page 18 raises is answered properly in [Part XVIII](../part-18-quant-finance-applications/index.md).
+
+One theme runs through the part and decides how several of these families should be used. The one-parameter laws — Poisson, geometric, exponential, discrete uniform — each encode the *absence* of structure: equidispersion, memorylessness, equiprobability. Every one is refuted by market data, cheaply, and always in the same direction. That makes them poor models and excellent nulls, and the quantity worth reporting is usually the size of the discrepancy rather than the fitted parameter.
 
 ## Topics
 
-### Discrete
-
 | Topic | Focus |
 |---|---|
-| [Bernoulli Distribution](01-bernoulli-distribution.md) | Indicator random variables, expectation, and variance |
-| [Binomial Distribution](02-binomial-distribution.md) | PMF, moments, and Monte Carlo simulation of coin-toss counts |
-| [Geometric Distribution](03-geometric-distribution.md) | PMF, memorylessness, and moments |
-| [Negative Binomial Distribution](04-negative-binomial-distribution.md) | PMF and moments of the trials-until-k-successes distribution |
-| [Hypergeometric Distribution](05-hypergeometric-distribution.md) | Sampling without replacement, and the contrast with the binomial |
-| [The Poisson Distribution](06-poisson-distribution.md) | PMF, moments, and the Poisson limit of the binomial |
-| [Multinomial Distribution](07-multinomial-distribution.md) | Partitions and counts across more than two categories |
-| [Discrete Uniform Distribution](08-discrete-uniform-distribution.md) | Equally likely outcomes on a finite range |
-
-### Continuous
-
-| Topic | Focus |
-|---|---|
-| [Continuous Uniform Distribution](09-continuous-uniform-distribution.md) | The flat density on an interval |
-| [Exponential Distribution](10-exponential-distribution.md) | Density, moments, and the continuous analog of geometric waiting times |
-| [Gamma Distribution](13-gamma-distribution.md) | Sums of exponential waiting times and the gamma family |
-| [Beta Distribution](14-beta-distribution.md) | The conjugate family for a Bernoulli parameter on the unit interval |
-| [Chi-Square Distribution](15-chi-square-distribution.md) | Sums of squared standard normals and their role in variance tests |
-| [Student's t Distribution](16-students-t-distribution.md) | Heavy-tailed sampling distribution of the standardized mean |
-| [F Distribution](17-f-distribution.md) | Ratios of scaled chi-square variables, used to compare variances |
-| [The Gaussian Distribution](11-gaussian-distribution.md) | The normal family, standardization, and linear transformations |
-| [Lognormal Distribution](12-lognormal-distribution.md) | Multiplicative growth and the distribution of exponentiated normals |
-| [Weibull Distribution](18-weibull-distribution.md) | Flexible failure-time distribution with shape-dependent hazard |
+| [Bernoulli Distribution](01-bernoulli-distribution.md) | The two-point law, the indicator that turns an event into a number, variance peaking where the outcome is least predictable, the trades a hit rate needs before it means anything, and the payoff ratio the Bernoulli cannot see |
+| [Binomial Distribution](02-binomial-distribution.md) | Counting the sequences, a mean that survives arbitrary dependence beside a variance that survives none, the normal approximation graded by skewness rather than $n$, what correlated trials do to a count, and the hit rate the best of a thousand worthless strategies reports |
+| [Geometric Distribution](03-geometric-distribution.md) | The waiting-time mass function, the two conventions, memorylessness as a uniqueness theorem rather than a curiosity, the constant hazard, and the drawdown data that refuses the model by eighteen orders of magnitude |
+| [Negative Binomial Distribution](04-negative-binomial-distribution.md) | Waiting for the $r$-th success, the decomposition into geometrics, the gamma mixture of Poissons that produces the identical law from an unrelated premise, and overdispersion as the family's only real job |
+| [Hypergeometric Distribution](05-hypergeometric-distribution.md) | Sampling without replacement, a mean that needs exchangeability rather than independence, the finite-population correction and the orientation that decides whether it matters at all, and an exact null for whether a signal caught the days that counted |
+| [The Poisson Distribution](06-poisson-distribution.md) | The rare-event limit, mean and variance forced equal by having one parameter, superposition and thinning, the equivalence between Poisson counts and exponential gaps, and the one division that refutes it on any real arrival series |
+| [Multinomial Distribution](07-multinomial-distribution.md) | The coefficient that counts arrangements with repetition, binomial margins carrying nothing new, a covariance made negative by the constraint alone, and why a table of shares cannot be read one row at a time |
+| [Discrete Uniform Distribution](08-discrete-uniform-distribution.md) | Equally likely outcomes, the variance from a telescoping sum of cubes, maximum entropy and what it does not license, and the parameter-free null that a tick grid fails on an afternoon of data |
+| [Continuous Uniform Distribution](09-continuous-uniform-distribution.md) | The flat density, the probability integral transform in both directions, inverse-transform sampling as the source of every other law here, and the sense in which a $p$-value stops being one |
+| [Exponential Distribution](10-exponential-distribution.md) | Memorylessness over the reals and the extra hypothesis it needs, the constant hazard as the operative form of it, competing risks whose identity is independent of their timing, maximum entropy at a fixed mean, and the shape of the failure on real durations |
+| [The Gaussian Distribution](11-gaussian-distribution.md) | The integral with no antiderivative until it is squared, every moment fixed by two, closure under affine maps and under sums, the generating function that proves both, the tail scoreboard counted in days, and the central limit theorem's two silences |
+| [Lognormal Distribution](12-lognormal-distribution.md) | The density from a Jacobian, mean and median and mode as three different numbers, every moment finite while the generating function diverges, a law its own moments cannot identify, and who actually receives the average return |
+| [Gamma Distribution](13-gamma-distribution.md) | The function that interpolates the factorial, a sum of memoryless waits that is not itself memoryless, additivity in the shape, the special cases that make up half this part, conjugacy for a rate, and the shape parameter read as a distance from normal |
+| [Beta Distribution](14-beta-distribution.md) | The distribution of a probability, mean and concentration as independent dials, the construction from two gammas, conjugacy for a Bernoulli parameter, the order statistic that gives a distribution-free interval on a quantile, and what a hit rate is worth at each sample size |
+| [Chi-Square Distribution](15-chi-square-distribution.md) | A sum of squared normals, the gamma it is in disguise, the degree of freedom the sample mean consumes, and the exact interval behind every claim that a volatility is known to some stated precision |
+| [Student's t Distribution](16-students-t-distribution.md) | The ratio definition, the continuous scale mixture that reaches a kurtosis two regimes cannot, the derivation of exactly which moments exist, and why a moment-matched tail index converges on the boundary of its own domain |
+| [F Distribution](17-f-distribution.md) | The ratio of two variance estimates, reciprocal symmetry, moment conditions set by the denominator alone, the square of a $t$, and how large a volatility difference must be before a year of data can see it |
+| [Weibull Distribution](18-weibull-distribution.md) | The survival function as a power-transformed exponential, the shape parameter as a hazard slope whose sign reads directly, min-stability and the weakest link, and the question of whether an edge ages — posed exactly, and shown to need more data than anyone has |
