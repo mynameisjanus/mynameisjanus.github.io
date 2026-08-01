@@ -134,7 +134,7 @@ for m in (100, 10_000, 1_000_000):
     hat = np.array([(draws == v).mean() for v in vals])
     print(f"  n {m:7d}   max |phat - p| {np.abs(hat - true).max():.5f}"
           f"   1/sqrt(n) {1 / np.sqrt(m):.5f}")
-# =>   n     100   max |phat - p| 0.03000   1/sqrt(n) 0.00000
+# =>   n     100   max |phat - p| 0.03000   1/sqrt(n) 0.10000
 #      n   10000   max |phat - p| 0.00480   1/sqrt(n) 0.01000
 #      n 1000000   max |phat - p| 0.00040   1/sqrt(n) 0.00100
 ```
