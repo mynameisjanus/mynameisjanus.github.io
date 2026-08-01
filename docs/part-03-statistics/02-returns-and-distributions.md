@@ -14,7 +14,7 @@ R_t = \frac{P_t}{P_{t-1}} - 1,
 r_t = \ln\!\frac{P_t}{P_{t-1}} = \ln(1 + R_t).
 $$
 
-The simple return $R_t$ is what your account statement means by a return — the fractional change in money. The log return $r_t$ is the continuously-compounded rate that produces the same move. For small moves they are nearly identical ($\ln(1+x) \approx x$); for violent days they visibly part ways:
+The simple return $R_t$ is what your account statement means by a return — the fractional change in money. The log return $r_t$ is the continuously-compounded rate that produces the same move. For small moves they are nearly identical ($\ln(1+x) \approx x$); for violent days they visibly part ways. The appendix derives the relationship, the size of the approximation error, and the volatility drag that separates arithmetic from compound returns in [Exponentials, Logarithms, and Growth](../appendix/part-01-mathematical-foundations/07-exponentials-logarithms-growth.md).
 
 ```python
 import numpy as np

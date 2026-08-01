@@ -6,7 +6,7 @@ Uncertainty is a fundamental aspect of nature. Let's say we want to roll a die. 
 
 ## Sample Space
 
-For a given experiment, we will associate a list or set of possible outcomes. This is called a **sample space** and we denote this by $\Omega$. In the example of rolling a die, the sample space is the set $\{1,2,3,4,5,6\}$. A sample space can be ***discrete*** or ***continuous***. It can also be ***finite*** or ***infinite***.
+For a given experiment, we will associate a list or set of possible outcomes. This is called a **sample space** and we denote this by $\Omega$. The set vocabulary used throughout this part — membership, subsets, unions, complements, and partitions — is collected in [Sets and Functions](../part-01-mathematical-foundations/01-sets-and-functions.md). In the example of rolling a die, the sample space is the set $\{1,2,3,4,5,6\}$. A sample space can be ***discrete*** or ***continuous***. It can also be ***finite*** or ***infinite***.
 
 For a list or set to be a valid sample space, it must be:
 

@@ -10,7 +10,7 @@ Consider $n$ independent trials where the outcome of each trial is either a succ
 
 Suppose we toss a coin $n$ times with the probability of getting a head $\mathbf{P}(\text{H})=p$ and, hence, the probability of getting a tail $\mathbf{P}(\text{T})=1-p$. We assume that the tosses are *independent*, i.e., the outcome of previous tosses does not affect subsequent tosses. What is the probability of getting $k$ heads?
 
-Before we proceed, we consider the specific case $n=6$ and compute the probability of getting the sequence $\text{HTHHTH}$. We use the multiplication principle to get
+Before we proceed, we consider the specific case $n=6$ and compute the probability of getting the sequence $\text{HTHHTH}$. We use the multiplication principle — and, shortly, the binomial coefficient — both of which are derived in [Counting Principles](../part-01-mathematical-foundations/02-counting-principles.md). This gives
 
 $$\mathbf{P}(\text{HTHHTH})=p\cdot(1-p)\cdot p\cdot p\cdot(1-p)\cdot p=p^4(1-p)^2.$$
 

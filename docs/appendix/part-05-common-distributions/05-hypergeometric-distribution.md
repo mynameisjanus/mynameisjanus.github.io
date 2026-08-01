@@ -10,7 +10,7 @@ The key difference between the hypergeometric and the binomial distributions is 
 
   ![](../../assets/images/prob/hypergeom.png){ width="100" .center }
 
-Consider a bowl with $n$ items of which $r$ are *red*. We randomly pick $m$ items from this bowl **without replacement**, i.e., we don't return to the bowl the items that we've picked. What is the probability that $k$ of the items we picked are red?
+Consider a bowl with $n$ items of which $r$ are *red*. We randomly pick $m$ items from this bowl **without replacement**, i.e., we don't return to the bowl the items that we've picked. What is the probability that $k$ of the items we picked are red? Every count below is an unordered draw without replacement, so the binomial coefficients come straight from [Counting Principles](../part-01-mathematical-foundations/02-counting-principles.md).
 
 !!! warning
     This might seem to be exactly like the multinomial probability but it is not. In this problem, we are only interested in having $k$ red items out of the $m$ items that we've picked. Moreover, we are sampling without replacement. In the multinomial case, we can either sample with replacement or think of the bowl as having an infinite number of items so that, if we pick an item, the probability of getting the next item with the same color is unchanged.

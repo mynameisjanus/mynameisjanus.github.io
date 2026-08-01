@@ -18,6 +18,8 @@ The mean of a geometric distribution with parameter $p$ is
 
 $$\mathbb{E}[X]=\dfrac{1}{p}.$$
 
+The proof differentiates a geometric series with respect to $p$; the series itself, its radius of convergence, and the differentiated identities $\sum_k k\alpha^k$ and $\sum_k k^2\alpha^k$ used here and in the variance below are derived in [Sequences and Infinite Series](../part-01-mathematical-foundations/04-sequences-and-series.md).
+
 ??? note "Proof"
     $$\begin{align}
     \mathbb{E}[X]&=\sum_{k=1}^{\infty}kp(1-p)^{k-1}\\
