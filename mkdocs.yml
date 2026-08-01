@@ -182,6 +182,8 @@ nav:
           - appendix/part-01-mathematical-foundations/03-mathematical-notation.md
           - appendix/part-01-mathematical-foundations/04-sequences-and-series.md
           - appendix/part-01-mathematical-foundations/05-linear-algebra-review.md
+          - appendix/part-01-mathematical-foundations/06-calculus-essentials.md
+          - appendix/part-01-mathematical-foundations/07-exponentials-logarithms-growth.md
       - Part II — Foundations of Probability:
           - appendix/part-02-probability-foundations/index.md
           - appendix/part-02-probability-foundations/01-probability-spaces.md
