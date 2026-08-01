@@ -74,7 +74,7 @@ $$\mathrm{var}(aX+b)=a^2\,\mathrm{var}(X),\qquad \sigma_{aX+b}=\lvert a\rvert\,\
     For standardization, set $Z=(X-\mu)/\sigma$, which is the case $a=1/\sigma$, $b=-\mu/\sigma$. Then $\mathbb{E}[Z]=(\mu-\mu)/\sigma=0$ and $\mathrm{var}(Z)=\sigma^{-2}\mathrm{var}(X)=1$. The only requirement is $0<\sigma<\infty$.
 
 !!! note "Standardizing changes the scale of a random variable and nothing else about it"
-    A standardized variable has mean zero and variance one, and that exhausts what standardizing accomplishes. It does not make a distribution normal, symmetric or thin-tailed: a standardized $t(2.65)$ is still a $t(2.65)$, with the same shape and the same tail index, and a Cauchy cannot be standardized at all because neither of the two required numbers exists. The familiar statement that $Z\sim\mathcal{N}(0,1)$ holds only when $X$ was already normal, and it is a fact about [The Gaussian Distribution](../part-05-common-distributions/16-gaussian-distribution.md) rather than about standardization.
+    A standardized variable has mean zero and variance one, and that exhausts what standardizing accomplishes. It does not make a distribution normal, symmetric or thin-tailed: a standardized $t(2.65)$ is still a $t(2.65)$, with the same shape and the same tail index, and a Cauchy cannot be standardized at all because neither of the two required numbers exists. The familiar statement that $Z\sim\mathcal{N}(0,1)$ holds only when $X$ was already normal, and it is a fact about [The Gaussian Distribution](../part-05-common-distributions/11-gaussian-distribution.md) rather than about standardization.
 
 ## Chebyshev's Inequality
 

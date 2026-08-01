@@ -225,13 +225,13 @@ nav:
           - appendix/part-05-common-distributions/08-discrete-uniform-distribution.md
           - appendix/part-05-common-distributions/09-continuous-uniform-distribution.md
           - appendix/part-05-common-distributions/10-exponential-distribution.md
-          - appendix/part-05-common-distributions/11-gamma-distribution.md
-          - appendix/part-05-common-distributions/12-beta-distribution.md
-          - appendix/part-05-common-distributions/13-chi-square-distribution.md
-          - appendix/part-05-common-distributions/14-students-t-distribution.md
-          - appendix/part-05-common-distributions/15-f-distribution.md
-          - appendix/part-05-common-distributions/16-gaussian-distribution.md
-          - appendix/part-05-common-distributions/17-lognormal-distribution.md
+          - appendix/part-05-common-distributions/11-gaussian-distribution.md
+          - appendix/part-05-common-distributions/12-lognormal-distribution.md
+          - appendix/part-05-common-distributions/13-gamma-distribution.md
+          - appendix/part-05-common-distributions/14-beta-distribution.md
+          - appendix/part-05-common-distributions/15-chi-square-distribution.md
+          - appendix/part-05-common-distributions/16-students-t-distribution.md
+          - appendix/part-05-common-distributions/17-f-distribution.md
           - appendix/part-05-common-distributions/18-weibull-distribution.md
       - Part VI — Multivariate Probability:
           - appendix/part-06-multivariate-probability/index.md

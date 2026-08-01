@@ -13,7 +13,7 @@ The coupling assumption: *conditioned on the entire hidden path, the observation
 
 $$p(y_0,y_1,\ldots,y_T\mid x_0,x_1,\ldots,x_T)=\prod_{n=0}^{T}f_{x_n}(y_n).$$
 
-The model is parameterized by $\lambda=(\pi_0,P,\{f_i\})$. For regime detection on returns, the standard choice is **Gaussian emissions**: state $i$ generates returns from a [normal distribution](../part-05-common-distributions/16-gaussian-distribution.md) with state-specific mean and variance,
+The model is parameterized by $\lambda=(\pi_0,P,\{f_i\})$. For regime detection on returns, the standard choice is **Gaussian emissions**: state $i$ generates returns from a [normal distribution](../part-05-common-distributions/11-gaussian-distribution.md) with state-specific mean and variance,
 
 $$f_i(y)=\frac{1}{\sqrt{2\pi\sigma_i^2}}\exp\!\left(-\frac{(y-\mu_i)^2}{2\sigma_i^2}\right).$$
 

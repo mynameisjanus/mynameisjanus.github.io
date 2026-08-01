@@ -103,7 +103,7 @@ $$
 \mathbb{E}[\#\{|z_t| > k\}] = n \cdot 2\,\Phi(-k),
 $$
 
-where $\Phi$ is the standard normal CDF (the distribution's full anatomy is in [The Gaussian Distribution](../appendix/part-05-common-distributions/16-gaussian-distribution.md)). That formula turns "the normal underestimates tails" from a slogan into a scoreboard:
+where $\Phi$ is the standard normal CDF (the distribution's full anatomy is in [The Gaussian Distribution](../appendix/part-05-common-distributions/11-gaussian-distribution.md)). That formula turns "the normal underestimates tails" from a slogan into a scoreboard:
 
 ```python
 import numpy as np
@@ -133,7 +133,7 @@ $$
 f(x) \;\sim\; |x|^{-(\nu + 1)},
 $$
 
-so $\nu$ directly indexes tail weight — moments exist only up to order $\nu$, meaning a t with $\nu < 4$ has no finite kurtosis and a t with $\nu < 2$ no finite variance ([Student's t-Distribution](../appendix/part-05-common-distributions/14-students-t-distribution.md) has the derivations). The **normal inverse Gaussian** (NIG) reaches heavy tails by a different route: it is a normal whose variance is itself random, which is exactly what volatility clustering suggests the market is doing, and its four parameters buy separate control of tail weight and asymmetry. The **stable** family is the theoretical aristocracy — closed under addition, tail index $\alpha \le 2$, beloved of Mandelbrot — but for $\alpha < 2$ it has *infinite variance*, a strong claim about markets that the data gets to veto below. The finance-side survey of all three lives in [Heavy-Tailed Returns](../appendix/part-18-quant-finance-applications/13-heavy-tailed-returns.md).
+so $\nu$ directly indexes tail weight — moments exist only up to order $\nu$, meaning a t with $\nu < 4$ has no finite kurtosis and a t with $\nu < 2$ no finite variance ([Student's t-Distribution](../appendix/part-05-common-distributions/16-students-t-distribution.md) has the derivations). The **normal inverse Gaussian** (NIG) reaches heavy tails by a different route: it is a normal whose variance is itself random, which is exactly what volatility clustering suggests the market is doing, and its four parameters buy separate control of tail weight and asymmetry. The **stable** family is the theoretical aristocracy — closed under addition, tail index $\alpha \le 2$, beloved of Mandelbrot — but for $\alpha < 2$ it has *infinite variance*, a strong claim about markets that the data gets to veto below. The finance-side survey of all three lives in [Heavy-Tailed Returns](../appendix/part-18-quant-finance-applications/13-heavy-tailed-returns.md).
 
 ## Fitting by likelihood, choosing by information criteria
 

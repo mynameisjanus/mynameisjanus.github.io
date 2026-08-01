@@ -25,11 +25,11 @@ The two summary numbers every page reports are defined and developed in [Expecte
 |---|---|
 | [Continuous Uniform Distribution](09-continuous-uniform-distribution.md) | The flat density on an interval |
 | [Exponential Distribution](10-exponential-distribution.md) | Density, moments, and the continuous analog of geometric waiting times |
-| [Gamma Distribution](11-gamma-distribution.md) | Sums of exponential waiting times and the gamma family |
-| [Beta Distribution](12-beta-distribution.md) | The conjugate family for a Bernoulli parameter on the unit interval |
-| [Chi-Square Distribution](13-chi-square-distribution.md) | Sums of squared standard normals and their role in variance tests |
-| [Student's t Distribution](14-students-t-distribution.md) | Heavy-tailed sampling distribution of the standardized mean |
-| [F Distribution](15-f-distribution.md) | Ratios of scaled chi-square variables, used to compare variances |
-| [The Gaussian Distribution](16-gaussian-distribution.md) | The normal family, standardization, and linear transformations |
-| [Lognormal Distribution](17-lognormal-distribution.md) | Multiplicative growth and the distribution of exponentiated normals |
+| [Gamma Distribution](13-gamma-distribution.md) | Sums of exponential waiting times and the gamma family |
+| [Beta Distribution](14-beta-distribution.md) | The conjugate family for a Bernoulli parameter on the unit interval |
+| [Chi-Square Distribution](15-chi-square-distribution.md) | Sums of squared standard normals and their role in variance tests |
+| [Student's t Distribution](16-students-t-distribution.md) | Heavy-tailed sampling distribution of the standardized mean |
+| [F Distribution](17-f-distribution.md) | Ratios of scaled chi-square variables, used to compare variances |
+| [The Gaussian Distribution](11-gaussian-distribution.md) | The normal family, standardization, and linear transformations |
+| [Lognormal Distribution](12-lognormal-distribution.md) | Multiplicative growth and the distribution of exponentiated normals |
 | [Weibull Distribution](18-weibull-distribution.md) | Flexible failure-time distribution with shape-dependent hazard |
