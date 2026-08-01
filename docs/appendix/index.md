@@ -14,7 +14,7 @@ This appendix is a self-contained reference for the mathematics, probability, an
 | Part | Focus |
 |---|---|
 | [Part I — Mathematical Foundations](part-01-mathematical-foundations/index.md) | Sets, counting, notation, series, linear algebra, calculus, and compound growth |
-| [Part II — Foundations of Probability](part-02-probability-foundations/index.md) | Sample spaces, axioms, conditioning, Bayes' rule, and independence |
+| [Part II — Foundations of Probability](part-02-probability-foundations/index.md) | Sample spaces, axioms, conditioning, Bayes' rule, independence, and the law of total probability |
 | [Part III — Random Variables](part-03-random-variables/index.md) | CDFs, PMFs, PDFs, joint and conditional distributions, transformations |
 | [Part IV — Expectation and Moments](part-04-expectation-and-moments/index.md) | Expectation, variance, covariance, correlation, and the total laws |
 | [Part V — Common Probability Distributions](part-05-common-distributions/index.md) | The standard discrete and continuous families |
