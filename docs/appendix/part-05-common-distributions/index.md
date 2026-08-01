@@ -2,6 +2,8 @@
 
 A reference catalog of the standard families. Each page gives the distribution's PMF or density, expectation, and variance, and — where written — a Monte Carlo simulation in R. Discrete families first, then continuous.
 
+The two summary numbers every page reports are defined and developed in [Expected Value](../part-04-expectation-and-moments/01-expected-value.md) and [Variance](../part-04-expectation-and-moments/02-variance.md); this part supplies their values family by family rather than re-deriving what they are. Two results from there do most of the work below: linearity of expectation, which is why a binomial mean falls out of a sum of Bernoullis with no independence argument, and the computational formula $\mathrm{var}(X)=\mathbb{E}[X^2]-(\mathbb{E}[X])^2$, which is the route almost every variance on these pages takes. Where a family has moments only up to a finite order — the Student's $t$ and the Cauchy among them — the reason is [Higher-Order Moments](../part-04-expectation-and-moments/03-higher-order-moments.md).
+
 ## Topics
 
 ### Discrete

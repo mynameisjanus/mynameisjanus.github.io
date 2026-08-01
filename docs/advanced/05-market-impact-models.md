@@ -8,7 +8,7 @@ Two results anchor the module. Kyle's model derives permanent impact from first 
 
 Why should trading move prices *permanently* at all? If a large order were known to be uninformed — an index fund rebalancing, a retiree liquidating — a rational market would supply liquidity and the price would snap back. Permanent impact exists because the market cannot tell. Kyle's 1985 model makes this precise with three players in one period.
 
-An **informed trader** observes the asset's true value $v \sim \mathcal N(\mu, \sigma_v^2)$ and submits a market order $x$. **Noise traders** submit a net order $u \sim \mathcal N(0, \sigma_u^2)$, independent of $v$, for reasons unrelated to value. A competitive **market maker** sees only the *combined* flow $y = x + u$ — never its decomposition — and, being competitive, prices at the conditional expectation:
+An **informed trader** observes the asset's true value $v \sim \mathcal N(\mu, \sigma_v^2)$ and submits a market order $x$. **Noise traders** submit a net order $u \sim \mathcal N(0, \sigma_u^2)$, independent of $v$, for reasons unrelated to value. A competitive **market maker** sees only the *combined* flow $y = x + u$ — never its decomposition — and, being competitive, prices at the conditional expectation. That choice is not arbitrary: [Conditional Expectation](../appendix/part-04-expectation-and-moments/06-conditional-expectation.md) proves $\mathbb{E}[v \mid y]$ is the unique minimizer of expected squared pricing error among *all* functions of the observed flow, so a maker who prices anywhere else is beatable by construction.
 
 $$
 P \;=\; \mathbb{E}[\,v \mid y\,].

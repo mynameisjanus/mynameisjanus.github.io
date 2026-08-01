@@ -6,7 +6,7 @@ This lesson makes correlation the subject rather than a parameter. It measures h
 
 ## The diversification math: correlation, not count
 
-The arithmetic is short enough to state exactly. An equal-weight book of $N$ assets, each with volatility $\sigma$ and pairwise correlation $\rho$, has variance $\sigma^{2}\bigl(1 + (N-1)\rho\bigr)/N$, so the number of *effective* independent bets — the $N$ that would produce this variance at zero correlation — is
+The arithmetic is short enough to state exactly, and it is the portfolio double sum of [Covariance](../appendix/part-04-expectation-and-moments/04-covariance.md) with every cross term set equal. An equal-weight book of $N$ assets, each with volatility $\sigma$ and pairwise correlation $\rho$, has variance $\sigma^{2}\bigl(1 + (N-1)\rho\bigr)/N$, so the number of *effective* independent bets — the $N$ that would produce this variance at zero correlation — is
 
 $$
 N_{\text{eff}} \;=\; \frac{N}{1 + (N-1)\rho} \;\xrightarrow[N \to \infty]{}\; \frac{1}{\rho} .
