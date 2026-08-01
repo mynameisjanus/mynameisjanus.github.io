@@ -181,7 +181,7 @@ These are precisely the sums that give the [geometric distribution](../part-05-c
 
 $$e^x = \sum_{k=0}^{\infty}\frac{x^k}{k!},\qquad \log(1+x) = \sum_{k=1}^{\infty}\frac{(-1)^{k+1}x^k}{k}\ \ \text{for } \lvert x\rvert<1.$$
 
-The first converges for every $x$ (ratio test: the ratio is $x/(k+1)\to0$) and is the reason the [Poisson](../part-05-common-distributions/06-poisson-distribution.md) probabilities $e^{-\lambda}\lambda^k/k!$ sum to one. The second is the series behind $\log(1+r)\approx r - r^2/2$, the approximation that governs the gap between simple and log returns in [Exponentials, Logarithms, and Growth](07-exponentials-logarithms-growth.md). Setting $x=1$ in it, at the edge of the interval, recovers the alternating harmonic sum $\ln 2$ used above.
+The first converges for every $x$ (ratio test: the ratio is $x/(k+1)\to0$) and is the reason the [Poisson](../part-05-common-distributions/06-poisson-distribution.md) probabilities $e^{-\lambda}\lambda^k/k!$ sum to one. The second is the series behind $\log(1+r)\approx r - r^2/2$, the approximation that governs the gap between simple and log returns in [Exponentials, Logarithms, and Growth](07-exponentials-logarithms-growth.md). Setting $x=1$ in it, at the edge of the interval, recovers the alternating harmonic sum $\ln 2$ used above. The same integral-and-series machinery gives $\Gamma(a)=\int_0^\infty t^{a-1}e^{-t}\,\mathrm{d}t$ its recursion and its half-integer values, which is what lets [Gamma Distribution](../part-05-common-distributions/13-gamma-distribution.md) carry a shape parameter that is not a whole number.
 
 ## Where This Shows Up: Exponential Weighting
 

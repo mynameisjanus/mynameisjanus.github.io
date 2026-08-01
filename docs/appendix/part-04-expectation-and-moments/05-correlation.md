@@ -117,7 +117,7 @@ Feed each variable through its own distribution function first, then take the or
 
 $$\rho_S(X,Y)=\rho\big(F_X(X),\,F_Y(Y)\big).$$
 
-The transform is the probability integral transform of [Change of Variables](../part-03-random-variables/09-change-of-variables.md), which maps any continuous variable to a uniform. So $\rho_S$ is a Pearson correlation of two uniforms, and on a finite sample the transform is exactly what replacing each observation by its rank accomplishes — hence the name.
+The transform is the probability integral transform of [Change of Variables](../part-03-random-variables/09-change-of-variables.md), which maps any continuous variable to a uniform. So $\rho_S$ is a Pearson correlation of two uniforms, and on a finite sample the transform is exactly what replacing each observation by its rank accomplishes — hence the name. The ranks themselves have a distribution once that transform is made: the $k$-th of $n$ uniforms is $\mathrm{Beta}(k,n-k+1)$, which is what [Beta Distribution](../part-05-common-distributions/14-beta-distribution.md) uses to put a distribution-free interval around an empirical quantile.
 
 ??? note "Proof that Spearman's ρ depends on the copula alone"
     Let $g$ be strictly increasing. Then $g(X)\le g(x)$ exactly when $X\le x$, so $F_{g(X)}(g(x))=F_X(x)$ — the transformed variable $F_{g(X)}(g(X))$ is the same random variable as $F_X(X)$. Applying any strictly increasing transform to either coordinate therefore leaves the pair $\big(F_X(X),F_Y(Y)\big)$ unchanged, and hence leaves $\rho_S$ unchanged.

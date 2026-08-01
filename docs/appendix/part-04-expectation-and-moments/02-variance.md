@@ -82,7 +82,7 @@ $$\mathrm{var}(aX+b)=a^2\,\mathrm{var}(X),\qquad \sigma_{aX+b}=\lvert a\rvert\,\
 
 $$\mathbf{P}\big(\lvert X-\mu\rvert\ge c\big)=\mathbf{P}\big((X-\mu)^2\ge c^2\big)\ \le\ \frac{\mathbb{E}\big[(X-\mu)^2\big]}{c^2}=\frac{\sigma^2}{c^2}.$$
 
-Writing $c=k\sigma$ puts it in the form usually quoted: the probability of landing $k$ or more standard deviations from the mean is at most $1/k^2$, for **every** law with a finite variance.
+Writing $c=k\sigma$ puts it in the form usually quoted: the probability of landing $k$ or more standard deviations from the mean is at most $1/k^2$, for **every** law with a finite variance. The price of that generality is looseness, and the comparison worth having is with a bound that assumes a family and gets a great deal more: under normality the sampling distribution of $s^2$ is known exactly, and [Chi-Square Distribution](../part-05-common-distributions/15-chi-square-distribution.md) turns it into an interval on $\sigma$ rather than a bound on a tail.
 
 ```python
 import numpy as np
