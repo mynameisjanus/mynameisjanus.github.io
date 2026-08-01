@@ -130,7 +130,7 @@ Two disciplines make this credible rather than decorative. First, EVT estimates 
 
 ## Do correlations go to one? Only within an asset class
 
-"Correlations go to one in a crisis" is the most repeated claim in risk management, and [the previous lesson](04-portfolio-optimization-and-correlation.md) appeared to confirm it: nine sectors reached an average pairwise correlation of 0.922 in March 2020. But a *period-average* correlation conflates two things — the market falling and the tails arriving together. The cleaner measure is tail dependence: given one asset in its worst decile, how often is the other also in its worst decile? Independence gives 10%:
+"Correlations go to one in a crisis" is the most repeated claim in risk management, and [the previous lesson](04-portfolio-optimization-and-correlation.md) appeared to confirm it: nine sectors reached an average pairwise correlation of 0.922 in March 2020. But a *period-average* correlation conflates two things — the market falling and the tails arriving together. The cleaner measure is tail dependence: given one asset in its worst decile, how often is the other also in its worst decile? Independence gives 10%. That this is a *different* question from correlation, and not a refinement of it, is the point of [Marginal Distributions](../appendix/part-03-random-variables/06-marginal-distributions.md): two joint laws can match on every marginal and on their correlation to three decimals and still differ in the joint tail by a factor of five, so no amount of per-asset data settles the question below:
 
 ```python
 import numpy as np

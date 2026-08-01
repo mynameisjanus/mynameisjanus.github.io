@@ -160,7 +160,9 @@ The abbreviation **iid** bundles two claims that fail separately and for differe
 
 $$\mathbf{P}(X_1\le x_1,\ldots,X_n\le x_n) = \prod_{i=1}^{n}\mathbf{P}(X_i\le x_i) = \prod_{i=1}^{n}F(x_i).$$
 
-The statement is legitimate at this level because each $\{X_i\le x_i\}$ is an event, as [Probability Spaces](01-probability-spaces.md) establishes; what $F$ is and how it is manipulated belongs to [Random Variables](../part-03-random-variables/01-random-variables.md) and [Cumulative Distribution Functions](../part-03-random-variables/02-cumulative-distribution-functions.md).
+The statement is legitimate at this level because each $\{X_i\le x_i\}$ is an event, as [Probability Spaces](01-probability-spaces.md) establishes; what $F$ is and how it is manipulated belongs to [Random Variables](../part-03-random-variables/01-random-variables.md) and [Cumulative Distribution Functions](../part-03-random-variables/02-cumulative-distribution-functions.md), and the factorization itself, at all three levels of description, is [Joint Distributions](../part-03-random-variables/05-joint-distributions.md).
+
+It is worth knowing how much the independent choice gives up. Fixing the individual distributions does not fix the joint one — it leaves an interval of possibilities with explicit endpoints, and the independent product is a single point inside it rather than its midpoint. [Marginal Distributions](../part-03-random-variables/06-marginal-distributions.md) makes that interval precise and shows the joint tail varying by a factor of five across laws that agree on every one-variable summary, which is the quantitative version of the claim this page ends on.
 
 | Independent? | Identically distributed? | Example | What breaks |
 |---|---|---|---|

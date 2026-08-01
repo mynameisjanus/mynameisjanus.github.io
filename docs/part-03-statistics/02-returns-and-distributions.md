@@ -61,7 +61,7 @@ print(f"weighted log returns {0.6 * rb.loc[d, 'SPY'] + 0.4 * rb.loc[d, 'TLT']:+.
 #    weighted log returns +0.0762
 ```
 
-The `allclose` confirms the time identity to machine precision — sum-of-logs and product-of-simples are the same monthly number, which is why [NumPy and Vectorization](../part-02-python/01-numpy-and-vectorization.md) pushed compounding into log space. The 60/40 example shows the portfolio identity breaking the other way: weighting *log* returns understates the true portfolio return by 58 basis points on one day, because the log of a sum is not the sum of logs (the general machinery for what happens to distributions under transformations is in [Functions of Random Variables](../appendix/part-03-random-variables/08-functions-of-random-variables.md)). The working rules:
+The `allclose` confirms the time identity to machine precision — sum-of-logs and product-of-simples are the same monthly number, which is why [NumPy and Vectorization](../part-02-python/01-numpy-and-vectorization.md) pushed compounding into log space. The 60/40 example shows the portfolio identity breaking the other way: weighting *log* returns understates the true portfolio return by 58 basis points on one day, because the log of a sum is not the sum of logs (the general machinery for what happens to distributions under transformations is in [Functions of Random Variables](../appendix/part-03-random-variables/08-functions-of-random-variables.md), and the density-level version — where the exponential's Jacobian is exactly what separates the median price ratio from the mean one — is [Change of Variables](../appendix/part-03-random-variables/09-change-of-variables.md)). The working rules:
 
 | Operation | Use simple | Use log |
 |---|---|---|
