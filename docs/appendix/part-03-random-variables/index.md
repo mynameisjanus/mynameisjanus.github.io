@@ -1,17 +1,19 @@
 # Part III — Random Variables
 
-Random variables turn outcomes into numbers. This part builds the distributional toolkit: CDFs, PMFs, and PDFs, joint, marginal, and conditional distributions, and what happens to distributions under transformations.
+A random variable moves the problem off the sample space and onto the real line. Nine pages about the objects that live there — the distribution function, the mass function, the density — and about the two operations, marginalizing and conditioning, that turn a joint law into the law you actually trade on. Once the law is written down the original experiment is no longer needed, and that is both the power of the construction and its cost: everything the map collapsed is gone, permanently.
+
+The dependencies run in file order, with two exceptions worth knowing. [Cumulative Distribution Functions](02-cumulative-distribution-functions.md) comes before both [Probability Mass Functions](03-probability-mass-functions.md) and [Probability Density Functions](04-probability-density-functions.md) rather than after them, because $F$ exists for every random variable while the other two exist only for laws of a particular shape, and both of those pages are written as answers to the question of what $F$ looks like in their case. And [Functions of Random Variables](08-functions-of-random-variables.md) is the general method while [Change of Variables](09-change-of-variables.md) is the shortcut that applies when the transform is smooth and invertible, so 08 reads first even though 09 supplies the formula that gets quoted. Where this part stops is also worth stating: nothing here averages anything, which is [Part IV](../part-04-expectation-and-moments/index.md); no distribution is given a name and a parameter, which is [Part V](../part-05-common-distributions/index.md); and two variables is as far as the joint material goes, because random vectors, covariance matrices, and the multivariate Gaussian are [Part VI](../part-06-multivariate-probability/index.md).
 
 ## Topics
 
 | Topic | Focus |
 |---|---|
-| [Random Variables](01-random-variables.md) | Random variables as mappings from outcomes to numbers |
-| [Cumulative Distribution Functions](02-cumulative-distribution-functions.md) | The CDF and its defining properties |
-| [Probability Mass Functions](03-probability-mass-functions.md) | PMFs for discrete random variables, with examples |
-| [Probability Density Functions](04-probability-density-functions.md) | Densities, non-negativity, and normalization |
-| [Joint Distributions](05-joint-distributions.md) | Joint PMFs and PDFs for multiple random variables |
-| [Marginal Distributions](06-marginal-distributions.md) | Recovering single-variable distributions from a joint distribution |
-| [Conditional Distributions](07-conditional-distributions.md) | Conditioning on events and on other random variables |
-| [Functions of Random Variables](08-functions-of-random-variables.md) | Distributions of transformed random variables |
-| [Change of Variables](09-change-of-variables.md) | The change-of-variables formula for densities under monotone transformations |
+| [Random Variables](01-random-variables.md) | The map from outcomes to numbers, the induced law and why the sample space can be discarded, discrete, continuous, and mixed, and what a measurement can never answer |
+| [Cumulative Distribution Functions](02-cumulative-distribution-functions.md) | The only description every law has: right-continuity, jumps as atoms, the survival function, and the quantile function that a VaR is a value of |
+| [Probability Mass Functions](03-probability-mass-functions.md) | Countable supports, every probability as a sum, the exact correspondence with $F$, and the test for whether discreteness is real or an artifact of rounding |
+| [Probability Density Functions](04-probability-density-functions.md) | Why uncountability forces a rate rather than a mass, why a density is not a probability and can exceed one, and the units that make log-likelihoods incomparable |
+| [Joint Distributions](05-joint-distributions.md) | One law on the plane, the joint mass function, density, and distribution function, the rectangle formula, and independence as factorization at all three levels |
+| [Marginal Distributions](06-marginal-distributions.md) | Marginalization as a lossy projection, the Fréchet bounds, identical margins with opposite tails, and why portfolio risk is not a function of the marginals |
+| [Conditional Distributions](07-conditional-distributions.md) | Conditioning on events and on random variables, the limiting construction when the conditioning event has probability zero, and a law as a mixture of its conditionals |
+| [Functions of Random Variables](08-functions-of-random-variables.md) | Transformation as a preimage problem, the distribution function method, non-monotone branches, order statistics, transforms that create atoms, and convolution |
+| [Change of Variables](09-change-of-variables.md) | The Jacobian as a local stretch factor, the multivariate determinant, the probability integral transform, inverse-transform sampling, and the lognormal |
