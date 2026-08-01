@@ -33,4 +33,4 @@ This appendix is a self-contained reference for the mathematics, probability, an
 | [Part XVIII — Applications to Quantitative Finance](part-18-quant-finance-applications/index.md) | Sizing, risk, microstructure, and regime detection |
 
 !!! note
-    Much of this material was migrated from an earlier site and is kept mathematically rigorous, with proofs in collapsible blocks and R-based Monte Carlo simulations. Pages marked **Draft** are placeholders for planned content.
+    Much of this material was migrated from an earlier site and is kept mathematically rigorous, with proofs in collapsible blocks. Rewritten parts carry seeded Python whose output is pinned in the source, so every number on the page can be reproduced by running the block above it. Pages marked **Draft** are placeholders for planned content.

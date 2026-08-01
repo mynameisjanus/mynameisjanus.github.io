@@ -1,4 +1,5 @@
-/* Centered figure images (used by migrated appendix pages) */
+/* Centered figure images. The rewritten appendix parts carry no figures;
+   the remaining consumer is the profile photo on the About page. */
 img.center {
   display: block;
   margin-left: auto;
