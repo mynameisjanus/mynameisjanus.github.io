@@ -4,7 +4,7 @@ A correlation is a cosine. Once that is taken literally rather than as an analog
 
 This page covers the standardization of a covariance, the proof of the bound and the exact case of equality, the geometry, what $\rho$ summarizes and what it cannot see, Spearman's rank correlation, and the ceiling correlation places on diversification. It does not develop the dependence structure that $\rho$ compresses — [Marginal Distributions](../part-03-random-variables/06-marginal-distributions.md) named that object and [Copulas](../part-18-quant-finance-applications/15-copulas.md) parameterizes it — and it does not test anything, which is [Nonparametric Tests](../part-12-hypothesis-testing/08-nonparametric-tests.md).
 
-The number that determines how many independent bets a book contains is not a property of the book. It is a property of the day: nine sector ETFs are $2.49$ effective bets on an ordinary day and $1.76$ in the worst decile, and both numbers follow from one correlation through arithmetic on this page. [Risk Parity, Diversification, and Factors](../../part-08-portfolio-management/03-risk-parity-diversification-factors.md) measures them.
+The number that determines how many independent bets a book contains is not a property of the book. It is a property of the day: nine sector ETFs are $2.49$ effective bets on an ordinary day and $1.76$ in the worst decile, and both numbers follow from one correlation through arithmetic on this page. [Portfolio Optimization and Correlation](../../part-08-portfolio-management/04-portfolio-optimization-and-correlation.md) measures them.
 
 ## Standardizing a Covariance
 
