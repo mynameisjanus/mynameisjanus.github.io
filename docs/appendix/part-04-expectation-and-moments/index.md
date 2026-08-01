@@ -1,16 +1,18 @@
 # Part IV — Expectation and Moments
 
-Summarizing distributions by their moments: expectation and variance first, then covariance and correlation for pairs, and the conditional versions — conditional expectation and the laws of total expectation and variance — that power regime and mixture arguments.
+[Part III](../part-03-random-variables/index.md) built laws; this part compresses them. A moment is what you get by averaging a power of a random variable, and averaging is the operation that trades an entire distribution for a handful of numbers. The compression is what makes portfolio arithmetic possible, because a few numbers combine where whole distributions do not — and it is dangerous for exactly the same reason, because the combination rules are silent about which of the numbers exist and which do not.
+
+The dependencies run in file order, with one exception worth knowing: [Conditional Expectation](06-conditional-expectation.md) owns both $\mathbb{E}[X\mid Y=y]$ and $\mathbb{E}[X\mid Y]$, and [Law of Total Expectation](07-law-of-total-expectation.md) and [Law of Total Variance](08-law-of-total-variance.md) are both restatements of the object it builds, so 06 reads before either — even though the event-partition version those two generalize was proved back in [Law of Total Probability](../part-02-probability-foundations/06-law-of-total-probability.md) and is not reproved here. Where this part stops is worth stating too: no named family's moments are tabulated, which is [Part V](../part-05-common-distributions/index.md); nothing is a vector and no matrix appears, because random vectors and covariance matrices are [Part VI](../part-06-multivariate-probability/index.md); no limit in $n$ is ever taken, so Markov's and Chebyshev's inequalities are here but the law of large numbers is [Part VII](../part-07-asymptotic-theory/index.md); and no property of an estimator is named, which is [Part X](../part-10-statistics-foundations/index.md) and [Part XI](../part-11-parameter-estimation/index.md).
 
 ## Topics
 
 | Topic | Focus |
 |---|---|
-| [Expected Value](01-expected-value.md) | Expectation for discrete and continuous random variables, and its properties |
-| [Variance](02-variance.md) | Variance, standard deviation, and standardized random variables |
-| [Higher-Order Moments](03-higher-order-moments.md) | Skewness, kurtosis, and what higher moments say about tails |
-| [Covariance](04-covariance.md) | Covariance and its properties |
-| [Correlation](05-correlation.md) | The correlation coefficient and its bounds |
-| [Conditional Expectation](06-conditional-expectation.md) | Conditional expectation as a random variable |
-| [Law of Total Expectation](07-law-of-total-expectation.md) | The law of iterated expectations |
-| [Law of Total Variance](08-law-of-total-variance.md) | Decomposing variance into within- and between-group parts |
+| [Expected Value](01-expected-value.md) | The definition and the condition it requires, a distribution with no mean at all, linearity without assumptions, the law of the unconscious statistician, Jensen, Markov, and the moment nobody can measure |
+| [Variance](02-variance.md) | The second central moment, why the computational formula is unsafe, standardization, Chebyshev's distribution-free bound, and the variance of a sum that the $\sqrt{T}$ rule assumes away |
+| [Higher-Order Moments](03-higher-order-moments.md) | Skewness and kurtosis with the $-3$ derived, the moments a two-regime mixture manufactures, the order up to which a heavy-tailed law has any moments, and what a sample kurtosis measures when there is nothing to measure |
+| [Covariance](04-covariance.md) | The definition and its shortcut, bilinearity, the portfolio double sum where the cross terms outnumber the diagonal, zero covariance under total dependence, and positive semi-definiteness stated once |
+| [Correlation](05-correlation.md) | Standardizing a covariance, the bound as Cauchy–Schwarz, correlation as a cosine, what it cannot see, Spearman's rank correlation as a functional of the copula alone, and the $1/\rho$ ceiling on diversification |
+| [Conditional Expectation](06-conditional-expectation.md) | The number and the random variable, the properties that follow, orthogonality, and the best-predictor theorem that every forecasting model in this book is written against |
+| [Law of Total Expectation](07-law-of-total-expectation.md) | The tower property, iterating across nested information, Wald's identity for a random number of terms, and the exact accounting for a number reported because it survived a filter |
+| [Law of Total Variance](08-law-of-total-variance.md) | The within-and-between decomposition as a Pythagorean identity, explained variance as a ratio rather than a convention, and the variance of a sum of a random number of terms |

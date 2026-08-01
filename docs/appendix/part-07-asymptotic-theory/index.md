@@ -6,7 +6,7 @@ What happens as the sample grows. The three modes of convergence — almost sure
 
 | Topic | Focus |
 |---|---|
-| [The Weak Law of Large Numbers](01-weak-law-of-large-numbers.md) | Markov and Chebyshev inequalities and convergence of sample means in probability |
+| [The Weak Law of Large Numbers](01-weak-law-of-large-numbers.md) | Convergence of sample means in probability, the Chebyshev route to it, and the rate |
 | [The Strong Law of Large Numbers](02-strong-law-of-large-numbers.md) | Almost-sure convergence of sample means |
 | [The Central Limit Theorem](03-central-limit-theorem.md) | Convergence in distribution of standardized sums to the normal |
 | [The Delta Method](04-delta-method.md) | Asymptotic distributions of smooth functions of estimators |
