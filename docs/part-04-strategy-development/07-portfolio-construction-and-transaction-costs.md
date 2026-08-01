@@ -159,7 +159,7 @@ Read the table against each sleeve's gross earnings and the verdicts start arriv
 
 ## The square-root law prices size
 
-Spread and commission are the costs of *trading*; impact is the cost of *size*, and it grows with the square root of the fraction of daily volume an order consumes. For the sector book's tempo — 5.3x one-way turnover a year across funds that trade about $1.5bn a day — the law prices two hypothetical books:
+Spread and commission are the costs of *trading*; impact is the cost of *size*, and it grows with the square root of the fraction of daily volume an order consumes ([market impact models](../advanced/05-market-impact-models.md) derives the law and estimates capacity from it). For the sector book's tempo — 5.3x one-way turnover a year across funds that trade about $1.5bn a day — the law prices two hypothetical books:
 
 ```python
 import numpy as np

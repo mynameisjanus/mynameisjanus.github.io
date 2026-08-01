@@ -89,7 +89,7 @@ Equal dollars long and short did not deliver beta zero — it delivered −0.25,
 
 ## The volatility risk premium
 
-Front two. The VIX is, by construction, the strike of a 30-day variance swap on the S&P 500 — the annualized volatility the market will lock in today for the coming month. The volatility risk premium is the claim that this insurance is persistently overpriced:
+Front two. The VIX is, by construction, the strike of a 30-day variance swap on the S&P 500 — the annualized volatility the market will lock in today for the coming month, an identity the [options pricing module](../advanced/11-options-pricing.md) derives from Ito's lemma rather than asserting. The volatility risk premium is the claim that this insurance is persistently overpriced:
 
 $$
 \mathrm{VRP}_t \;=\; \sigma^{\text{implied}}_t \;-\; \sigma^{\text{realized}}_{t \to t+1} \;>\; 0

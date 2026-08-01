@@ -64,7 +64,7 @@ The index row says: a level that is emphatically not stationary (ADF p = 0.992 â
 
 ## Ornstein-Uhlenbeck: the physics of the tether
 
-Once a spread earns "stationary," it deserves a model with parameters worth estimating. The workhorse is the Ornstein-Uhlenbeck process,
+Once a spread earns "stationary," it deserves a model with parameters worth estimating. The workhorse is the Ornstein-Uhlenbeck process (solved properly, and shown to make this discrete fit *exact* rather than approximate, in the [stochastic calculus module](../advanced/03-stochastic-calculus.md)),
 
 $$
 dX_t \;=\; \theta\,(\mu - X_t)\,dt \;+\; \sigma\,dW_t ,

@@ -45,7 +45,7 @@ $$
 \mathbb{E}[\text{PnL}] = (1-p)\,\frac{s}{2} \;-\; p\,\ell ,
 $$
 
-which is only non-negative when the spread satisfies $s \ge 2p\ell/(1-p)$. This is the core insight of classical microstructure theory: **the spread is exactly the price at which providing liquidity to a partially informed crowd breaks even.** More informed flow or higher volatility (bigger $p$ or $\ell$) forces wider spreads — which is why spreads blow out around news, and why "tight spread" is a statement about how little the market fears the next arrival.
+which is only non-negative when the spread satisfies $s \ge 2p\ell/(1-p)$. This is the core insight of classical microstructure theory: **the spread is exactly the price at which providing liquidity to a partially informed crowd breaks even.** More informed flow or higher volatility (bigger $p$ or $\ell$) forces wider spreads — which is why spreads blow out around news, and why "tight spread" is a statement about how little the market fears the next arrival. The [market making module](../advanced/12-market-making.md) turns this inequality into the two models a quoting desk runs on.
 
 The implication for you is uncomfortable and essential: **when your limit order fills, ask why.** Fills are not random. Your resting bid executes most readily when someone with better information or a broader view of flow decided your price was worth hitting. Every backtest that assumes limit orders fill whenever price touches them is quietly assuming away adverse selection — and it is the single most common way paper profits vanish in production.
 
