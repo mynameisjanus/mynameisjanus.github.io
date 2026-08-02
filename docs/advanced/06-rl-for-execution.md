@@ -194,7 +194,7 @@ The lesson is not that RL cannot work on execution — production desks do run l
 
 ## Common random numbers are worth more than a better algorithm
 
-One methodological note earns its own section because it changes what is measurable. Every comparison above evaluated all policies **on the same 20,000 random seeds** — identical price paths, identical signal realizations, differing only in the policy's decisions. Since the quantity of interest is a difference between policies, and the price noise is common to both, pairing cancels the dominant variance term:
+One methodological note earns its own section because it changes what is measurable. Every comparison above evaluated all policies **on the same 20,000 random seeds** — identical price paths, identical signal realizations, differing only in the policy's decisions. Since the quantity of interest is a difference between policies, and the price noise is common to both, pairing cancels the dominant variance term ([Variance Reduction](../appendix/part-09-monte-carlo-methods/06-variance-reduction.md) prices the same trick from scratch, and names what it costs — the two level estimates are afterwards correlated, so no unpaired test may be applied to them):
 
 $$
 \operatorname{Var}\left[\bar d\right] \;=\; \frac{\operatorname{Var}[C_A] + \operatorname{Var}[C_B] - 2\operatorname{Cov}[C_A, C_B]}{n},

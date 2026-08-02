@@ -162,7 +162,7 @@ gives contention $\sigma = 0.0448$ and coherency $\kappa = 0.00103$, which predi
 
 Distributed results arrive in completion order, which varies run to run. Any aggregation that depends on arrival order — a running maximum, an accumulator, a "first result wins" rule — produces different answers on identical inputs, and the resulting irreproducibility is indistinguishable from a bug. Three rules make a sweep bit-reproducible, and all three appear in the code above.
 
-**Seed by spawning, not by arithmetic.** `np.random.SeedSequence(0).spawn(k)` produces $k$ statistically independent streams; deriving seeds as `seed = base + task_index` produces streams that can be correlated, which silently degrades bootstrap estimates. **Return the key with the value.** Every task emits `(config, result)` pairs so nothing depends on which worker finished when. **Sort before reducing.** Aggregate only after sorting by key, and hash the sorted table to prove it:
+**Seed by spawning, not by arithmetic.** `np.random.SeedSequence(0).spawn(k)` produces $k$ statistically independent streams; deriving seeds as `seed = base + task_index` produces streams that can be correlated, which silently degrades bootstrap estimates — [Random Number Generation](../appendix/part-09-monte-carlo-methods/01-random-number-generation.md) measures the damage on a 512-worker farm and finds an unbiased estimate whose reported standard error is four times too narrow. **Return the key with the value.** Every task emits `(config, result)` pairs so nothing depends on which worker finished when. **Sort before reducing.** Aggregate only after sorting by key, and hash the sorted table to prove it:
 
 ```python
 import hashlib

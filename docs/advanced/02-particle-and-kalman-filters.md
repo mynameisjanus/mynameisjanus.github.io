@@ -322,7 +322,7 @@ The EKF fails on three-quarters of the seeds; the unscented filter fails on thre
 
 ## Particle filters trade the Gaussian assumption for Monte Carlo error
 
-When the state is not Gaussian at all — bimodal, bounded, skewed — sigma points will not save you either, and the last resort is to represent the posterior by samples. Sequential importance sampling maintains $N$ weighted particles $\{x_t^{(i)}, w_t^{(i)}\}$ approximating $p(x_t \mid \mathcal F_t)$. Propagate each particle through the state equation, then reweight by how well it explains the new observation. With the state transition as the proposal — the *bootstrap* filter — the general weight update collapses to something you can implement in one line:
+When the state is not Gaussian at all — bimodal, bounded, skewed — sigma points will not save you either, and the last resort is to represent the posterior by samples. Sequential importance sampling maintains $N$ weighted particles $\{x_t^{(i)}, w_t^{(i)}\}$ approximating $p(x_t \mid \mathcal F_t)$ — the weights, the effective sample size that monitors them, and the tail condition a proposal must satisfy for either to mean anything are [Importance Sampling](../appendix/part-09-monte-carlo-methods/04-importance-sampling.md). Propagate each particle through the state equation, then reweight by how well it explains the new observation. With the state transition as the proposal — the *bootstrap* filter — the general weight update collapses to something you can implement in one line:
 
 $$
 w_t^{(i)} \;\propto\; w_{t-1}^{(i)}\; p\bigl(y_t \mid x_t^{(i)}\bigr).

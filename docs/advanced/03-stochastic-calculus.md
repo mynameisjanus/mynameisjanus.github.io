@@ -223,7 +223,7 @@ print(f"difference {pay.mean() - bs:+.4f}, which is {(pay.mean() - bs) / se:+.2f
 #    difference +0.0060, which is +0.68 standard errors
 ```
 
-Two million paths simulated under a drift of $r$ — not $\mu$, which never enters — price the option at 7.1341 against the analytic 7.1281, a discrepancy of 0.68 standard errors. The PDE and the expectation are the same object seen from two directions.
+Two million paths simulated under a drift of $r$ — not $\mu$, which never enters — price the option at 7.1341 against the analytic 7.1281, a discrepancy of 0.68 standard errors. The PDE and the expectation are the same object seen from two directions. Note what two million paths bought: an interval of ±0.0174, because the error falls like one over the square root of the path count and nothing faster ([Monte Carlo Simulation](../appendix/part-09-monte-carlo-methods/03-monte-carlo-simulation.md) runs this same option across seven sample sizes to show it, and [Variance Reduction](../appendix/part-09-monte-carlo-methods/06-variance-reduction.md) buys back a factor of 1,345 on a related contract by regressing against a payoff whose answer is known).
 
 ## Simulating an SDE means choosing your error
 
