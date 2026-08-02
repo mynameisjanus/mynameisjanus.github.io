@@ -94,7 +94,7 @@ print(f"largest eigenvalue  {ev[-1]:.3e}")
 #    largest eigenvalue  4.612e-04
 ```
 
-Rank 29 from 30 observations — one degree of freedom lost to estimating the mean. Twenty-one directions in this 50-asset space have *exactly zero* estimated variance, which the optimizer will happily read as "risk-free" and lever into. The slightly negative smallest eigenvalue is floating-point noise around a true zero, and it is worth recognizing on sight: eigenvalues of order $10^{-19}$ against a largest of order $10^{-4}$ mean rank deficiency, not a broken calculation. Shrinkage estimators exist to repair exactly this, though as [Portfolio Optimization and Correlation](../../part-08-portfolio-management/04-portfolio-optimization-and-correlation.md) documents, repairing $\hat\Sigma$ does not fix an optimizer whose real problem is $\hat\mu$.
+Rank 29 from 30 observations — one degree of freedom lost to estimating the mean. Twenty-one directions in this 50-asset space have *exactly zero* estimated variance, which the optimizer will happily read as "risk-free" and lever into. The slightly negative smallest eigenvalue is floating-point noise around a true zero, and it is worth recognizing on sight: eigenvalues of order $10^{-19}$ against a largest of order $10^{-4}$ mean rank deficiency, not a broken calculation. Shrinkage estimators exist to repair exactly this, though as [Portfolio Optimization and Correlation](../../part-08-portfolio-management/04-portfolio-optimization-and-correlation.md) documents, repairing $\hat\Sigma$ does not fix an optimizer whose real problem is $\hat\mu$. [Covariance Matrices](../part-06-multivariate-probability/02-covariance-matrices.md) develops both halves of that: why the spectrum is distorted long before the matrix goes singular, and a simulation in which shrinkage is worth $0.015$ of Sharpe against the $0.81$ that knowing $\mu$ is worth.
 
 ### Solving $Ax = b$
 
@@ -193,7 +193,7 @@ print(f"first component explains {evals[0] / 3:.1%} of total variance")
 #    first component explains 78.8% of total variance
 ```
 
-Three assets, two of them correlated at 0.999, and the spectrum tells the whole story: one dominant direction holding 79% of the variance, a second holding 21%, and a third with essentially nothing — the near-perfect pair leaves almost no independent variation in their difference. This is the eigenvalue-spectrum reading behind the effective-rank and effective-number-of-bets diagnostics in [Risk Parity, Diversification, and Factors](../../part-08-portfolio-management/03-risk-parity-diversification-factors.md): a universe of $N$ assets rarely offers $N$ independent bets, and the spectrum says how many it actually offers.
+Three assets, two of them correlated at 0.999, and the spectrum tells the whole story: one dominant direction holding 79% of the variance, a second holding 21%, and a third with essentially nothing — the near-perfect pair leaves almost no independent variation in their difference. This is the eigenvalue-spectrum reading behind the effective-rank and effective-number-of-bets diagnostics in [Risk Parity, Diversification, and Factors](../../part-08-portfolio-management/03-risk-parity-diversification-factors.md): a universe of $N$ assets rarely offers $N$ independent bets, and the spectrum says how many it actually offers. [Correlation Matrices](../part-06-multivariate-probability/03-correlation-matrices.md) makes that reading exact — on a correlation matrix the eigenvalues sum to $N$ whatever the correlations are, so the spectrum is a fixed budget and the four competing diagnostics are four ways of asking how concentrated it is.
 
 ### Condition Number: Why Optimizers Explode
 
@@ -254,6 +254,8 @@ print("realized vol: ", np.round(x.std(axis=0, ddof=1), 4))
 ```
 
 Note the transpose in `z @ L.T`: with draws stored as rows, the map that acts on a column vector as $Lz$ acts on a row-stacked matrix as $ZL^\top$. This is the rows-as-observations convention colliding with the columns-as-vectors convention, and getting it backwards produces a matrix with the wrong correlations and no error message. Verifying the realized correlation against the target, as above, costs one line and catches it.
+
+The law this recipe generates is the multivariate normal, and $\det L$ reappears there as the density's normalizing constant: [Multivariate Gaussian Distribution](../part-06-multivariate-probability/05-multivariate-gaussian.md) derives the density by treating $\mu+Lz$ as a change of variables, which is why the factor is $(\det\Sigma)^{-1/2}$ and why the density exists only when $L$ is invertible — the case the rank-29 example above is not.
 
 ## Projections and Least Squares
 

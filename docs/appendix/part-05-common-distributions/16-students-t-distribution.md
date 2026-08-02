@@ -79,6 +79,8 @@ print(f"    exact t({nu}) quantiles"
 
 Neither route draws a $t$ variate. One divides a normal by a chi-square and the other draws a variance first and a normal second, and both land on the same law — quantiles agreeing across the range and a Kolmogorov–Smirnov test finding nothing to report against the exact $t$. The second route is the one to keep in mind when reading a return series: it says that heavy tails and a randomly varying volatility are not two phenomena but one, described from different ends.
 
+Running the same mixture with a vector in place of the scalar gives the multivariate $t$, which is the smallest change of assumption that gives a *joint* law any tail dependence at all — a normal has none at any correlation below one. [Multivariate Gaussian Distribution](../part-06-multivariate-probability/05-multivariate-gaussian.md) measures the difference and finds it invisible at the decile and a factor of $1.55$ deep in the tail, and [Conditional Gaussian Distributions](../part-06-multivariate-probability/06-conditional-gaussian.md) finds the limit of the repair: one shared mixing variable removes the wrong sign from the conditional correlation without producing the right one.
+
 ## Moments Exist Only Below ν
 
 This is the second promised derivation, and it is the sharpest fact about the family.

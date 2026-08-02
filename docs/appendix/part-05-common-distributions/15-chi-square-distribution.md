@@ -14,6 +14,8 @@ $$Q=Z_1^{2}+\cdots+Z_k^{2}\ \sim\ \chi^{2}_{k},$$
 
 with $k$ the degrees of freedom. The support is the positive half-line because squares are non-negative, and the family is additive in $k$ for the obvious reason: concatenating $j$ squares with $k$ more gives $j+k$ squares.
 
+The same sum written in $n$ dimensions is the squared Mahalanobis distance of [Multivariate Gaussian Distribution](../part-06-multivariate-probability/05-multivariate-gaussian.md), where standardizing a correlated vector by $\Sigma^{-1/2}$ produces exactly $n$ independent squared normals. That is where every multivariate outlier screen gets its reference distribution, and the striking part is what the reference does not depend on: not the volatilities, not the correlations, only $n$.
+
 ??? note "Proof that the square of a standard normal is Gamma(1/2, 2), and hence that the chi-square is a gamma"
     Let $Y=Z^{2}$ with $Z$ standard normal. The map is two-to-one, so for $y>0$ the distribution function is
 
