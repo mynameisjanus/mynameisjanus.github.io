@@ -111,11 +111,11 @@ print(f"effective n {len(m) * (hac.tvalues[0] / naive.tvalues[0]) ** 2:.0f} of {
 # => effective n 335 of 6138
 ```
 
-Same strategy, same information — and the naive t-statistic reads **7.40**, a seven-sigma discovery, because each day's return is counted twenty-one times and the test believes there are 6,138 independent observations when there are effectively 335. The HAC estimator deflates it back to 1.73, in line with the daily-frequency truth. Any time a backtest's t-statistic looks miraculous, the first suspect is not the strategy but the counting: overlapping windows, smoothed marks, illiquid prices, and monthly aggregation of persistent positions all manufacture exactly this inflation.
+Same strategy, same information — and the naive t-statistic reads **7.40**, a seven-sigma discovery, because each day's return is counted twenty-one times and the test believes there are 6,138 independent observations when there are effectively 335. The HAC estimator deflates it back to 1.73, in line with the daily-frequency truth. The theorem that licenses substituting *any* estimated variance into a limiting normal is [Slutsky's Theorem](../appendix/part-07-asymptotic-theory/05-slutskys-theorem.md), and it is worth reading for what it does not certify: both estimators here are consistent, they simply converge to two different constants that differ by a factor of fourteen, and only one of them appears in the formula being used. Any time a backtest's t-statistic looks miraculous, the first suspect is not the strategy but the counting: overlapping windows, smoothed marks, illiquid prices, and monthly aggregation of persistent positions all manufacture exactly this inflation.
 
 ## Sharpe ratios have standard errors too
 
-The industry reports Sharpe ratios, not t-statistics, so put the error bar where the industry looks. Lo's approximation for iid-ish returns gives the annualized Sharpe a standard error of
+The industry reports Sharpe ratios, not t-statistics, so put the error bar where the industry looks. Lo's approximation for iid-ish returns — derived, along with the skew and kurtosis terms it drops, in [The Delta Method](../appendix/part-07-asymptotic-theory/04-delta-method.md) — gives the annualized Sharpe a standard error of
 
 $$
 \operatorname{SE}(\widehat{SR}_{\text{ann}}) \;\approx\; \sqrt{\frac{1 + \widehat{SR}_d^2 / 2}{n}} \cdot \sqrt{252},

@@ -139,6 +139,8 @@ for v in (1.0, 2.65, 3.5, 4.526, 8.0):
 
 The first four rows are the ladder being climbed until it ends. The mean settles and stays; the second row wobbles around a value it is genuinely converging to, since $2<2.65$; and the third and fourth do not converge to anything at all, jumping by large factors as the sample grows because that is what averaging toward an infinite expectation looks like. The ladder stops between the second and third rungs, exactly where $\nu=2.65$ puts it.
 
+Which rung a law reaches decides which asymptotic theorem applies to it. A finite mean is all [The Weak Law of Large Numbers](../part-07-asymptotic-theory/01-weak-law-of-large-numbers.md) needs, so it holds here and fails outright at $\nu=1$, where the $t$ is the Cauchy and the sample mean has the same distribution as a single draw. A finite variance is the entry fee for [The Central Limit Theorem](../part-07-asymptotic-theory/03-central-limit-theorem.md), so $\nu=2.65$ pays it with $0.65$ to spare. A finite *third* moment is what a Berry–Esseen bound needs to certify the rate, and $\nu=2.65$ does not have one — the theorem holds with no finite-sample guarantee attached, which is the sharpest thing the fitted value says about how this law behaves under aggregation.
+
 ## Reaching a Kurtosis Two Regimes Cannot
 
 Now the first promised debt. [Higher-Order Moments](../part-04-expectation-and-moments/03-higher-order-moments.md) showed that a two-regime normal mixture manufactures kurtosis through the *variance gap* between the regimes, and that reaching an excess kurtosis of $11.41$ demands a turbulent regime far more extreme than the data supports. A continuous mixture has no such difficulty, because the mixing law has a tail of its own.
