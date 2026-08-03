@@ -278,7 +278,7 @@ nav:
           - appendix/part-10-statistics-foundations/02-descriptive-statistics.md
           - appendix/part-10-statistics-foundations/03-sampling-distributions.md
           - appendix/part-10-statistics-foundations/04-statistical-models.md
-          - appendix/part-10-statistics-foundations/05-bias-and-variance.md
+          - appendix/part-10-statistics-foundations/07-bias-and-variance.md
       - Part XI — Parameter Estimation:
           - appendix/part-11-parameter-estimation/index.md
           - appendix/part-11-parameter-estimation/01-point-estimation.md
