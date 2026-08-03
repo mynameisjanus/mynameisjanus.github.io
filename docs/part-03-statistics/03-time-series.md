@@ -202,7 +202,7 @@ print(f"spread std {1e4 * spread.std():.0f} bp, AR(1) rho {rho:.2f}, "
 # => spread std 23 bp, AR(1) rho 0.82, half-life 3.4 days
 ```
 
-SPY–GLD failing (p = 0.49) is the expected negative — no economic force ties gold to the S&P. But SPY–IVV *also fails*, at p = 0.46, statistically indistinguishable from the gold pair. Meanwhile the last line describes a spread that stays within a few dozen basis points for two decades and mean-reverts with a **3.4-day half-life** — as tradeable a spread as exists anywhere. The test and the trade are looking at the same data and reaching opposite conclusions. That is not a bug in statsmodels; it is a real property of this spread, and resolving it is the next section's job.
+SPY–GLD failing (p = 0.49) is the expected negative — no economic force ties gold to the S&P. But SPY–IVV *also fails*, at p = 0.46, statistically indistinguishable from the gold pair. Meanwhile the last line describes a spread that stays within a few dozen basis points for two decades and mean-reverts with a **3.4-day half-life** — as tradeable a spread as exists anywhere. That half-life is trustworthy at this sample size and not at the window a live system would re-estimate it on: the matched autocorrelation is biased down by a known function of $n$, and at sixty observations the same arithmetic returns 2.5 days instead of 3.5 ([Method of Moments](../appendix/part-11-parameter-estimation/04-method-of-moments.md)). The test and the trade are looking at the same data and reaching opposite conclusions. That is not a bug in statsmodels; it is a real property of this spread, and resolving it is the next section's job.
 
 ## Johansen, and the horizon you actually asked about
 
