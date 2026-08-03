@@ -141,7 +141,7 @@ In trading terms: the mean says equities paid about 7.5% a year for a quarter ce
 
 ## Standard errors, or which moment you can trust
 
-Every number above is an estimate, and an estimate without a standard error is a rumor. For the mean of $n$ observations,
+Every number above is an estimate, and an estimate without a standard error is a rumor — the law of the estimate itself, and why a drift's precision is fixed by calendar span while a volatility's is fixed by observation count, is [Sampling Distributions](../appendix/part-10-statistics-foundations/03-sampling-distributions.md). For the mean of $n$ observations,
 
 $$
 \operatorname{SE}(\bar{r}) = \frac{\sigma}{\sqrt{n}},

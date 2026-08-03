@@ -168,7 +168,7 @@ print("expected regime length: calm", round(1 / (1 - T[0, 0])),
 # => expected regime length: calm 93 days, stress 36 days
 ```
 
-The `argsort` line is not cosmetic — EM numbers its states arbitrarily, and every rerun may swap them, so *you* impose the labeling (here, by variance). What the model finds is the two-regime folklore, quantified: a calm state earning +22% at 11.6% vol, a stress state losing −29% at 32% vol, and — the structurally important part — both states *sticky*, with expected durations of a quarter and a month and a half respectively:
+The `argsort` line is not cosmetic — EM numbers its states arbitrarily, and every rerun may swap them, so *you* impose the labeling (here, by variance), which is the identifying restriction a non-identifiable model cannot supply for itself ([Statistical Models](../appendix/part-10-statistics-foundations/04-statistical-models.md)). What the model finds is the two-regime folklore, quantified: a calm state earning +22% at 11.6% vol, a stress state losing −29% at 32% vol, and — the structurally important part — both states *sticky*, with expected durations of a quarter and a month and a half respectively:
 
 ```mermaid
 stateDiagram-v2

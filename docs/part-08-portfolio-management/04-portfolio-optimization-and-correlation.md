@@ -127,7 +127,7 @@ The two columns worth carrying forward are the ones nobody quotes. **Minimum var
 
 ## Is it the sample size? Shrinkage says no
 
-The standard remedy is to shrink the sample covariance toward a structured target, with the Ledoit–Wolf estimator choosing the intensity analytically. If MVO fails because $\hat\Sigma$ is noisy, this should fix it. In the table above it does the opposite: **LW-MVO scores 0.115 against plain MVO's 0.377**, and across the five configurations it loses to 1/N in *all five* and to plain MVO in three. One number explains why:
+The standard remedy is to shrink the sample covariance toward a structured target, with the Ledoit–Wolf estimator choosing the intensity analytically — shrinkage as the deliberate purchase of bias, and why a correct repair aimed at the wrong input is indistinguishable from none, is [Bias and Variance](../appendix/part-10-statistics-foundations/07-bias-and-variance.md). If MVO fails because $\hat\Sigma$ is noisy, this should fix it. In the table above it does the opposite: **LW-MVO scores 0.115 against plain MVO's 0.377**, and across the five configurations it loses to 1/N in *all five* and to plain MVO in three. One number explains why:
 
 ```python
 import numpy as np
