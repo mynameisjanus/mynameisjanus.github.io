@@ -10,5 +10,5 @@ The numerical workhorses behind modern inference: optimization and integration, 
 | [Numerical Integration](02-numerical-integration.md) | Quadrature and the integrals simulation replaces |
 | [Expectation-Maximization Algorithm](03-em-algorithm.md) | Iterative maximum likelihood with latent variables |
 | [Markov Chain Monte Carlo](04-markov-chain-monte-carlo.md) | Sampling from intractable posteriors by running a chain |
-| [Gibbs Sampling](05-gibbs-sampling.md) | MCMC by cycling through conditional distributions |
-| [Metropolis–Hastings](06-metropolis-hastings.md) | The accept–reject rule behind general MCMC |
+| [Metropolis–Hastings](05-metropolis-hastings.md) | The accept–reject rule behind general MCMC |
+| [Gibbs Sampling](06-gibbs-sampling.md) | MCMC by cycling through conditional distributions |

@@ -342,8 +342,8 @@ nav:
           - appendix/part-17-statistical-computing/02-numerical-integration.md
           - appendix/part-17-statistical-computing/03-em-algorithm.md
           - appendix/part-17-statistical-computing/04-markov-chain-monte-carlo.md
-          - appendix/part-17-statistical-computing/05-gibbs-sampling.md
-          - appendix/part-17-statistical-computing/06-metropolis-hastings.md
+          - appendix/part-17-statistical-computing/05-metropolis-hastings.md
+          - appendix/part-17-statistical-computing/06-gibbs-sampling.md
       - Part XVIII — Applications to Quantitative Finance:
           - appendix/part-18-quant-finance-applications/index.md
           - appendix/part-18-quant-finance-applications/01-kelly-criterion.md
