@@ -105,7 +105,7 @@ Returns clear the band only at lag one, and barely (−0.086) — while squared 
 
 ## ARIMA: fit it, test it, respect the smallness
 
-An ARMA(1,1) on returns is the canonical conditional-mean model: today's return regressed on yesterday's return and yesterday's surprise. Fitting it and — the step that separates modeling from curve-fitting — interrogating its residuals with the Ljung-Box test:
+An ARMA(1,1) on returns is the canonical conditional-mean model: today's return regressed on yesterday's return and yesterday's surprise. Fitting it and — the step that separates modeling from curve-fitting — interrogating its residuals with the Ljung-Box test ([Residual Analysis](../appendix/part-13-regression/07-residual-analysis.md) is why the direction you test along decides what you find):
 
 ```python
 import numpy as np
@@ -176,7 +176,7 @@ $$
 y_t - \beta x_t = \varepsilon_t \sim I(0).
 $$
 
-The Engle-Granger procedure is the two-step everyone learns: regress $y$ on $x$ to estimate the hedge ratio, then unit-root-test the residual (with critical values adjusted for the estimated $\beta$, which `coint` handles). The cache contains the most cointegrated pair in existence — SPY and IVV track the *same index* — so the test should be a formality:
+The Engle-Granger procedure is the two-step everyone learns: regress $y$ on $x$ to estimate the hedge ratio, then unit-root-test the residual (with critical values adjusted for the estimated $\beta$, which `coint` handles — the adjustment is needed because a residual is not an error, as [Residual Analysis](../appendix/part-13-regression/07-residual-analysis.md) develops). The cache contains the most cointegrated pair in existence — SPY and IVV track the *same index* — so the test should be a formality:
 
 ```python
 import numpy as np

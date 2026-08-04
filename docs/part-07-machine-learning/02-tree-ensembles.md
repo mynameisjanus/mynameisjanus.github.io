@@ -278,7 +278,7 @@ Start with the number attached to the permutation "winner": 0.0077 of AUC, with 
 
 ## Calibration: a probability you can size with
 
-The scoreboard graded thresholded decisions, but [lesson four](04-reinforcement-learning-and-meta-labeling.md) will want the probabilities themselves — a P(up) of 0.6 should mean *something happens 60% of the time*, or sizing on it is arithmetic on fiction. Boosted trees are notorious here: trained to rank, pushed toward confident scores by the loss, their raw outputs are not frequencies. The diagnosis is the reliability curve — bin predictions, compare each bin's claim to its realized frequency — and the repair is isotonic regression fitted on a held-out slice: 2017–2020 calibrates, 2021+ judges.
+The scoreboard graded thresholded decisions, but [lesson four](04-reinforcement-learning-and-meta-labeling.md) will want the probabilities themselves — a P(up) of 0.6 should mean *something happens 60% of the time*, or sizing on it is arithmetic on fiction. Boosted trees are notorious here: trained to rank, pushed toward confident scores by the loss, their raw outputs are not frequencies. Ranking and calibration are separate properties — [Logistic Regression](../appendix/part-13-regression/04-logistic-regression.md) measures a shift that leaves AUC identical to four decimals while moving the invested fraction from 50% to 91%. The diagnosis is the reliability curve — bin predictions, compare each bin's claim to its realized frequency — and the repair is isotonic regression fitted on a held-out slice: 2017–2020 calibrates, 2021+ judges.
 
 ```python
 import matplotlib.pyplot as plt

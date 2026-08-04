@@ -12,7 +12,7 @@ $$
 \mathbb{E}\big[r_{t+1} \mid r_{t-12 \to t} > 0\big] \;>\; \mathbb{E}\big[r_{t+1} \mid r_{t-12 \to t} \le 0\big],
 $$
 
-and the falsification standard, committed to now: the regression slope of next-month return on the sign of the trailing twelve-month return should be positive for *all three* assets. A sign that flips across assets kills the universality claim, whatever any single backtest says ([Random Walks](../appendix/part-08-stochastic-processes/11-random-walks.md) and [Martingales](../appendix/part-08-stochastic-processes/10-martingales.md) describe the null world where every such slope is zero):
+and the falsification standard, committed to now: the regression slope of next-month return on the sign of the trailing twelve-month return should be positive for *all three* assets — a standard that deliberately reads directions rather than magnitudes, because collapsing a trailing return to its sign is measurement error of a severe kind and [Simple Linear Regression](../appendix/part-13-regression/01-simple-linear-regression.md) shows it shrinks every slope toward zero by a factor the fit cannot report. A sign that flips across assets kills the universality claim, whatever any single backtest says ([Random Walks](../appendix/part-08-stochastic-processes/11-random-walks.md) and [Martingales](../appendix/part-08-stochastic-processes/10-martingales.md) describe the null world where every such slope is zero):
 
 ```python
 import numpy as np

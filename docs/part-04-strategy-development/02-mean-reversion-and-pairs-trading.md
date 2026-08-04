@@ -70,7 +70,7 @@ $$
 dX_t \;=\; \theta\,(\mu - X_t)\,dt \;+\; \sigma\,dW_t ,
 $$
 
-a random walk on a spring: $\theta$ is the stiffness, $\mu$ the resting point, $\sigma$ the noise constantly re-stretching it ([Brownian Motion](../appendix/part-08-stochastic-processes/08-brownian-motion.md) supplies the $dW_t$). Its exact daily discretization is an AR(1) with $\rho = e^{-\theta \Delta t}$, which means the whole continuous-time apparatus is fitted by one lag regression:
+a random walk on a spring: $\theta$ is the stiffness, $\mu$ the resting point, $\sigma$ the noise constantly re-stretching it ([Brownian Motion](../appendix/part-08-stochastic-processes/08-brownian-motion.md) supplies the $dW_t$). Its exact daily discretization is an AR(1) with $\rho = e^{-\theta \Delta t}$, which means the whole continuous-time apparatus is fitted by one lag regression ([Simple Linear Regression](../appendix/part-13-regression/01-simple-linear-regression.md), whose attenuation result is why a noisily measured spread reports a half-life shorter than the truth):
 
 ```python
 import numpy as np

@@ -212,7 +212,7 @@ The correlation table shows this was not a one-year accident. Through the decade
 
 ## Factor attribution: which sleeves are strategies
 
-A strategy earns the name only if what it produces cannot be bought more cheaply as a passive exposure. The test is a regression of the sleeve on a panel of factors, where the intercept is the part no combination of factors explains. Six proxies are available from the frozen panel: the market, size (small minus large), international (developed minus US), duration, gold, and a defensive tilt. Standard errors are HAC-corrected at 21 lags because daily strategy returns are autocorrelated and naive standard errors would overstate every t-statistic:
+A strategy earns the name only if what it produces cannot be bought more cheaply as a passive exposure. The test is a regression of the sleeve on a panel of factors, where the intercept is the part no combination of factors explains — a Frisch–Waugh–Lovell residual, in the language of [Multiple Linear Regression](../appendix/part-13-regression/02-multiple-linear-regression.md). Six proxies are available from the frozen panel: the market, size (small minus large), international (developed minus US), duration, gold, and a defensive tilt. Standard errors are HAC-corrected at 21 lags because daily strategy returns are autocorrelated and naive standard errors would overstate every t-statistic:
 
 ```python
 import numpy as np
@@ -258,7 +258,7 @@ print(f"  s_tom, adding a variance-carry factor: alpha {m.params['const'] * 252:
 
 ## The admission gate: spanning
 
-Factor regressions ask whether a sleeve beats passive alternatives. The allocation question is narrower and more useful: does this sleeve beat *the sleeves already in the book*? Regressing each on all the others answers it directly — the intercept is the return that survives being replicated by the existing portfolio, and it is the only alpha that justifies adding a position rather than resizing one:
+Factor regressions ask whether a sleeve beats passive alternatives. The allocation question is narrower and more useful: does this sleeve beat *the sleeves already in the book*? Regressing each on all the others answers it directly — the intercept is the return that survives being replicated by the existing portfolio, and it is the only alpha that justifies adding a position rather than resizing one. Expect the loadings to be unstable where two sleeves overlap and the *fit* to be untroubled by it, which is the collinearity result in [Multiple Linear Regression](../appendix/part-13-regression/02-multiple-linear-regression.md):
 
 ```python
 import numpy as np
