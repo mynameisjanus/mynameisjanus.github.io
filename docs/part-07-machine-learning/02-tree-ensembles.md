@@ -38,7 +38,7 @@ The unrestricted tree is the purest overfitting exhibit this course will ever pr
 
 ## A forest averages away variance, not noise
 
-The random forest fixes the unrestricted tree's disease with two doses of randomness: each tree sees a bootstrap resample of the rows, and each split considers only a random subset of features. Five hundred such trees disagree with each other by construction, and averaging their votes cancels the idiosyncratic carving — variance reduction, the textbook cure from the [bias–variance decomposition](../appendix/part-14-model-selection/01-bias-variance-tradeoff.md). The open question is whether variance was ever the binding constraint:
+The random forest fixes the unrestricted tree's disease with two doses of randomness: each tree sees a bootstrap resample of the rows, and each split considers only a random subset of features. Five hundred such trees disagree with each other by construction, and averaging their votes cancels the idiosyncratic carving — an exact identity, since [model averaging](../appendix/part-14-model-selection/05-model-averaging.md) makes an ensemble's error its members' mean error minus their mean disagreement — variance reduction, the textbook cure from the [bias–variance decomposition](../appendix/part-14-model-selection/01-bias-variance-tradeoff.md). The open question is whether variance was ever the binding constraint:
 
 ```python
 import numpy as np
