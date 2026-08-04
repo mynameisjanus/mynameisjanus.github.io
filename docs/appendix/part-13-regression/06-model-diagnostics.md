@@ -81,7 +81,7 @@ The damage is in the last line. The slope is $0.8629$ with that point and $0.423
 
 The natural question — how would the answer change without observation $i$ — sounds like it costs $n$ regressions. It costs none.
 
-??? note "Proof of the leave-one-out identity $\hat\beta-\hat\beta_{(i)}=(X^\top X)^{-1}x_ie_i/(1-h_{ii})$, so every deletion diagnostic is a function of the single full fit"
+??? note "Proof that $\hat\beta-\hat\beta_{(i)}=(X^\top X)^{-1}x_ie_i/(1-h_{ii})$, the leave-one-out identity, so every deletion diagnostic is a function of the single full fit"
 
     Removing row $i$ changes the cross-product matrix by a rank-one update, $X_{(i)}^\top X_{(i)}=X^\top X-x_ix_i^\top$, and the Sherman–Morrison formula inverts it in closed form:
     $$\big(X^\top X-x_ix_i^\top\big)^{-1}=(X^\top X)^{-1}+\frac{(X^\top X)^{-1}x_ix_i^\top(X^\top X)^{-1}}{1-h_{ii}},$$

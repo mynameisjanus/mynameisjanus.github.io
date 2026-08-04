@@ -30,7 +30,7 @@ That last observation is the whole page in one line. Everything that is stable a
 
 The theorem makes the substitution explicit. To get $\hat\beta_j$ from the full regression, one may instead regress $x_j$ on all the other columns, keep the residual, regress $y$ on all the other columns, keep that residual, and run a one-predictor regression of the second residual on the first. The answer is not approximately the same; it is the same number.
 
-??? note "Proof of the Frisch–Waugh–Lovell theorem, that the multiple-regression coefficient on $x_j$ is the simple-regression coefficient of $y$ on the part of $x_j$ the other columns cannot explain"
+??? note "Proof that the multiple-regression coefficient on $x_j$ is the simple-regression coefficient of $y$ on the part of $x_j$ the other columns cannot explain, which is the Frisch–Waugh–Lovell theorem"
 
     Partition $X=[X_1\ \ X_2]$ and write $\hat\beta$ conformably as $(\hat\beta_1,\hat\beta_2)$. Let $M_2=I-X_2(X_2^\top X_2)^{-1}X_2^\top$ be the residual-maker for $X_2$: it is symmetric, idempotent, and annihilates every column of $X_2$, so $M_2X_2=0$. The normal equations for the full fit read
     $$X_1^\top(y-X_1\hat\beta_1-X_2\hat\beta_2)=0,\qquad X_2^\top(y-X_1\hat\beta_1-X_2\hat\beta_2)=0.$$
