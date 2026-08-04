@@ -28,7 +28,7 @@ This appendix is a self-contained reference for the mathematics, probability, an
 | [Part XIII — Regression and Statistical Models](part-13-regression/index.md) | Linear and generalized linear models, regularization, diagnostics |
 | [Part XIV — Model Selection](part-14-model-selection/index.md) | Bias–variance, cross-validation, information criteria |
 | [Part XV — Multiple Testing](part-15-multiple-testing/index.md) | Corrections for many comparisons and data snooping |
-| [Part XVI — Bayesian Statistics](part-16-bayesian-statistics/index.md) | Priors, posteriors, conjugacy, updating, and prediction |
+| [Part XVI — Bayesian Statistics](part-16-bayesian-statistics/index.md) | Priors, posteriors, conjugacy, updating, model comparison, and prediction |
 | [Part XVII — Statistical Computing](part-17-statistical-computing/index.md) | Optimization, EM, and MCMC |
 | [Part XVIII — Applications to Quantitative Finance](part-18-quant-finance-applications/index.md) | Sizing, risk, microstructure, and regime detection |
 

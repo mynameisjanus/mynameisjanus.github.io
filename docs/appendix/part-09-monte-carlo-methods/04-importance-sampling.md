@@ -143,7 +143,7 @@ The two diagnostic columns are where the honest reading gets uncomfortable. Effe
 
 ## Self-Normalized Weights and the Tail of a Book
 
-Two obstacles remain between the construction above and a usable risk number. The target density is often known only up to a constant — a Bayesian posterior, a conditional law given a rare event, an empirical distribution reweighted by a stress scenario. And the quantity wanted is usually not an expectation but a *ratio* of expectations: an expected shortfall is $\mathbb{E}[X\mathbf{1}\{X>q\}]/\mathbf{P}(X>q)$, with the same weights appearing in numerator and denominator. Both are solved by the same device. The **self-normalized** estimator
+Two obstacles remain between the construction above and a usable risk number. The target density is often known only up to a constant — a [Bayesian posterior](../part-16-bayesian-statistics/03-posterior-distributions.md), a conditional law given a rare event, an empirical distribution reweighted by a stress scenario. And the quantity wanted is usually not an expectation but a *ratio* of expectations: an expected shortfall is $\mathbb{E}[X\mathbf{1}\{X>q\}]/\mathbf{P}(X>q)$, with the same weights appearing in numerator and denominator. Both are solved by the same device. The **self-normalized** estimator
 
 $$\hat\theta_{\text{SN}}=\frac{\sum_i w(Y_i)f(Y_i)}{\sum_i w(Y_i)}$$
 

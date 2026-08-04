@@ -72,7 +72,7 @@ for a, b in ((6.0, 4.0), (600.0, 400.0)):
 #        Beta(600.0,400.0)  var 0.00023976   mu(1-mu)/(kappa+1) 0.00023976
 ```
 
-The three rows sharing a mean of $0.6$ have concentrations differing by a factor of a hundred and interval widths differing by a factor of ten, which is the $\sqrt{\kappa}$ scaling. The last two rows are the two standard uninformative choices: $\mathrm{Beta}(1,1)$ is flat, and $\mathrm{Beta}(1/2,1/2)$ is the Jeffreys prior, which piles mass at both endpoints — a deliberate choice, on the grounds that a parameter near zero or one is harder to learn about and should be given more prior room.
+The three rows sharing a mean of $0.6$ have concentrations differing by a factor of a hundred and interval widths differing by a factor of ten, which is the $\sqrt{\kappa}$ scaling. The last two rows are the two standard uninformative choices: $\mathrm{Beta}(1,1)$ is flat, and $\mathrm{Beta}(1/2,1/2)$ is the [Jeffreys prior](../part-16-bayesian-statistics/02-prior-distributions.md), which piles mass at both endpoints — a deliberate choice, on the grounds that a parameter near zero or one is harder to learn about and should be given more prior room.
 
 ## A Uniform Order Statistic Is Beta
 
