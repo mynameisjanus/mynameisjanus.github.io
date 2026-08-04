@@ -38,7 +38,7 @@ rng = np.random.default_rng(12041)
 sr = 0.30                                          # the course's momentum Sharpe, assumed true
 
 def se(T):                                         # Lo's standard error for an annual Sharpe
-    return np.sqrt((1 + sr**2 / 2) / T)
+    return np.sqrt((1 + sr**2 / (2 * 252)) / T)   # Lo's factor is per-period
 
 print("  one-sided test of a TRUE annualized Sharpe of 0.30, by track-record length")
 print("    years   SE(SR)   SR/SE   power at 5%   alpha for 50%   alpha for 80%")
@@ -55,18 +55,18 @@ hits = (rng.normal(d, 1.0, reps) > stats.norm.isf(0.05)).mean()
 print(f"  simulated check at 24 years: power {hits:.4f} at the 5% level")
 # =>   one-sided test of a TRUE annualized Sharpe of 0.30, by track-record length
 #        years   SE(SR)   SR/SE   power at 5%   alpha for 50%   alpha for 80%
-#            3   0.5902   0.508        0.1279          0.3056          0.6306
-#            5   0.4572   0.656        0.1614          0.2558          0.5735
-#           10   0.3233   0.928        0.2367          0.1767          0.4656
-#           24   0.2087   1.438        0.4179          0.0753          0.2756
-#           50   0.1446   2.075        0.6665          0.0190          0.1087
-#          100   0.1022   2.935        0.9014          0.0017          0.0182
-#      simulated check at 24 years: power 0.4172 at the 5% level
+#            3   0.5774   0.520        0.1302          0.3017          0.6263
+#            5   0.4473   0.671        0.1650          0.2512          0.5678
+#           10   0.3163   0.949        0.2431          0.1714          0.4574
+#           24   0.2041   1.470        0.4304          0.0708          0.2650
+#           50   0.1414   2.121        0.6831          0.0170          0.1004
+#          100   0.1000   3.000        0.9123          0.0014          0.0155
+#      simulated check at 24 years: power 0.4298 at the 5% level
 ```
 
-Read the twenty-four-year row first, since it is the course's own sample. A real Sharpe of $0.30$ sits $1.438$ standard errors from zero, and a one-sided $5\%$ test detects it $41.79\%$ of the time — the simulated check returns $0.4172$ and confirms the closed form. That figure is already the frontier's verdict on the conventional threshold: on a genuine edge, with the longest history most desks will ever see, the test is close to a coin flip. Merely reaching an even chance requires $\alpha=0.0753$, and reaching $80\%$ requires $\alpha=0.2756$ — a false-positive rate of more than one in four, accepted deliberately, as the price of an eighty-percent chance of noticing something that is really there.
+Read the twenty-four-year row first, since it is the course's own sample. A real Sharpe of $0.30$ sits $1.470$ standard errors from zero, and a one-sided $5\%$ test detects it $43.04\%$ of the time — the simulated check returns $0.4298$ and confirms the closed form. That figure is already the frontier's verdict on the conventional threshold: on a genuine edge, with the longest history most desks will ever see, the test is close to a coin flip. Merely reaching an even chance requires $\alpha=0.0708$, and reaching $80\%$ requires $\alpha=0.2650$ — a false-positive rate of more than one in four, accepted deliberately, as the price of an eighty-percent chance of noticing something that is really there.
 
-The rows above are the situations research actually runs in. At three years the same true edge yields $12.79\%$ power at the conventional level, and buying $80\%$ power would mean accepting $\alpha=0.6306$: a test that fires on nearly two-thirds of worthless strategies. At the other end, a hundred years of daily data reaches $90.14\%$ power at $5\%$ and needs only $\alpha=0.0182$ for $80\%$ — the same edge, the same statistic, the same threshold arithmetic, with the curve simply moved. Nothing in these rows involves a mistake, an assumption violation, or a bad estimator. It is the frontier, priced.
+The rows above are the situations research actually runs in. At three years the same true edge yields $13.02\%$ power at the conventional level, and buying $80\%$ power would mean accepting $\alpha=0.6263$: a test that fires on nearly two-thirds of worthless strategies. At the other end, a hundred years of daily data reaches $91.23\%$ power at $5\%$ and needs only $\alpha=0.0155$ for $80\%$ — the same edge, the same statistic, the same threshold arithmetic, with the curve simply moved. Nothing in these rows involves a mistake, an assumption violation, or a bad estimator. It is the frontier, priced.
 
 **The conventional $5\%$ was not chosen to sit anywhere in particular on this curve, and on a twenty-four-year record of a real edge it buys a coin flip.**
 
@@ -96,7 +96,7 @@ from scipy import stats
 
 rng = np.random.default_rng(12043)
 sr, T = 0.30, 24
-d = sr / np.sqrt((1 + sr**2 / 2) / T)
+d = sr / np.sqrt((1 + sr**2 / (2 * 252)) / T)   # Lo's factor is per-period
 grid = np.arange(0.001, 0.601, 0.001)
 power = stats.norm.sf(stats.norm.isf(grid) - d)
 cases = [("1:10", 0.1), ("1:3", 1 / 3), ("1:1", 1.0), ("3:1", 3.0), ("10:1", 10.0)]
@@ -117,16 +117,16 @@ print(f"  cells of 15 where the cost-optimal alpha is within 0.005 of the conven
 #      the alpha that minimises it, over cost ratios and prior odds of a real edge
 #        c_FN:c_FP    pi1=0.02   pi1=0.10   pi1=0.30
 #        1:10           0.001      0.001      0.002
-#        1:3            0.001      0.001      0.019
-#        1:1            0.001      0.012      0.095
-#        3:1            0.004      0.069      0.293
-#        10:1           0.034      0.259      0.600
+#        1:3            0.001      0.001      0.020
+#        1:1            0.001      0.013      0.095
+#        3:1            0.004      0.069      0.286
+#        10:1           0.035      0.254      0.600
 #      cells of 15 where the cost-optimal alpha is within 0.005 of the conventional 0.05: 0
 ```
 
 The optimal level ranges over nearly three orders of magnitude, from $0.001$ to $0.600$, and the final line is the finding: in none of the fifteen cells is the cost-optimal $\alpha$ within $0.005$ of the conventional $0.05$. That is not a claim that $5\%$ is a bad choice. It is the observation that $5\%$ is a choice, and that the grid of situations in which it would be the *right* choice does not include any of the fifteen plausible combinations of cost asymmetry and prior plausibility examined here.
 
-The structure of the grid is worth reading across and down. Moving down a column raises the cost of a missed edge relative to a false one, and the optimal $\alpha$ rises with it — from $0.001$ to $0.034$ at $\pi_1=0.02$, and from $0.002$ to $0.600$ at $\pi_1=0.30$. Moving across a row raises the prior plausibility that the edge is real, and the optimal $\alpha$ rises again. The cells where a conventional threshold is nearly right are the middle ones, and even there the $1{:}1$ row reads $0.001$, $0.012$ and $0.095$: with symmetric costs and a one-in-ten prior, the cost-minimizing level is $0.012$, four times stricter than convention, while at a three-in-ten prior it is $0.095$, twice as loose.
+The structure of the grid is worth reading across and down. Moving down a column raises the cost of a missed edge relative to a false one, and the optimal $\alpha$ rises with it — from $0.001$ to $0.035$ at $\pi_1=0.02$, and from $0.002$ to $0.600$ at $\pi_1=0.30$. Moving across a row raises the prior plausibility that the edge is real, and the optimal $\alpha$ rises again. The cells where a conventional threshold is nearly right are the middle ones, and even there the $1{:}1$ row reads $0.001$, $0.013$ and $0.095$: with symmetric costs and a one-in-ten prior, the cost-minimizing level is $0.013$, nearly four times stricter than convention, while at a three-in-ten prior it is $0.095$, twice as loose.
 
 **A test run at $5\%$ has asserted a cost ratio and a prior, and the assertion is the same one whether the trade risks a thousand dollars or the fund.**
 
@@ -198,7 +198,7 @@ This is the section's thesis in one table. The false positives and the apparent 
 
 ## One Error Is Chosen and the Other Is Inherited, and the Report Names Only the Chosen One
 
-This page established that the two errors are expectations under different measures and therefore do not combine into an accuracy without a prior nobody supplies; that at fixed sample size the achievable pairs form one convex decreasing frontier generated by the likelihood ratio, so a true Sharpe of $0.30$ on twenty-four years yields $41.79\%$ power at the conventional level and would need $\alpha=0.2756$ for $80\%$; that the cost-minimizing level is a likelihood-ratio threshold set by the cost ratio and prior odds, running from $0.001$ to $0.600$ across fifteen plausible cells, none of which puts it within $0.005$ of $0.05$; that a desk pays for the two errors in currencies of which only one is recorded; and that a size can be simulated to arbitrary precision without data while a power cannot be computed at all without naming an alternative, so repairing a $\phi=0.40$ series' size from $0.1985$ to $0.0500$ silently discards $63.8\%$ of the apparent power.
+This page established that the two errors are expectations under different measures and therefore do not combine into an accuracy without a prior nobody supplies; that at fixed sample size the achievable pairs form one convex decreasing frontier generated by the likelihood ratio, so a true Sharpe of $0.30$ on twenty-four years yields $43.04\%$ power at the conventional level and would need $\alpha=0.2650$ for $80\%$; that the cost-minimizing level is a likelihood-ratio threshold set by the cost ratio and prior odds, running from $0.001$ to $0.600$ across fifteen plausible cells, none of which puts it within $0.005$ of $0.05$; that a desk pays for the two errors in currencies of which only one is recorded; and that a size can be simulated to arbitrary precision without data while a power cannot be computed at all without naming an alternative, so repairing a $\phi=0.40$ series' size from $0.1985$ to $0.0500$ silently discards $63.8\%$ of the apparent power.
 
 The through-line is a division of labour that nobody agreed to. One error is chosen, in advance, by convention, and reported; the other is inherited from the sample size, the statistic, the dependence and the effect, and is reported by no one. The course's two VaR models are the clearest case: both were graded, each failed a different test, and the lesson had to say in words that these were "two separate repairs" because no number in either row could express it. The historical model's `Kupiec p 9.51e-01` and `indep p 0.0013` are not in tension and do not average — they are two measurements of two errors, and reading either alone grades a different model than the one being run.
 

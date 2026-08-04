@@ -32,7 +32,7 @@ Setting the power to a target and solving for $n$ is the standard design calcula
     $$n=\frac{(z_{1-\alpha}+z_{1-\beta})^{2}\sigma^{2}}{S^{2}\sigma^{2}/k}=\frac{k\,(z_{1-\alpha}+z_{1-\beta})^{2}}{S^{2}},$$
     and $\sigma$ has cancelled. Dividing by $k$ converts $n$ observations into $T=n/k$ *years*:
     $$T=\frac{(z_{1-\alpha}+z_{1-\beta})^{2}}{S^{2}},$$
-    a quantity in which the sampling frequency $k$ no longer appears. Using Lo's variance for an estimated Sharpe multiplies this by $(1+S^{2}/2)$, which is the form the block below uses.
+    a quantity in which the sampling frequency $k$ no longer appears. Using Lo's variance for an estimated Sharpe multiplies this by $(1+S^{2}/2k)$, which is the form the block below uses. The factor is worth stating carefully because it is routinely misquoted: Lo's $(1+S^{2}/2)$ is written for the *per-period* Sharpe $S_p$, and substituting $S=\sqrt k\,S_p$ gives $\operatorname{var}(\hat S)=(1+S^{2}/2k)/T$ for the annualized one. At $k=252$ that factor is $1.0002$ for $S=0.30$ and $1.0045$ for $S=1.50$, so the clean display above is exact to within half a percent at every Sharpe anyone trades — whereas applying the per-period factor to an annualized Sharpe inflates the required span by $4\%$ at $S=0.30$ and by $52\%$ at $S=1.50$.
 
     The load-bearing cancellation is that both the effect and the noise scale with $\sigma$, so the signal-to-noise ratio per unit of *time* is a property of the strategy alone. **You cannot buy statistical significance about a Sharpe ratio by sampling more often; the only currency is calendar, and no amount of money accelerates it.**
 
@@ -44,14 +44,15 @@ from scipy import stats
 
 rng = np.random.default_rng(12051)
 za = stats.norm.isf(0.05)                          # one-sided 5%
+k = 252                                            # Lo's factor is per-period, not annual
 
 def years_needed(sr, power):
-    return (za + stats.norm.isf(1 - power)) ** 2 * (1 + sr**2 / 2) / sr**2
+    return (za + stats.norm.isf(1 - power)) ** 2 * (1 + sr**2 / (2 * k)) / sr**2
 
 print("  years of daily data needed to detect a TRUE annualized Sharpe, one-sided 5%")
 print("     Sharpe   50% power   80% power   90% power   power at 24 years")
 for sr in (0.20, 0.30, 0.50, 0.80, 1.00, 1.50):
-    d = sr / np.sqrt((1 + sr**2 / 2) / 24)
+    d = sr / np.sqrt((1 + sr**2 / (2 * k)) / 24)
     print(f"     {sr:6.2f}   {years_needed(sr, 0.50):9.1f}   {years_needed(sr, 0.80):9.1f}   "
           f"{years_needed(sr, 0.90):9.1f}   {stats.norm.sf(za - d):17.4f}")
 
@@ -64,18 +65,18 @@ print(f"  simulated check: at {T:.1f} years the Sharpe-0.30 edge is found "
       f"{(t > za).mean():.4f} of the time")
 # =>   years of daily data needed to detect a TRUE annualized Sharpe, one-sided 5%
 #         Sharpe   50% power   80% power   90% power   power at 24 years
-#           0.20        69.0       157.7       218.4              0.2499
-#           0.30        31.4        71.8        99.4              0.4179
-#           0.50        12.2        27.8        38.5              0.7468
-#           0.80         5.6        12.8        17.7              0.9613
-#           1.00         4.1         9.3        12.8              0.9907
-#           1.50         2.6         5.8         8.1              0.9997
-#      simulated check: at 71.8 years the Sharpe-0.30 edge is found 0.8169 of the time
+#           0.20        67.6       154.6       214.1              0.2530
+#           0.30        30.1        68.7        95.2              0.4304
+#           0.50        10.8        24.7        34.3              0.7893
+#           0.80         4.2         9.7        13.4              0.9885
+#           1.00         2.7         6.2         8.6              0.9994
+#           1.50         1.2         2.8         3.8              1.0000
+#      simulated check: at 68.7 years the Sharpe-0.30 edge is found 0.7989 of the time
 ```
 
-The course's own strategy is the $0.30$ row, and it needs $71.8$ years of daily data for an $80\%$ chance of detection — three times the twenty-four years the lesson actually has, and longer than the modern history of most instruments. Even a coin-flip chance of detection requires $31.4$ years. The simulated check confirms the arithmetic: at $71.8$ years the edge is found $81.69\%$ of the time. A Sharpe of $0.20$, which is a perfectly tradeable number in size, needs $157.7$ years for $80\%$ power and would be detected on a twenty-four-year record only $24.99\%$ of the time.
+The course's own strategy is the $0.30$ row, and it needs $68.7$ years of daily data for an $80\%$ chance of detection — nearly three times the twenty-four years the lesson actually has, and longer than the modern history of most instruments. Even a coin-flip chance of detection requires $30.1$ years. The simulated check confirms the arithmetic: at $68.7$ years the edge is found $79.89\%$ of the time. A Sharpe of $0.20$, which is a perfectly tradeable number in size, needs $154.6$ years for $80\%$ power and would be detected on a twenty-four-year record only $25.30\%$ of the time.
 
-The other end of the table is where research is comfortable and it explains a bias in what gets published. A Sharpe of $1.00$ needs $9.3$ years and a Sharpe of $1.50$ needs $5.8$; both are detected essentially always on twenty-four years, at $0.9907$ and $0.9997$. So the strategies that can be *demonstrated* on available history are the ones with large Sharpes, which are exactly the ones least likely to be real and most likely to be artefacts of a search — a selection effect that [Part XV](../part-15-multiple-testing/index.md) takes up. The strategies whose Sharpes are plausible for a liquid market, between $0.2$ and $0.5$, sit in the range where no available history settles anything.
+The other end of the table is where research is comfortable and it explains a bias in what gets published. A Sharpe of $1.00$ needs $6.2$ years and a Sharpe of $1.50$ needs $2.8$; both are detected essentially always on twenty-four years, at $0.9994$ and $1.0000$. So the strategies that can be *demonstrated* on available history are the ones with large Sharpes, which are exactly the ones least likely to be real and most likely to be artefacts of a search — a selection effect that [Part XV](../part-15-multiple-testing/index.md) takes up. The strategies whose Sharpes are plausible for a liquid market, between $0.2$ and $0.5$, sit in the range where no available history settles anything.
 
 **A Sharpe ratio's error bar shrinks with calendar time and nothing else, so the sampling frequency a desk controls is irrelevant and the one thing that would help cannot be bought.**
 
@@ -210,7 +211,7 @@ The exaggeration decays exactly as the proof requires. At five years the factor 
 
 ## Power Is the One Quantity a Report Could Have Contained Before the Data Arrived, and It Is the One Never Reported
 
-This page established that power is a function on the alternative whose infimum is the size, so quoting it as a number fixes an undisclosed effect size; that inverting it for a Sharpe ratio cancels the volatility and returns a span of calendar time, so the course's $0.30$ edge needs $71.8$ years for $80\%$ power against the twenty-four it has, and a $0.20$ Sharpe needs $157.7$; that the course's five weekday tests had between $8.20\%$ and $9.22\%$ power against a tradeable $2$ bp effect, and closing that gap on Mondays would take $34{,}356$ of them, or $661$ years; that observed power is a strictly decreasing function of the p-value and therefore carries no information, with a measured rank correlation of $-1.0000$; and that filtering on significance inflates a genuine $0.30$ Sharpe to a reported $1.1708$ at three years, with $8.07\%$ of significant findings carrying the wrong sign, decaying to $1.77$ times and $0.09\%$ at twenty-four years.
+This page established that power is a function on the alternative whose infimum is the size, so quoting it as a number fixes an undisclosed effect size; that inverting it for a Sharpe ratio cancels the volatility and returns a span of calendar time, so the course's $0.30$ edge needs $68.7$ years for $80\%$ power against the twenty-four it has, and a $0.20$ Sharpe needs $154.6$; that the course's five weekday tests had between $8.20\%$ and $9.22\%$ power against a tradeable $2$ bp effect, and closing that gap on Mondays would take $34{,}356$ of them, or $661$ years; that observed power is a strictly decreasing function of the p-value and therefore carries no information, with a measured rank correlation of $-1.0000$; and that filtering on significance inflates a genuine $0.30$ Sharpe to a reported $1.1708$ at three years, with $8.07\%$ of significant findings carrying the wrong sign, decaying to $1.77$ times and $0.09\%$ at twenty-four years.
 
 The two failures are the same fact seen from either side of the threshold. Below it, a non-rejection is uninformative because the test could not have detected anything worth having; above it, a rejection is inflated because only the large draws got through. Both are consequences of the detectable effect being larger than the interesting effect, and both are fixed by the same quantity — a power calculation that costs one line and is almost never performed, because performing it early would frequently end the project and performing it late cannot rescue one.
 

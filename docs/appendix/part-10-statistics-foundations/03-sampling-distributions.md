@@ -152,7 +152,8 @@ shp = np.sqrt(252) * r.mean(axis=1) / r.std(axis=1, ddof=1)
 lo, hi = np.quantile(shp, [0.025, 0.975])
 print(f"  a Sharpe of {sr} measured on {nobs} daily returns, {paths} independent histories")
 print(f"    mean {shp.mean():.4f}   empirical sd {shp.std(ddof=1):.4f}   Lo formula"
-      f" {np.sqrt(252 * (1 + sr ** 2 / 2) / nobs):.4f}   95% interval [{lo:.4f}, {hi:.4f}]")
+      f" {np.sqrt(252 * (1 + sr ** 2 / (2 * 252)) / nobs):.4f}"
+      f"   95% interval [{lo:.4f}, {hi:.4f}]")
 
 print(f"  the best of N independent nulls, each with standard error {se}")
 print("        N    E[max]    sd(max)    se*sqrt(2 ln N)    cover of the winner 95% CI")
@@ -163,7 +164,7 @@ for N in (1, 8, 20, 50, 200):
           f" {se * np.sqrt(2 * np.log(N)) if N > 1 else 0.0:18.4f}"
           f" {np.mean(np.abs(mx) <= 1.96 * se):29.4f}")
 # =>   a Sharpe of 0.3 measured on 6048 daily returns, 20000 independent histories
-#        mean 0.2985   empirical sd 0.2064   Lo formula 0.2087   95% interval [-0.1050, 0.6988]
+#        mean 0.2985   empirical sd 0.2064   Lo formula 0.2041   95% interval [-0.1050, 0.6988]
 #      the best of N independent nulls, each with standard error 0.2
 #            N    E[max]    sd(max)    se*sqrt(2 ln N)    cover of the winner 95% CI
 #              1    0.0008     0.1992             0.0000                        0.9495
@@ -173,7 +174,7 @@ for N in (1, 8, 20, 50, 200):
 #            200    0.5489     0.0801             0.6510                        0.0069
 ```
 
-The first panel is the derivation working. Twenty thousand independent twenty-four-year histories of a strategy whose true annualized Sharpe is exactly $0.30$ produce estimates with mean $0.2985$ and standard deviation $0.2064$, against Lo's formula $\sqrt{252(1+SR^2/2)/n}=0.2087$ — agreement to within one percent, on innovations with a tail heavy enough to break the variance interval of the previous section. The empirical $95\%$ interval is $[-0.1050,0.6988]$ against the course's pinned `Sharpe 0.30 +/- 0.20, 95% CI [-0.09, 0.70]`. Twenty-four years of daily data, and the interval runs from slightly money-losing to genuinely good.
+The first panel is the derivation working. Twenty thousand independent twenty-four-year histories of a strategy whose true annualized Sharpe is exactly $0.30$ produce estimates with mean $0.2985$ and standard deviation $0.2064$, against Lo's formula $\sqrt{252(1+SR^2/2k)/n}=0.2041$ — agreement to within about one percent, on innovations with a tail heavy enough to break the variance interval of the previous section, and the small excess is that tail rather than an error in the formula. The factor is $(1+SR^2/2k)$ with $k=252$ periods a year, not the $(1+SR^2/2)$ that Lo writes for a *per-period* Sharpe, and at an annualized $0.30$ the difference between the two is the difference between $0.2041$ and $0.2087$; it grows without limit as the Sharpe does, which is why [Statistical Power](../part-12-hypothesis-testing/05-statistical-power.md) states the annualized form explicitly before inverting it for a sample size. The empirical $95\%$ interval is $[-0.1050,0.6988]$ against the course's pinned `Sharpe 0.30 +/- 0.20, 95% CI [-0.09, 0.70]`. Twenty-four years of daily data, and the interval runs from slightly money-losing to genuinely good.
 
 The second panel is the derivation not applying. Each of the $N$ nulls has a true value of exactly zero and an unbiased estimator with standard error $0.20$. The expected maximum climbs $0.0008$, $0.2843$, $0.3728$, $0.4506$, $0.5489$. At $N=50$ it is $0.4506$, which reproduces the course's `expected best of 50 nulls 0.45` and sits above the $+0.43$ that its fifty coin-flip strategies actually achieved — the observed champion did not even clear its own null.
 
