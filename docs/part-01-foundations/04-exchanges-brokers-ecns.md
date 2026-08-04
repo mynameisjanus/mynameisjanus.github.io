@@ -10,7 +10,7 @@ Type a ticker into a brokerage app, click buy, and a fill comes back in under a 
 
 **Dark pools** are ATSs with no pre-trade transparency: no public quotes, no visible book. Orders rest hidden and typically match at the midpoint of the public best bid and offer. The design purpose is real — institutions can seek size without advertising intent — but you learn a dark fill happened only after the print.
 
-**Wholesalers (internalizers)** — Citadel Securities and Virtu foremost — are market-making firms that buy retail order flow from brokers and execute it internally, off-exchange, usually at or slightly inside the public quote. A third or more of US equity volume now executes off-exchange, much of it retail flow that never touches a lit book.
+**Wholesalers (internalizers)** — Citadel Securities and Virtu foremost — are market-making firms that buy retail order flow from brokers and execute it internally, off-exchange, usually at or slightly inside the public quote. A large share of US equity volume now executes off-exchange, much of it retail flow that never touches a lit book.
 
 Fragmentation demands a common reference. In US equities that is the **NBBO** — the National Best Bid and Offer, the best bid and best ask aggregated across all exchanges. Regulation NMS obliges brokers to execute at prices no worse than the NBBO. But note the fine print: the consolidated (SIP) feed that computes the NBBO is measurably slower than the direct feeds professionals buy from each exchange. The "official" market view lags the true one — a structural fact with obvious consequences for anyone fast.
 
