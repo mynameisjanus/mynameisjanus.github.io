@@ -99,4 +99,4 @@ This course teaches you to work the way quantitative researchers and systematic 
 
 ## About
 
-The course is written by [Janus B. Advincula](about/index.md) — physicist by training, MIT MicroMasters in Statistics and Data Science, currently building a systematic trading platform. If the material is useful to you, you can [support the site](about/support.md).
+The course is created by [Janus B. Advincula](about/index.md) — physicist by training, MIT MicroMasters in Statistics and Data Science, currently building a systematic trading platform. If the material is useful to you, you can [support the site](about/support.md).
