@@ -6,7 +6,7 @@ This appendix is a self-contained reference for the mathematics, probability, an
 
 - **If you have a quantitative background**, skim the part titles and move on. Come back when a course lesson cites a specific result.
 - **If you are newer to probability**, work through Parts I–VIII in order — they build from counting principles up to the Central Limit Theorem and Markov processes, which is exactly the toolkit regime models and Monte Carlo methods assume later.
-- **The statistics parts (X–XVII)** cover estimation, hypothesis testing, regression, model selection, multiple testing, and Bayesian methods — the machinery behind every "is this strategy actually profitable?" question the course asks.
+- **The statistics parts (X–XVII)** cover estimation, hypothesis testing, regression, model selection, multiple testing, Bayesian methods, and the numerical machinery that makes all of it computable — the machinery behind every "is this strategy actually profitable?" question the course asks.
 - **Part XVIII** connects the formal results back to trading: sizing, risk, microstructure, and regime detection.
 
 ## Contents

@@ -91,7 +91,7 @@ Grant ergodicity and the time average converges. The next question is how fast, 
 
 $$n_{\text{eff}}=\frac{n}{1+2\sum_{k\geq1}\rho_k},$$
 
-the number of independent observations that would have delivered the same precision. For an AR(1) with $X_t=\rho X_{t-1}+\varepsilon_t$ the autocorrelations are $\rho_k=\rho^{k}$, the geometric series of [Sequences and Infinite Series](../part-01-mathematical-foundations/04-sequences-and-series.md) sums to $1+2\rho/(1-\rho)=(1+\rho)/(1-\rho)$, and the ratio collapses to a single number worth memorizing:
+the number of independent observations that would have delivered the same precision. The denominator is the integrated autocorrelation time, and where the series is a sampler's output rather than a market's it becomes the exchange rate every MCMC diagnostic is quoted in, which is [Markov Chain Monte Carlo](../part-17-statistical-computing/04-markov-chain-monte-carlo.md). For an AR(1) with $X_t=\rho X_{t-1}+\varepsilon_t$ the autocorrelations are $\rho_k=\rho^{k}$, the geometric series of [Sequences and Infinite Series](../part-01-mathematical-foundations/04-sequences-and-series.md) sums to $1+2\rho/(1-\rho)=(1+\rho)/(1-\rho)$, and the ratio collapses to a single number worth memorizing:
 
 $$\frac{n_{\text{eff}}}{n}=\frac{1-\rho}{1+\rho}.$$
 

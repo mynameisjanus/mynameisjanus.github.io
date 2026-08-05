@@ -217,7 +217,7 @@ The direction is the dangerous one. A geometric law has the heaviest tail availa
 
 ## One Matrix, Two Numbers, and Everything They Do Not Contain
 
-A Markov chain compresses history into a state and dynamics into a matrix, and the whole of its behaviour is read off two features of that matrix. The leading eigenvector is the stationary distribution and answers every unconditional question. The second eigenvalue is the mixing rate and answers every conditional one — how long knowledge of today's state remains worth having, which for the course's fitted chain is a half-life of about seventeen days.
+A Markov chain compresses history into a state and dynamics into a matrix, and the whole of its behaviour is read off two features of that matrix. The leading eigenvector is the stationary distribution and answers every unconditional question. The second eigenvalue is the mixing rate and answers every conditional one — how long knowledge of today's state remains worth having, which for the course's fitted chain is a half-life of about seventeen days. The same gap governs a chain built deliberately rather than fitted: it is what decides how many draws a sampler needs per independent one, which is [Markov Chain Monte Carlo](../part-17-statistical-computing/04-markov-chain-monte-carlo.md).
 
 What the matrix does not contain is anything about the shape of a sojourn, and that is not an omission to be patched but a theorem: memorylessness and a non-geometric holding time are incompatible. So a fitted chain will always reproduce a mean duration and will get the tail wrong by whatever margin the world's hazard function departs from flat, which the fifth section prices at nearly four orders of magnitude in a case that is not exotic.
 
