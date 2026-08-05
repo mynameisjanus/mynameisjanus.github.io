@@ -7,7 +7,7 @@ This appendix is a self-contained reference for the mathematics, probability, an
 - **If you have a quantitative background**, skim the part titles and move on. Come back when a course lesson cites a specific result.
 - **If you are newer to probability**, work through Parts I–VIII in order — they build from counting principles up to the Central Limit Theorem and Markov processes, which is exactly the toolkit regime models and Monte Carlo methods assume later.
 - **The statistics parts (X–XVII)** cover estimation, hypothesis testing, regression, model selection, multiple testing, Bayesian methods, and the numerical machinery that makes all of it computable — the machinery behind every "is this strategy actually profitable?" question the course asks.
-- **Part XVIII** connects the formal results back to trading: sizing, risk, microstructure, and regime detection.
+- **Part XVIII** connects the formal results back to trading: sizing, risk, microstructure, and regime detection. It is where the appendix argues for itself, since every page there finds a model whose own diagnostic cannot see the thing it got wrong.
 
 ## Contents
 
@@ -30,7 +30,7 @@ This appendix is a self-contained reference for the mathematics, probability, an
 | [Part XV — Multiple Testing](part-15-multiple-testing/index.md) | Corrections for many comparisons and data snooping |
 | [Part XVI — Bayesian Statistics](part-16-bayesian-statistics/index.md) | Priors, posteriors, conjugacy, updating, model comparison, and prediction |
 | [Part XVII — Statistical Computing](part-17-statistical-computing/index.md) | Optimization, EM, and MCMC |
-| [Part XVIII — Applications to Quantitative Finance](part-18-quant-finance-applications/index.md) | Sizing, risk, microstructure, and regime detection |
+| [Part XVIII — Applications to Quantitative Finance](part-18-quant-finance-applications/index.md) | Kelly and ruin, drawdowns and passage times, queues and order flow, evidence, simulated prices and risk, VaR and expected shortfall, tails, copulas, and regime detection |
 
 !!! note
-    Much of this material was migrated from an earlier site and is kept mathematically rigorous, with proofs in collapsible blocks. Rewritten parts carry seeded Python whose output is pinned in the source, so every number on the page can be reproduced by running the block above it. Pages marked **Draft** are placeholders for planned content.
+    Much of this material was migrated from an earlier site and is kept mathematically rigorous, with proofs in collapsible blocks. Every part carries seeded Python whose output is pinned in the source, so every number on the page can be reproduced by running the block above it. No page reads cached market data, so the appendix runs anywhere numpy and scipy do.

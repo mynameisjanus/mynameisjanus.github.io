@@ -33,5 +33,5 @@ extra:
 
 ## Repository notes
 
-- `docs/appendix/` is an 18-part mathematics, probability, and statistics reference organized as `part-NN-*/` directories. Much of its content was migrated from the previous Jekyll site ("The Science of Data"); the one-off converter is kept at `scripts/migrate_math_pages.py` for provenance. Pages marked "Draft" are placeholders.
+- `docs/appendix/` is an 18-part mathematics, probability, and statistics reference organized as `part-NN-*/` directories. Much of its content was migrated from the previous Jekyll site ("The Science of Data"); the one-off converter is kept at `scripts/migrate_math_pages.py` for provenance. Every part has since been rewritten, with seeded numpy/scipy blocks whose output is pinned in the source and reproducible without any cached data.
 - Course content is © Janus B. Advincula, all rights reserved (see `LICENSE`).
