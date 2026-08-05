@@ -68,11 +68,6 @@ extra_javascript:
 extra_css:
   - stylesheets/extra.css
 
-extra:
-  analytics:
-    provider: google
-    property: G-Z80S0VMNH1
-
 hooks:
   - hooks/strip_blank_lines.py
 
