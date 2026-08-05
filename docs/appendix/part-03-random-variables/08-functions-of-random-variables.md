@@ -104,7 +104,7 @@ $$F_{\max}(y)=F(y)^n,\qquad F_{\min}(y)=1-\big(1-F(y)\big)^n.$$
 For a daily return that is $N(0.0003,\,0.012)$, a single day exceeds $+3\%$ with probability $0.0067$ — about one chance in a hundred and fifty. Over a trading year the probability that *some* day does is $0.8144$. The daily law never changed; only $n$ did.
 
 !!! note "The worst day of the year is not the worst day scaled"
-    Extremes have their own limiting theory, and it is not the Central Limit Theorem. Sums of many variables converge to a Gaussian; maxima of many variables converge to one of three quite different shapes, which is the content of [Extreme Value Theory](../part-18-quant-finance-applications/14-extreme-value-theory.md). This is why a risk estimate built by annualizing a daily volatility describes the body of the annual distribution and says almost nothing correct about its worst day, and why [Drawdown Probabilities](../part-18-quant-finance-applications/03-drawdown-probabilities.md) needs machinery of its own.
+    Extremes have their own limiting theory, and it is not the Central Limit Theorem. Sums of many variables converge to a Gaussian; maxima of many variables converge to one of three quite different shapes, which is the content of [Extreme Value Theory](../part-18-quant-finance-applications/13-extreme-value-theory.md). This is why a risk estimate built by annualizing a daily volatility describes the body of the annual distribution and says almost nothing correct about its worst day, and why [Drawdown Probabilities](../part-18-quant-finance-applications/03-drawdown-probabilities.md) needs machinery of its own.
 
 ## Transforms That Create Atoms
 

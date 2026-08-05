@@ -94,7 +94,7 @@ The $\rho$ of 0.82 is Part III's number reporting for duty in its third lesson, 
 
 ## The half-life sets the holding period
 
-Stiffness has a more useful currency: time. An OU displacement decays to half its size in $t_{1/2} = \ln 2 / \theta$ — equivalently $\ln(0.5)/\ln \rho$ in daily AR(1) terms — and that single number dictates the trade's entire tempo: how long positions are held, how fast the z-score window may be, how quickly a loss must be recognized as regime change rather than opportunity ([Hitting Times](../appendix/part-18-quant-finance-applications/04-hitting-times.md) makes the waiting-time math exact). Compute it for the tethered pair and for two impostors:
+Stiffness has a more useful currency: time. An OU displacement decays to half its size in $t_{1/2} = \ln 2 / \theta$ — equivalently $\ln(0.5)/\ln \rho$ in daily AR(1) terms — and that single number dictates the trade's entire tempo: how long positions are held, how fast the z-score window may be, how quickly a loss must be recognized as regime change rather than opportunity ([Hitting and First-Passage Times](../appendix/part-18-quant-finance-applications/04-hitting-and-first-passage-times.md) makes the waiting-time math exact). Compute it for the tethered pair and for two impostors:
 
 ```python
 import numpy as np

@@ -170,7 +170,7 @@ The bootstrap feels assumption-free, which is exactly what makes it dangerous â€
 
 | Pitfall | Symptom | Mitigation |
 |---|---|---|
-| Extreme-value statistics | intervals for max drawdown or worst day centered near the sample's own extreme | resampling cannot invent a worse day than history contains; use parametric tails ([EVT](../appendix/part-18-quant-finance-applications/14-extreme-value-theory.md)) |
+| Extreme-value statistics | intervals for max drawdown or worst day centered near the sample's own extreme | resampling cannot invent a worse day than history contains; use parametric tails ([EVT](../appendix/part-18-quant-finance-applications/13-extreme-value-theory.md)) |
 | Heavy tails | intervals that jump when one crisis day enters or leaves a resample | df â‰ˆ 2.6 from lesson two strains the [CLT](../appendix/part-07-asymptotic-theory/03-central-limit-theorem.md) machinery beneath the bootstrap; check stability by deleting the worst day |
 | Small samples | beautiful intervals from 36 monthly observations | $\hat F$ is a poor stand-in for $F$ at small $n$; the bootstrap amplifies, not fixes, data poverty |
 | Nonstationarity | 2008 blocks resampled into a 2019-shaped future | the interval is conditional on the sampled regime mix; report sub-period intervals too |

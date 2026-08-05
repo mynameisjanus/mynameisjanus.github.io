@@ -349,20 +349,18 @@ nav:
           - appendix/part-18-quant-finance-applications/01-kelly-criterion.md
           - appendix/part-18-quant-finance-applications/02-probability-of-ruin.md
           - appendix/part-18-quant-finance-applications/03-drawdown-probabilities.md
-          - appendix/part-18-quant-finance-applications/04-hitting-times.md
-          - appendix/part-18-quant-finance-applications/05-first-passage-times.md
-          - appendix/part-18-quant-finance-applications/06-queue-models.md
-          - appendix/part-18-quant-finance-applications/07-order-arrival-processes.md
-          - appendix/part-18-quant-finance-applications/08-bayesian-signal-updating.md
-          - appendix/part-18-quant-finance-applications/09-monte-carlo-option-pricing.md
-          - appendix/part-18-quant-finance-applications/10-portfolio-risk-simulation.md
-          - appendix/part-18-quant-finance-applications/11-value-at-risk.md
-          - appendix/part-18-quant-finance-applications/12-expected-shortfall.md
-          - appendix/part-18-quant-finance-applications/13-heavy-tailed-returns.md
-          - appendix/part-18-quant-finance-applications/14-extreme-value-theory.md
-          - appendix/part-18-quant-finance-applications/15-copulas.md
-          - appendix/part-18-quant-finance-applications/16-regime-detection.md
-          - appendix/part-18-quant-finance-applications/17-hidden-state-models.md
+          - appendix/part-18-quant-finance-applications/04-hitting-and-first-passage-times.md
+          - appendix/part-18-quant-finance-applications/05-queue-models.md
+          - appendix/part-18-quant-finance-applications/06-order-arrival-processes.md
+          - appendix/part-18-quant-finance-applications/07-bayesian-signal-updating.md
+          - appendix/part-18-quant-finance-applications/08-monte-carlo-option-pricing.md
+          - appendix/part-18-quant-finance-applications/09-portfolio-risk-simulation.md
+          - appendix/part-18-quant-finance-applications/10-value-at-risk.md
+          - appendix/part-18-quant-finance-applications/11-expected-shortfall.md
+          - appendix/part-18-quant-finance-applications/12-heavy-tailed-returns.md
+          - appendix/part-18-quant-finance-applications/13-extreme-value-theory.md
+          - appendix/part-18-quant-finance-applications/14-copulas.md
+          - appendix/part-18-quant-finance-applications/15-regime-detection.md
   - About:
       - about/index.md
       - Support This Site: about/support.md

@@ -188,7 +188,7 @@ The column that matters more than the ranking is the last one. All three log-log
 
 ## Value at Risk, three ways, and the backtest that fails them
 
-Value at Risk answers one question — *what loss will not be exceeded on 99 days out of 100* — and the three standard ways of answering it differ only in what they assume about the shape of the distribution. Parametric VaR assumes a normal; historical VaR assumes the past sample is the distribution; Monte Carlo assumes whatever you sample from ([Value at Risk](../appendix/part-18-quant-finance-applications/11-value-at-risk.md) derives all three). Since the answers are testable, the interesting part is not the levels but the backtest: Kupiec's proportion-of-failures test asks whether the *number* of breaches matches the promise, and Christoffersen's independence test asks whether the breaches are *scattered* the way independent events should be. Both run on the book — the five surviving sleeves, each scaled to the same standalone volatility:
+Value at Risk answers one question — *what loss will not be exceeded on 99 days out of 100* — and the three standard ways of answering it differ only in what they assume about the shape of the distribution. Parametric VaR assumes a normal; historical VaR assumes the past sample is the distribution; Monte Carlo assumes whatever you sample from ([Value at Risk](../appendix/part-18-quant-finance-applications/10-value-at-risk.md) derives all three). Since the answers are testable, the interesting part is not the levels but the backtest: Kupiec's proportion-of-failures test asks whether the *number* of breaches matches the promise, and Christoffersen's independence test asks whether the breaches are *scattered* the way independent events should be. Both run on the book — the five surviving sleeves, each scaled to the same standalone volatility:
 
 ```python
 import numpy as np
@@ -253,7 +253,7 @@ The last row is the one worth remembering, because it is the fix that isn't. Con
 
 ## Expected shortfall and the shape of the tail
 
-VaR names a threshold and says nothing about what lies beyond it — a distribution with a 1.1% VaR and a −4% worst day and one with a 1.1% VaR and a −40% worst day are indistinguishable to it. Expected shortfall, the average loss *conditional on* exceeding the threshold, looks past the cutoff, and it is [coherent](../appendix/part-18-quant-finance-applications/12-expected-shortfall.md) where VaR is not: the ES of a combined book can never exceed the sum of its parts', a guarantee VaR cannot make. It is also the measure Basel's FRTB regime moved to, swapping a 99% VaR for a 97.5% ES on the grounds that the two are nearly identical under a normal:
+VaR names a threshold and says nothing about what lies beyond it — a distribution with a 1.1% VaR and a −4% worst day and one with a 1.1% VaR and a −40% worst day are indistinguishable to it. Expected shortfall, the average loss *conditional on* exceeding the threshold, looks past the cutoff, and it is [coherent](../appendix/part-18-quant-finance-applications/11-expected-shortfall.md) where VaR is not: the ES of a combined book can never exceed the sum of its parts', a guarantee VaR cannot make. It is also the measure Basel's FRTB regime moved to, swapping a 99% VaR for a 97.5% ES on the grounds that the two are nearly identical under a normal:
 
 ```python
 import numpy as np
